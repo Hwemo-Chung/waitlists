@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Japan First Hire — Coming soon</title>
+  <meta name="description" content="A plain-English checklist and bilingual EN/JA template kit for foreign companies making their first hire in Japan. Coming soon. General information only — not a 社労士 filing service and not legal advice.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Japan First Hire — Coming soon">
+  <meta property="og:description" content="A plain-English checklist and bilingual EN/JA template kit for your first hire in Japan. General information only.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --paper: #f7f3e9;
+      --paper-2: #efe9da;
+      --ink: #16211f;
+      --ink-soft: #3f4d49;
+      --muted: #5f6b66;
+      --line: #d8d1bf;
+      --accent: #b4472e;
+      --accent-dark: #8f3522;
+      --white: #fffdf7;
+      --shadow: 0 18px 50px rgba(22, 33, 31, 0.08);
+      --radius: 14px;
+      --max: 1120px;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+      --jp: "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, Meiryo, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(22, 33, 31, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(22, 33, 31, 0.025) 1px, transparent 1px),
+        var(--paper);
+      background-size: 28px 28px, 28px 28px, auto;
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-dark); text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--ink);
+      color: var(--white);
+      padding: 12px 18px;
+      z-index: 100;
+    }
+    .skip:focus { left: 12px; top: 12px; }
+
+    .wrap {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    header.site {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1.5px solid var(--ink);
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-size: 14px;
+      line-height: 1;
+      background: var(--white);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.65);
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex: none;
+    }
+
+    main { display: block; }
+
+    .hero {
+      padding: 76px 0 82px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2.7rem, 6.2vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      max-width: 12ch;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+      position: relative;
+    }
+
+    h1 em::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0.04em;
+      height: 0.09em;
+      background: var(--accent);
+      opacity: 0.28;
+    }
+
+    .lede {
+      margin: 24px 0 0;
+      font-size: 19px;
+      color: var(--ink-soft);
+      max-width: 58ch;
+    }
+
+    .jp {
+      margin: 18px 0 0;
+      padding-left: 14px;
+      border-left: 3px solid var(--accent);
+      font-family: var(--jp);
+      font-size: 14.5px;
+      line-height: 1.8;
+      color: var(--muted);
+      line-break: strict;
+      max-width: 64ch;
+    }
+
+    .actions {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1.5px solid var(--ink);
+      background: var(--ink);
+      color: var(--white);
+      font: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease, color 120ms ease;
+    }
+    .btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: var(--white); transform: translateY(-1px); }
+    .btn.secondary { background: transparent; color: var(--ink); }
+    .btn.secondary:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+    .btn:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid rgba(180, 71, 46, 0.45);
+      outline-offset: 3px;
+    }
+
+    .micro {
+      margin: 16px 0 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-card {
+      padding: 24px 24px 20px;
+      position: relative;
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border: 1px solid rgba(180, 71, 46, 0.16);
+      border-radius: 9px;
+      pointer-events: none;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .card-head h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .card-head span {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .steps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .steps li {
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 12px;
+      padding: 11px 0;
+      border-top: 1px solid rgba(216, 209, 191, 0.75);
+      align-items: start;
+    }
+
+    .steps li:first-child { border-top: 0; }
+
+    .when {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--accent-dark);
+      line-height: 1.45;
+      padding-top: 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .what {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+
+    .what strong { color: var(--ink); }
+
+    .card-note {
+      margin: 14px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.55;
+      position: relative;
+    }
+
+    section { padding: 76px 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .kicker {
+      margin: 0 0 10px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    h2.display {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--ink-soft);
+      max-width: 58ch;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 26px 26px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 247, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .num {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--accent-dark);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+      margin-bottom: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .feature h3 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+    }
+
+    .feature .tag {
+      margin-top: auto;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: 8px;
+    }
+
+    .contrast {
+      background: var(--ink);
+      color: var(--paper);
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .contrast .kicker { color: #e59a83; }
+    .contrast h2.display { color: var(--white); }
+    .contrast p { color: #c9d0ca; }
+
+    .not-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 40px;
+    }
+
+    .not-list li {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 12px;
+      padding: 16px 0;
+      border-top: 1px solid rgba(247, 243, 233, 0.16);
+      color: #dfe4de;
+      font-size: 15px;
+    }
+
+    .not-list li::before {
+      content: "—";
+      color: #e59a83;
+      font-weight: 700;
+    }
+
+    .not-list strong { color: var(--white); }
+
+    .form-section {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(180, 71, 46, 0.07), transparent 34%),
+        var(--paper-2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .form-shell {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 52px;
+      align-items: start;
+    }
+
+    .form-col { min-width: 0; }
+
+    .cta-link {
+      margin: 0 0 14px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .form-intro h2 {
+      margin: 0 0 16px;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .form-intro p {
+      margin: 0 0 14px;
+      color: var(--ink-soft);
+      font-size: 15.5px;
+    }
+
+    .form-intro .jp {
+      font-size: 13.5px;
+      margin-top: 20px;
+    }
+
+    .research-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      background: rgba(255, 253, 247, 0.5);
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    form {
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+    }
+
+    label .opt {
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      font: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      background: #fdfbf4;
+      border: 1px solid #87928b;
+      border-radius: 8px;
+      padding: 11px 12px;
+      min-height: 44px;
+    }
+
+    textarea { min-height: 92px; resize: vertical; }
+
+    input::placeholder, textarea::placeholder { color: #6b766f; }
+
+    .consent {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 10px;
+      align-items: start;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .consent input {
+      width: 18px;
+      height: 18px;
+      min-height: 0;
+      margin: 2px 0 0;
+      accent-color: var(--accent-dark);
+    }
+
+    .form-foot {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .form-foot .micro { margin: 0; max-width: 34ch; }
+
+    .form-status {
+      margin: 14px 0 0;
+      font-size: 13.5px;
+      color: var(--accent-dark);
+      min-height: 1.4em;
+    }
+
+    .sources {
+      padding: 62px 0;
+      border-top: 1px solid var(--line);
+      background: rgba(255, 253, 247, 0.42);
+    }
+
+    .sources .section-head {
+      margin-bottom: 26px;
+    }
+
+    .source-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 34px;
+    }
+
+    .source-list li {
+      padding: 13px 0;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .source-list a {
+      display: block;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      line-height: 1.45;
+    }
+
+    .source-list a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .source-list span {
+      display: block;
+      margin-top: 3px;
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .disclaimer {
+      padding: 46px 0 40px;
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .disclaimer h2 {
+      margin: 0 0 12px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .disclaimer p {
+      margin: 0 0 12px;
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 100ch;
+    }
+
+    footer.site {
+      padding: 24px 0 34px;
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      align-items: baseline;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .foot strong { color: var(--ink-soft); }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; padding: 54px 0 62px; }
+      h1 { max-width: 14ch; }
+      .section-head { grid-template-columns: 1fr; gap: 18px; }
+      .form-shell { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .nav { align-items: flex-start; }
+      .pill { font-size: 10.5px; padding: 6px 10px; }
+      section { padding: 56px 0; }
+      .grid-2, .not-list, .field-grid { grid-template-columns: 1fr; }
+      .source-list { grid-template-columns: 1fr; }
+      .feature { padding: 22px; }
+      .timeline-card { padding: 20px; }
+      .steps li { grid-template-columns: 74px 1fr; }
+      form { padding: 20px; }
+      .form-foot { align-items: flex-start; flex-direction: column; }
+      .btn { width: 100%; }
+      .actions .btn { width: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#waitlist">Skip to the waitlist</a>
+
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Japan First Hire home">
+        <span class="brand-mark" aria-hidden="true">日</span>
+        <span>Japan First Hire</span>
+      </a>
+      <span class="pill"><span class="dot" aria-hidden="true"></span> Coming soon</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <p class="eyebrow">For foreign companies hiring in Japan for the first time</p>
+        <h1>Your <em>first Japan hire</em>, without the guesswork.</h1>
+        <p class="lede">A plain-English deadline checklist and bilingual EN/JA template kit for the documents, offices, and conversations that come before — and right after — your first employee in Japan.</p>
+        <p class="jp" lang="ja">日本で初めての採用を検討している外国企業の方向けに、英語・日本語のチェックリストとテンプレート集を準備しています。<br><span aria-hidden="true">※</span> 社労士業務・法律相談ではありません。</p>
+        <div class="actions">
+          <a class="btn" href="#waitlist">Join the waitlist <span aria-hidden="true">→</span></a>
+          <a class="btn secondary" href="#inside">See what's inside</a>
+        </div>
+        <p class="micro">Independent project · General information only · Not a 社労士 filing service</p>
+      </div>
+
+      <aside class="card timeline-card" aria-labelledby="timeline-title">
+        <div class="card-head">
+          <h2 id="timeline-title">The first-hire sequence</h2>
+          <span>Simplified</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="when">Before hiring</span>
+            <span class="what"><strong>Written working conditions</strong> — required under the Labor Standards Act, Article 15.</span>
+          </li>
+          <li>
+            <span class="when">Day 1–5</span>
+            <span class="what"><strong>Health &amp; pension enrollment</strong> — social insurance procedures within 5 days of hire.</span>
+          </li>
+          <li>
+            <span class="when">Within 10 days</span>
+            <span class="what"><strong>Labor insurance establishment notice</strong> to the Labor Standards Inspection Office, and <strong>employment insurance establishment notice</strong> to Hello Work.</span>
+          </li>
+          <li>
+            <span class="when">Within 50 days</span>
+            <span class="what"><strong>Estimated premium filing</strong> (概算保険料申告).</span>
+          </li>
+          <li>
+            <span class="when">By the 10th<br>of next month</span>
+            <span class="what"><strong>Employment insurance qualification notice</strong> (資格取得届).</span>
+          </li>
+          <li>
+            <span class="when">Within 1 month</span>
+            <span class="what"><strong>Tax office notice</strong> of a salary-paying office.</span>
+          </li>
+          <li>
+            <span class="when">Before overtime</span>
+            <span class="what"><strong>36 Agreement</strong> — required before any overtime work.</span>
+          </li>
+          <li>
+            <span class="when">At 10+ regular<br>workers</span>
+            <span class="what"><strong>Rules of Employment</strong> — required for workplaces with 10 or more regular workers.</span>
+          </li>
+        </ol>
+        <p class="card-note">A simplified view, not a complete legal checklist. Deadlines and requirements can change. Verify with the <a href="#sources">public sources</a> and a licensed 社労士.</p>
+      </aside>
+    </div>
+
+    <section id="inside" aria-labelledby="inside-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">What we're building</p>
+            <h2 class="display" id="inside-title">A working kit, not another pile of links.</h2>
+          </div>
+          <p>JETRO already publishes free English guides and templates. This project is meant to sit on top of that: a company-specific sequence you can assign, share, and take to a licensed professional.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="feature">
+            <div class="num">01</div>
+            <h3>A deadline map for the first-hire window</h3>
+            <p>Labor insurance, employment insurance, health and pension, the tax office notice, the 36 Agreement, and Rules of Employment — with the office and the timing for each.</p>
+            <span class="tag">Plain English · EN/JA</span>
+          </article>
+          <article class="feature">
+            <div class="num">02</div>
+            <h3>An owner-ready checklist</h3>
+            <p>Turn the sequence into tasks with an owner, due date, status, and evidence. Useful for a founder, an HR lead, or a small operations team.</p>
+            <span class="tag">Editable · Shareable</span>
+          </article>
+          <article class="feature">
+            <div class="num">03</div>
+            <h3>A bilingual EN/JA template kit</h3>
+            <p>Internal kickoff checklist, document request list, first-hire timeline, glossary, and questions to ask your 社労士. General working templates — not legal documents.</p>
+            <span class="tag">Templates · Glossary</span>
+          </article>
+          <article class="feature">
+            <div class="num">04</div>
+            <h3>An EOR-vs-direct-hire guide — and who to ask</h3>
+            <p>Questions to ask before choosing an EOR or hiring directly, what to prepare for each path, and when to bring in a licensed 社労士, 税理士, 行政書士, or 弁護士.</p>
+            <span class="tag">Decision guide · Referral only</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contrast" aria-labelledby="not-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Honest boundaries</p>
+            <h2 class="display" id="not-title">What this is not.</h2>
+          </div>
+          <p>These boundaries are not fine print. They decide what we will build, what we will decline, and when we will tell you to call a licensed professional instead.</p>
+        </div>
+
+        <ul class="not-list">
+          <li><span><strong>Not a 社労士 filing service.</strong> We do not prepare, review, or submit labor or social insurance filings for clients.</span></li>
+          <li><span><strong>Not legal, tax, or immigration advice.</strong> Labor and social insurance questions: a licensed 社労士. Tax: a 税理士. Immigration: an 行政書士 or 弁護士.</span></li>
+          <li><span><strong>Not an official product.</strong> No affiliation with JETRO, MHLW, Hello Work, or any government body.</span></li>
+          <li><span><strong>Not a replacement for professional review.</strong> Templates are general information and must be adapted for your situation.</span></li>
+          <li><span><strong>Not an Employer of Record (EOR) or payroll provider.</strong> We can explain the questions to ask, not employ your staff or run payroll.</span></li>
+          <li><span><strong>Not a shortcut to Japan market entry.</strong> The wedge is the first hire, not incorporation, tax, or ongoing HR.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="form-section" id="waitlist" aria-labelledby="waitlist-title">
+      <div class="wrap form-shell">
+        <div class="form-intro">
+          <p class="kicker">Early access</p>
+          <h2 id="waitlist-title">Be first to get it.</h2>
+          <p>Email us to join the waitlist and we'll contact you when the kit is ready. We're also looking for short interviews with companies planning a first hire in Japan — the questions you share will shape the checklist.</p>
+          <p>This is a research waitlist, not a product on sale. No payment is collected, and joining does not create a professional relationship.</p>
+          <p>We use your email address only to contact you about Japan First Hire and to understand demand for the kit. You can ask us to delete it by replying to any email we send.</p>
+          <p class="jp" lang="ja">近日公開予定です。ご関心のある方は、下のボタンからメールでご登録ください。<br><span aria-hidden="true">※</span> 社労士業務・法律相談ではありません。</p>
+          <div class="research-note">
+            <strong>Why a waitlist?</strong> We're validating whether this kit is worth building before we build it. If you have a first hire coming up, a 15-minute conversation is more useful than an email alone.
+          </div>
+        </div>
+
+                <div class="form-col">
+          <p class="cta-link"><a class="btn cta-mailto" href="mailto:tolaria@naver.com?subject=Waitlist%3A%20Japan%20First-Hire%20Kit&body=Preferred%20language%3A%20%0AWhat%20I%20need%20help%20with%3A%20">Join the waitlist (email)</a></p>
+          <p class="micro">No spam. No payment. A confirmation email, then only when there's something real to share.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources" id="sources" aria-labelledby="sources-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Primary sources</p>
+            <h2 class="display" id="sources-title">Public starting points.</h2>
+          </div>
+          <p>These are the public sources this page is based on. They are not a substitute for advice on your company's facts, and requirements can change.</p>
+        </div>
+        <ul class="source-list">
+          <li>
+            <a href="https://www.jetro.go.jp/en/invest/setting_up/section1/page6.html">JETRO — Setting up in Japan</a>
+            <span>Company setup, social insurance, tax, the 36 Agreement, and Rules of Employment.</span>
+          </li>
+          <li>
+            <a href="https://www.jetro.go.jp/en/invest/setting_up/section4/">JETRO — HR and free English templates</a>
+            <span>Free English guides and HR templates.</span>
+          </li>
+          <li>
+            <a href="https://jsite.mhlw.go.jp/hyogo-roudoukyoku/hourei_seido_tetsuzuki/roudou_hoken/tetsuzuki/ippan_jigyo/koyoushitatoki.html">MHLW — Labor and employment insurance procedures</a>
+            <span>Official procedure page for labor and employment insurance when hiring.</span>
+          </li>
+          <li>
+            <a href="https://www.mhlw.go.jp/new-info/kobetu/roudou/gyousei/hoken/dl/20260529-01.pdf">MHLW — English labor insurance guide (PDF)</a>
+            <span>English overview of the labor insurance system.</span>
+          </li>
+          <li>
+            <a href="https://www.mipro.or.jp/Document/hti0re0000000vcf-att/pblicinsurance_e.pdf">MIPRO — English labor insurance guide (PDF)</a>
+            <span>Includes the written working conditions requirement under LSA Article 15.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="disclaimer" aria-labelledby="disclaimer-title">
+      <div class="wrap">
+        <h2 id="disclaimer-title">Important disclaimer</h2>
+        <p><strong>Japan First Hire is an independent informational project.</strong> It is not affiliated with, endorsed by, or acting on behalf of JETRO, the Ministry of Health, Labour and Welfare (MHLW), Hello Work, any Labor Standards Inspection Office, or any government agency. It is not a 社会保険労務士 (社労士) office, law firm, tax accountant, or administrative scrivener.</p>
+        <p>We do not prepare, review, or file labor insurance, social insurance, tax, or visa applications for clients. Nothing on this page is legal, tax, immigration, or social insurance advice. Requirements and deadlines can change; verify them with official sources and licensed professionals.</p>
+        <p>Under the 社労士法 (Articles 2 and 27), procedures such as preparing or submitting labor and social insurance filings for others for a fee are reserved for licensed 社労士. Please consult a licensed 社労士 for your specific situation. Where we refer to a professional, the referral is for your own independent engagement and does not create a partnership or agency relationship with us.</p>
+        <p>This page describes a product in development. Features, scope, and availability may change. No payment is collected on this page.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap foot">
+      <span><strong>Japan First Hire</strong> · Independent project · <span id="year">2026</span></span>
+      <span>No payment collected · General information only</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var year = document.getElementById("year");
+
+      if (year) {
+        year.textContent = String(new Date().getFullYear());
+      }
+    })();
+  </script>
+</body>
+</html>

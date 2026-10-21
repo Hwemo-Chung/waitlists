@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Care Kanji — coming soon</title>
+<meta name="description" content="A concept for helping foreign care workers in Japan read the kanji in care records. No product yet. Join the waitlist or request a pilot interview.">
+<!-- TODO: remove noindex when the concept page becomes a public launch page. -->
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --paper:#f7f3e9;
+    --paper-2:#efe8d8;
+    --card:#fffdf7;
+    --ink:#17251f;
+    --muted:#55635c;
+    --line:#d8d0bf;
+    --green:#17594a;
+    --green-dark:#0f3f35;
+    --amber:#a84b0a;
+    --amber-soft:#f3e2cf;
+    --radius:18px;
+    --shadow:0 18px 45px rgba(23,37,31,.08);
+    --max:1080px;
+    --sans:"Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Noto Sans JP",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --jp-serif:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:radial-gradient(rgba(23,37,31,.055) 1px, transparent 1px);
+    background-size:22px 22px;
+    opacity:.35;
+    z-index:-1;
+  }
+  img,svg{max-width:100%;display:block}
+  a{color:var(--green);text-underline-offset:.18em}
+  a:hover{color:var(--green-dark)}
+  h1,h2,h3{line-height:1.2;margin:0 0 .5em}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.35rem,5vw,4rem);letter-spacing:-.025em;line-height:1.08}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.85rem,3.6vw,2.7rem);letter-spacing:-.015em}
+  h3{font-size:1.18rem;font-weight:700}
+  p{margin:0 0 1rem}
+  .wrap{width:min(var(--max),calc(100% - 2.5rem));margin-inline:auto}
+  .skip{position:absolute;left:-9999px;top:0;background:#fff;color:var(--ink);padding:.75rem 1rem;z-index:100}
+  .skip:focus{left:1rem;top:1rem}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+  .site-header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(247,243,233,.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(216,208,191,.8);
+  }
+  .header-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
+  .brand{display:inline-flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:-.01em}
+  .brand-mark{
+    display:grid;place-items:center;width:38px;height:38px;border-radius:11px;
+    background:var(--green);color:#fff;font-family:var(--jp-serif);font-size:1.35rem;line-height:1;
+  }
+  .brand small{display:block;font-size:.68rem;font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .nav{display:flex;align-items:center;gap:1.2rem}
+  .nav a{font-size:.9rem;text-decoration:none;color:var(--muted)}
+  .nav a:hover{color:var(--ink)}
+  .nav a.btn{color:#fff}
+  .nav a.btn:hover{color:#fff}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+    min-height:48px;padding:.7rem 1.15rem;border-radius:999px;
+    background:var(--green);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;
+    border:1px solid var(--green);cursor:pointer;
+    transition:transform .15s ease,background .15s ease;
+  }
+  .btn:hover{background:var(--green-dark);color:#fff;transform:translateY(-1px)}
+  .btn.secondary{background:transparent;color:var(--green);border-color:var(--green)}
+  .btn.secondary:hover{background:rgba(23,89,74,.07);color:var(--green-dark)}
+  .btn.small{min-height:38px;padding:.45rem .9rem;font-size:.85rem}
+
+  .hero{padding:clamp(3rem,7vw,6rem) 0 clamp(2.5rem,5vw,4rem);position:relative}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,.78fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.55rem;margin-bottom:1.35rem;
+    font-size:.76rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green);
+  }
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(168,75,10,.12)}
+  .hero h1 em{
+    font-style:normal;color:var(--green);
+    background:linear-gradient(transparent 66%,rgba(168,75,10,.16) 66%);
+    -webkit-box-decoration-break:clone;box-decoration-break:clone;
+    padding:0 .04em;
+  }
+  .lede{font-size:1.1rem;color:#34463e;max-width:38rem}
+  .ja{font-family:var(--sans);color:#34463e;line-height:2.05}
+  ruby rt{line-height:1.1}
+  .hero .ja{font-size:1rem;line-height:2.3;max-width:37rem;padding-left:1rem;border-left:3px solid var(--line)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+  .micro{font-size:.8rem;color:var(--muted);margin-top:1rem;max-width:34rem}
+  .micro strong{color:var(--ink)}
+
+  .hero-card{
+    position:relative;background:var(--card);border:1px solid var(--line);border-radius:26px;
+    padding:clamp(1.4rem,3vw,2rem);box-shadow:var(--shadow);transform:rotate(1.2deg);
+  }
+  .hero-card::before{
+    content:"";position:absolute;inset:10px;border:1px dashed rgba(23,89,74,.18);border-radius:18px;pointer-events:none;
+  }
+  .sample-label{display:flex;justify-content:space-between;gap:1rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+  .sample-label b{color:var(--amber);font-weight:700}
+  .hero-kanji{font-family:var(--jp-serif);font-size:clamp(4rem,9vw,6.4rem);line-height:1.05;margin:0 0 .5rem;letter-spacing:.04em}
+  .hero-kanji rt{font-family:var(--sans);font-size:.22em;color:var(--green);letter-spacing:.04em}
+  .hero-en{font-size:1rem;font-weight:700;margin-bottom:.35rem}
+  .hero-ja{font-size:.92rem;color:var(--muted);line-height:2.15;margin:0}
+  .hero-note{font-size:.72rem;color:var(--muted);margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line)}
+
+  .honesty{border-block:1px solid var(--line);background:rgba(255,253,247,.55)}
+  .honesty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .honesty-item{padding:1.35rem 1.5rem;border-left:1px solid var(--line)}
+  .honesty-item:first-child{border-left:0;padding-left:0}
+  .honesty-item:last-child{padding-right:0}
+  .honesty-item b{display:block;font-size:.95rem;margin-bottom:.2rem}
+  .honesty-item span{font-size:.82rem;color:var(--muted);line-height:1.55;display:block}
+  .honesty-item .ja{font-size:.8rem;margin-top:.15rem}
+
+  section{padding:clamp(3.5rem,7vw,5.5rem) 0}
+  [id]{scroll-margin-top:88px}
+  .section-head{max-width:46rem;margin-bottom:2.2rem}
+  .kicker{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:.7rem}
+  .section-head p{color:var(--muted);margin-bottom:0}
+  .section-head .ja{font-size:.95rem;line-height:2.1;margin-top:.55rem}
+
+  .audience{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+  .audience-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;
+    display:flex;flex-direction:column;gap:.4rem;
+  }
+  .audience-card .tagline{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+  .audience-card h3{margin-bottom:.15rem}
+  .audience-card p{font-size:.94rem;color:var(--muted);margin-bottom:.5rem}
+  .audience-card .ja{font-size:.88rem;line-height:2.05}
+  .audience-card a{margin-top:auto;font-weight:700;font-size:.9rem;text-decoration:none}
+  .audience-card a::after{content:" →"}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-card{max-width:440px;transform:rotate(.6deg)}
+    .nav a:not(.btn){display:none}
+    .honesty-grid{grid-template-columns:1fr}
+    .honesty-item{border-left:0;border-top:1px solid var(--line);padding:1.1rem 0}
+    .honesty-item:first-child{border-top:0}
+  }
+  @media (max-width:720px){
+    .audience{grid-template-columns:1fr}
+    .header-in{min-height:64px}
+    .brand small{display:none}
+    .nav{gap:.6rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+
+  /* Sample cards */
+  .samples-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.35rem;display:flex;flex-direction:column;min-height:100%;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:1rem}
+  .tag{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:rgba(23,89,74,.08);padding:.25rem .55rem;border-radius:999px}
+  .review{font-size:.66rem;color:var(--amber);font-weight:700}
+  .kanji{font-family:var(--jp-serif);font-size:clamp(2.5rem,5vw,3.3rem);line-height:1.15;margin:0 0 .5rem;letter-spacing:.03em}
+  .kanji rt{font-family:var(--sans);font-size:.24em;color:var(--green);letter-spacing:.03em}
+  .card .en{font-size:.92rem;font-weight:700;margin-bottom:.3rem}
+  .card .ja{font-size:.86rem;line-height:2.1;color:var(--muted);margin-bottom:.7rem}
+  .card .where{font-size:.72rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.6rem;margin-top:auto;margin-bottom:0}
+  .sample-note{
+    display:flex;gap:.8rem;align-items:flex-start;margin-top:1.2rem;
+    background:var(--amber-soft);border:1px solid #e2c6a8;border-radius:14px;padding:.9rem 1rem;
+    font-size:.82rem;color:#5c3616;line-height:1.6;
+  }
+  .sample-note strong{white-space:nowrap}
+  .sample-note p{margin:0}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .step{background:rgba(255,253,247,.55);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem}
+  .step-num{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;font-size:.9rem;margin-bottom:.8rem}
+  .step h3{font-size:1rem;margin-bottom:.3rem}
+  .step p{font-size:.88rem;color:var(--muted);margin-bottom:.4rem}
+  .step .ja{font-size:.82rem;line-height:2.05}
+  .planned{font-size:.72rem;color:var(--amber);font-weight:700;margin-top:.4rem;margin-bottom:0}
+
+  /* Forms */
+  .pilot{background:var(--green-dark);color:#f5efe1}
+  .pilot .kicker{color:#e9b98f}
+  .pilot .section-head h2{color:#fff}
+  .pilot .section-head p{color:#cfdcd5}
+  .pilot .section-head .ja{color:#cfdcd5}
+  .pilot-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.5rem,4vw,3rem);align-items:start}
+  .pilot-copy p{color:#cfdcd5;font-size:.95rem}
+  .pilot-copy .ja{color:#cfdcd5;font-size:.9rem;line-height:2.15}
+  .pilot-list{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.55rem}
+  .pilot-list li{position:relative;padding-left:1.4rem;font-size:.9rem;color:#e7eee9}
+  .pilot-list li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:#e9b98f}
+  .pilot-copy .micro{color:#b9c9c1}
+  .form-card{background:var(--card);color:var(--ink);border-radius:22px;padding:clamp(1.2rem,3vw,1.8rem);box-shadow:var(--shadow)}
+  .form-card.narrow{max-width:640px;margin-inline:0}
+  .form-card h3{font-family:var(--serif);font-size:1.5rem;margin-bottom:.25rem}
+  .form-intro{font-size:.86rem;color:var(--muted);margin-bottom:1.1rem}
+  .form-intro .ja{display:block;font-size:.82rem;margin-top:.25rem}
+  .cta-link{margin:0 0 1rem;display:flex;flex-wrap:wrap}
+  .field{margin-bottom:.9rem}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+  .field label,.field legend{display:block;font-size:.8rem;font-weight:700;margin-bottom:.3rem}
+  .field .hint{font-weight:400;color:var(--muted);font-size:.75rem}
+  .label-ja{display:block;font-weight:400;color:var(--muted);font-size:.76rem;line-height:1.6;margin-top:.1rem}
+  .h3-ja{display:block;font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--muted);margin-top:.25rem;letter-spacing:0}
+  .field input,.field select,.field textarea{
+    width:100%;padding:.7rem .8rem;border:1px solid #c9c0ad;border-radius:10px;
+    background:#fff;color:var(--ink);font:inherit;font-size:.92rem;
+  }
+  .field textarea{min-height:88px;resize:vertical}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);outline:2px solid rgba(23,89,74,.2);outline-offset:1px}
+  .consent{display:flex;gap:.6rem;align-items:flex-start;margin:.9rem 0 1rem;font-size:.78rem;color:var(--muted);line-height:1.55}
+  .consent input{width:18px;height:18px;margin-top:.15rem;flex:0 0 auto;accent-color:var(--green)}
+  .consent .ja{display:block;margin-top:.2rem;font-size:.74rem;line-height:1.75}
+  .form-note{font-size:.72rem;color:var(--muted);margin-top:.8rem;line-height:1.6}
+  .form-note strong{color:var(--amber)}
+  .form-status{margin:.8rem 0 0;padding:.7rem .8rem;border-radius:10px;background:var(--amber-soft);color:#5c3616;font-size:.82rem}
+  .form-status[hidden]{display:none}
+  .submit{width:100%;margin-top:.2rem}
+  .privacy-mini{font-size:.72rem;color:var(--muted);margin-top:.7rem;margin-bottom:0}
+  .privacy-mini a{color:var(--green)}
+
+  /* FAQ */
+  .faq{max-width:52rem}
+  .faq details{border-top:1px solid var(--line);padding:1rem 0}
+  .faq details:last-child{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;font-weight:700;font-size:.98rem;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.3rem;color:var(--green);font-weight:400;line-height:1}
+  .faq details[open] summary::after{content:"−"}
+  .faq .answer{padding-top:.6rem;font-size:.9rem;color:var(--muted)}
+  .faq .answer p{margin-bottom:.5rem}
+  .faq .answer .ja{font-size:.86rem;line-height:2.1}
+
+  /* Footer */
+  .site-footer{background:#12241e;color:#c9d6cf;padding:2.5rem 0;font-size:.8rem;line-height:1.95}
+  .site-footer .wrap{display:grid;gap:1rem}
+  .site-footer strong{color:#fff}
+  .site-footer a{color:#e9b98f}
+  .footer-brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-weight:700;font-size:.95rem}
+  .footer-brand .brand-mark{width:32px;height:32px;font-size:1.1rem;background:#285c4e}
+  .footer-legal{max-width:62rem;color:#a9bbb2}
+  .footer-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;color:#8fa69b;font-size:.74rem;border-top:1px solid rgba(255,255,255,.12);padding-top:1rem}
+
+  @media (max-width:900px){
+    .samples-grid{grid-template-columns:repeat(2,1fr)}
+    .pilot-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:680px){
+    .samples-grid,.steps{grid-template-columns:1fr}
+    .field-row{grid-template-columns:1fr}
+    .sample-note{flex-direction:column;gap:.3rem}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="#top" aria-label="Care Kanji home">
+      <span class="brand-mark" aria-hidden="true">漢</span>
+      <span>Care Kanji <small>working title</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#samples">Sample cards</a>
+      <a href="#pilot">For facilities</a>
+      <a class="btn small" href="#waitlist">Join the waitlist</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Coming soon · 準備中</p>
+        <h1>Care work is hard.<br><em>Reading the records shouldn't be.</em></h1>
+        <p class="lede">We are exploring a small reading aid for foreign care workers in Japan: the kanji that show up in <strong>介護記録</strong>, <strong>申し送り</strong>, medication labels, and <strong>ケアプラン</strong>. There is no product yet. This page exists to find out whether it is worth building.</p>
+        <p class="ja" lang="ja"><ruby>介護<rt>かいご</rt></ruby>の<ruby>現場<rt>げんば</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>く<ruby>外国人<rt>がいこくじん</rt></ruby>の<ruby>方<rt>かた</rt></ruby>のために、<ruby>記録<rt>きろく</rt></ruby>の<ruby>漢字<rt>かんじ</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む<ruby>小<rt>ちい</rt></ruby>さな<ruby>助<rt>たす</rt></ruby>けを作れないか<ruby>考<rt>かんが</rt></ruby>えています。まだ<ruby>製品<rt>せいひん</rt></ruby>はありません。本当に<ruby>必要<rt>ひつよう</rt></ruby>かどうかを、<ruby>施設<rt>しせつ</rt></ruby>・<ruby>登録支援機関<rt>とうろくしえんきかん</rt></ruby>の<ruby>方<rt>かた</rt></ruby>に<ruby>聞<rt>き</rt></ruby>いて<ruby>確<rt>たし</rt></ruby>かめたいです。</p>
+        <div class="cta-row">
+          <a class="btn" href="#waitlist">Join the waitlist</a>
+          <a class="btn secondary" href="#pilot">Request a pilot interview</a>
+        </div>
+        <p class="micro"><strong>No product yet. No invented numbers. No official affiliation.</strong> The sample cards below are for illustration and are waiting for review by a qualified care professional.</p>
+      </div>
+
+      <aside class="hero-card" aria-label="Sample care kanji card">
+        <div class="sample-label"><span>Sample card</span><b>検討中</b></div>
+        <p class="hero-kanji"><ruby>褥<rt>じょく</rt>瘡<rt>そう</rt></ruby></p>
+        <p class="hero-en">Pressure sore (bedsore)</p>
+        <p class="hero-ja" lang="ja"><ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby>おなじ<ruby>姿勢<rt>しせい</rt></ruby>でいると、<ruby>皮膚<rt>ひふ</rt></ruby>が<ruby>傷<rt>きず</rt></ruby>つくことがあります。これを<ruby>褥瘡<rt>じょくそう</rt></ruby>（<ruby>床<rt>とこ</rt></ruby>ずれ）といいます。</p>
+        <p class="hero-note">Reading and plain meaning to be checked by a qualified care professional before launch.</p>
+      </aside>
+    </div>
+  </section>
+
+  <div class="honesty">
+    <div class="wrap honesty-grid">
+      <div class="honesty-item">
+        <b>Concept stage</b>
+        <span>There is no app, no account, and no paid plan. Not yet.</span>
+        <span class="ja" lang="ja">まだ<ruby>製品<rt>せいひん</rt></ruby>はありません。</span>
+      </div>
+      <div class="honesty-item">
+        <b>No invented numbers</b>
+        <span>No user counts, testimonials, or “guaranteed results.” If we cite a public figure, we link the source.</span>
+        <span class="ja" lang="ja"><ruby>数字<rt>すうじ</rt></ruby>を<ruby>盛<rt>も</rt></ruby>りません。うその<ruby>声<rt>こえ</rt></ruby>も作りません。</span>
+      </div>
+      <div class="honesty-item">
+        <b>Independent</b>
+        <span>Not affiliated with any government body, exam organization, care facility, or 登録支援機関.</span>
+        <span class="ja" lang="ja"><ruby>政府<rt>せいふ</rt></ruby>・<ruby>団体<rt>だんたい</rt></ruby>・<ruby>施設<rt>しせつ</rt></ruby>と<ruby>関係<rt>かんけい</rt></ruby>ありません。</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="who">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Who this is for</p>
+        <h2>Two different conversations.</h2>
+        <p class="ja" lang="ja"><ruby>二<rt>ふた</rt></ruby>つの<ruby>立場<rt>たちば</rt></ruby>から、<ruby>話<rt>はなし</rt></ruby>を<ruby>聞<rt>き</rt></ruby>かせてください。</p>
+      </div>
+      <div class="audience">
+        <div class="audience-card">
+          <p class="tagline">For care workers</p>
+          <h3>If records slow you down</h3>
+          <p>Join the waitlist. You will get one email if a test version is ready. This is not a job offer, a visa service, or an exam course.</p>
+          <p class="ja" lang="ja"><ruby>記録<rt>きろく</rt></ruby>の<ruby>漢字<rt>かんじ</rt></ruby>で<ruby>困<rt>こま</rt></ruby>ったことがある<ruby>方<rt>かた</rt></ruby>は、<ruby>事前登録<rt>じぜんとうろく</rt></ruby>してください。テスト<ruby>版<rt>ばん</rt></ruby>ができたら、メールを1<ruby>回<rt>かい</rt></ruby>だけ<ruby>送<rt>おく</rt></ruby>ります。</p>
+          <a href="#waitlist">Join the worker waitlist</a>
+        </div>
+        <div class="audience-card">
+          <p class="tagline">For care facilities &amp; 登録支援機関</p>
+          <h3>If your staff lose time on records</h3>
+          <p>Talk to us for 20–30 minutes. We are looking for five conversations before we decide whether to build anything. No pitch; there is nothing to buy yet.</p>
+          <p class="ja" lang="ja"><ruby>外国人<rt>がいこくじん</rt></ruby><ruby>職員<rt>しょくいん</rt></ruby>の<ruby>記録<rt>きろく</rt></ruby><ruby>業務<rt>ぎょうむ</rt></ruby>について、20〜30<ruby>分<rt>ふん</rt></ruby>お<ruby>話<rt>はなし</rt></ruby>を<ruby>聞<rt>き</rt></ruby>かせてください。まだ<ruby>売<rt>う</rt></ruby>るものはありません。</p>
+          <a href="#pilot">Request a pilot interview</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="samples">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Sample care kanji</p>
+        <h2>Five words from the records.</h2>
+        <p>Each card is meant to show a reading, a plain meaning, and where the word may appear. This is a design sample, not a dictionary.</p>
+        <p class="ja" lang="ja"><ruby>記録<rt>きろく</rt></ruby>に<ruby>出<rt>で</rt></ruby>てくる<ruby>言葉<rt>ことば</rt></ruby>を5つ<ruby>紹介<rt>しょうかい</rt></ruby>します。これはサンプルです。まだ<ruby>専門家<rt>せんもんか</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby>を<ruby>受<rt>う</rt></ruby>けていません。</p>
+      </div>
+
+      <div class="samples-grid">
+        <article class="card">
+          <div class="card-top"><span class="tag">Daily care</span><span class="review">検討中</span></div>
+          <p class="kanji" lang="ja"><ruby>介<rt>かい</rt>助<rt>じょ</rt></ruby></p>
+          <p class="en">Helping with everyday actions</p>
+          <p class="ja" lang="ja"><ruby>食事<rt>しょくじ</rt></ruby>・<ruby>入浴<rt>にゅうよく</rt></ruby>・<ruby>移動<rt>いどう</rt></ruby>のときに、<ruby>手<rt>て</rt></ruby>を<ruby>貸<rt>か</rt></ruby>すことです。</p>
+          <p class="where">May appear in: care records, 申し送り (examples to confirm with staff)</p>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="tag">Toileting</span><span class="review">検討中</span></div>
+          <p class="kanji" lang="ja"><ruby>排<rt>はい</rt>泄<rt>せつ</rt></ruby></p>
+          <p class="en">Toileting and excretion</p>
+          <p class="ja" lang="ja">トイレに<ruby>行<rt>い</rt></ruby>くときの<ruby>支援<rt>しえん</rt></ruby>や、おしっこ・うんちを<ruby>出<rt>だ</rt></ruby>すことです。</p>
+          <p class="where">May appear in: 排泄記録 (examples to confirm with staff)</p>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="tag">Skin</span><span class="review">検討中</span></div>
+          <p class="kanji" lang="ja"><ruby>褥<rt>じょく</rt>瘡<rt>そう</rt></ruby></p>
+          <p class="en">Pressure sore (bedsore)</p>
+          <p class="ja" lang="ja"><ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby>おなじ<ruby>姿勢<rt>しせい</rt></ruby>でいると、<ruby>皮膚<rt>ひふ</rt></ruby>が<ruby>傷<rt>きず</rt></ruby>つくことがあります。これを<ruby>褥瘡<rt>じょくそう</rt></ruby>（<ruby>床<rt>とこ</rt></ruby>ずれ）といいます。</p>
+          <p class="where">May appear in: skin check records (examples to confirm with staff)</p>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="tag">Eating</span><span class="review">検討中</span></div>
+          <p class="kanji" lang="ja"><ruby>誤<rt>ご</rt>嚥<rt>えん</rt></ruby></p>
+          <p class="en">Aspiration</p>
+          <p class="ja" lang="ja"><ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>や<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>が<ruby>気管<rt>きかん</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ってしまうことです。</p>
+          <p class="where">May appear in: meal and swallowing records (examples to confirm with staff)</p>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="tag">Medication</span><span class="review">検討中</span></div>
+          <p class="kanji" lang="ja"><ruby>服<rt>ふく</rt>薬<rt>やく</rt></ruby></p>
+          <p class="en">Taking medicine</p>
+          <p class="ja" lang="ja"><ruby>決<rt>き</rt></ruby>められたとおりに<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>むことです。</p>
+          <p class="where">May appear in: 服薬記録 and medication labels (examples to confirm with staff)</p>
+        </article>
+      </div>
+
+      <div class="sample-note" role="note">
+        <strong>Please note:</strong>
+        <p>Readings and plain meanings are pending review by a qualified care professional. Do not use this page as medical or care instructions. Always follow your facility’s procedures and ask a senior staff member when you are unsure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">What it would do</p>
+        <h2>Check a word. Keep the ones you need.</h2>
+        <p class="ja" lang="ja">わからない<ruby>言葉<rt>ことば</rt></ruby>を<ruby>調<rt>しら</rt></ruby>べて、<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>言葉<rt>ことば</rt></ruby>だけを<ruby>残<rt>のこ</rt></ruby>せます。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <h3>See it in a record</h3>
+          <p>You meet a kanji during a handover, a care note, or a medication check.</p>
+          <p class="ja" lang="ja"><ruby>申<rt>もう</rt></ruby>し<ruby>送<rt>おく</rt></ruby>りや<ruby>記録<rt>きろく</rt></ruby>で、わからない<ruby>漢字<rt>かんじ</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います。</p>
+          <p class="planned">Planned — not built yet</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <h3>Check the reading and meaning</h3>
+          <p>See the reading, a plain explanation, and one short example. Turn furigana on or off.</p>
+          <p class="ja" lang="ja"><ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>と<ruby>意味<rt>いみ</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます。ふりがなは、つけたり<ruby>消<rt>け</rt></ruby>したりできます。</p>
+          <p class="planned">Planned — not built yet</p>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <h3>Save it for later</h3>
+          <p>Keep a small personal list and review the words that keep coming back.</p>
+          <p class="ja" lang="ja">よく<ruby>出<rt>で</rt></ruby>てくる<ruby>言葉<rt>ことば</rt></ruby>だけを、<ruby>自分<rt>じぶん</rt></ruby>のリストに<ruby>残<rt>のこ</rt></ruby>します。</p>
+          <p class="planned">Planned — not built yet</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pilot" id="pilot">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">For care facilities &amp; 登録支援機関</p>
+        <h2>We want to understand the work first.</h2>
+        <p>Before building anything, we are looking for five short conversations with people who run or support care teams. There is no product to buy and no sales pitch.</p>
+        <p class="ja" lang="ja">ものを作る<ruby>前<rt>まえ</rt></ruby>に、<ruby>現場<rt>げんば</rt></ruby>の<ruby>話<rt>はなし</rt></ruby>を<ruby>聞<rt>き</rt></ruby>かせてください。20〜30<ruby>分<rt>ふん</rt></ruby>です。まだ<ruby>製品<rt>せいひん</rt></ruby>はなく、<ruby>売<rt>う</rt></ruby>り<ruby>込<rt>こ</rt></ruby>みはしません。</p>
+      </div>
+
+      <div class="pilot-grid">
+        <div class="pilot-copy">
+          <p>We will ask how your staff read <strong>申し送り</strong>, <strong>介護記録</strong>, medication labels, and <strong>ケアプラン</strong>; where kanji causes delays or repeated checks; and what would make a small pilot useful.</p>
+          <p class="ja" lang="ja"><ruby>外国人<rt>がいこくじん</rt></ruby><ruby>職員<rt>しょくいん</rt></ruby>が<ruby>記録<rt>きろく</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む<ruby>流<rt>なが</rt></ruby>れ、<ruby>手書<rt>てが</rt></ruby>きの<ruby>申<rt>もう</rt></ruby>し<ruby>送<rt>おく</rt></ruby>り、<ruby>薬<rt>くすり</rt></ruby>のラベル、ケアプランについて<ruby>伺<rt>うかが</rt></ruby>います。</p>
+          <ul class="pilot-list">
+            <li>20–30 minutes, free, by video call or phone.</li>
+            <li>No patient or resident information needed.</li>
+            <li>If it fits, 1–2 organizations may be invited to a free 4-week pilot later. Nothing is decided in advance.</li>
+            <li>You can stop the conversation at any time.</li>
+          </ul>
+          <p class="micro">We are not affiliated with any government body, exam organization, or facility. This is an independent concept.</p>
+        </div>
+
+        <div class="form-card">
+          <h3>Request a pilot interview<span class="h3-ja" lang="ja">パイロットの相談</span></h3>
+          <p class="form-intro">Tell us a little about your organization. We will reply with a few times.<span class="ja" lang="ja">下のボタンからメールでご連絡ください。折り返し、候補日をお送りします。</span></p>
+
+          <p class="cta-link"><a class="btn cta-mailto" href="mailto:tolaria@naver.com?subject=Waitlist%3A%20CareKanji&body=Preferred%20language%3A%20%0AWhat%20I%20need%20help%20with%3A%20">Join the waitlist (email)</a></p>
+          <p class="privacy-mini">Please do not include patient or resident information in your email.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="waitlist">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">For care workers</p>
+        <h2>One email if a test version exists.</h2>
+        <p>This is a waitlist, not a job offer or a visa service. There is no product yet, and no date is promised. If nothing is built, you will not receive marketing emails.</p>
+        <p class="ja" lang="ja">これは<ruby>事前登録<rt>じぜんとうろく</rt></ruby>です。<ruby>仕事<rt>しごと</rt></ruby>の<ruby>紹介<rt>しょうかい</rt></ruby>やビザの<ruby>相談<rt>そうだん</rt></ruby>ではありません。まだ<ruby>製品<rt>せいひん</rt></ruby>はなく、できる<ruby>日<rt>ひ</rt></ruby>も決まっていません。</p>
+      </div>
+
+      <div class="form-card narrow">
+        <h3>Join the worker waitlist<span class="h3-ja" lang="ja">事前登録</span></h3>
+        <p class="form-intro">A test version, if it happens, will start in Japanese and English. Other languages need careful translation and review.</p>
+
+        <p class="cta-link"><a class="btn cta-mailto" href="mailto:tolaria@naver.com?subject=Waitlist%3A%20CareKanji&body=Preferred%20language%3A%20%0AWhat%20I%20need%20help%20with%3A%20">Join the waitlist (email)</a></p>
+        <p class="privacy-mini">We will not sell or share your email. Reply to any email to ask us to delete it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Straight answers</p>
+        <h2>Questions we should answer honestly.</h2>
+        <p class="ja" lang="ja">よくある<ruby>質問<rt>しつもん</rt></ruby>にお<ruby>答<rt>こた</rt></ruby>えします。</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is this available now?</summary>
+          <div class="answer">
+            <p>No. This is a concept page. There is no app, no account, and no content library yet. The waitlist exists to measure whether the idea is worth building.</p>
+            <p class="ja" lang="ja">いいえ。まだ<ruby>製品<rt>せいひん</rt></ruby>はありません。このページは、<ruby>作<rt>つく</rt></ruby>る<ruby>価値<rt>かち</rt></ruby>があるかを<ruby>確認<rt>かくにん</rt></ruby>するためのものです。</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is it free? How much will it cost?</summary>
+          <div class="answer">
+            <p>Pricing is not decided. We are not collecting payment, and there is no paid plan to buy. The 14-day validation is designed to cost 0 yen in cash; that does not tell us what a future product should cost.</p>
+            <p class="ja" lang="ja"><ruby>価格<rt>かかく</rt></ruby>はまだ<ruby>決<rt>き</rt></ruby>めていません。お<ruby>金<rt>かね</rt></ruby>は<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>りません。</p>
+          </div>
+        </details>
+        <details>
+          <summary>Are you an official service?</summary>
+          <div class="answer">
+            <p>No. This is an independent concept. It is not affiliated with, endorsed by, or connected to the Ministry of Health, Labour and Welfare, the Immigration Services Agency, SSSC (社会福祉振興・試験センター), any care facility, or any 登録支援機関.</p>
+            <p class="ja" lang="ja"><ruby>公式<rt>こうしき</rt></ruby>サービスではありません。<ruby>政府<rt>せいふ</rt></ruby>・<ruby>試験<rt>しけん</rt></ruby><ruby>機関<rt>きかん</rt></ruby>・<ruby>施設<rt>しせつ</rt></ruby>と<ruby>関係<rt>かんけい</rt></ruby>ありません。</p>
+          </div>
+        </details>
+        <details>
+          <summary>Will it help me pass the 介護福祉士 exam?</summary>
+          <div class="answer">
+            <p>We cannot promise that. This is not a past-exam question bank, and no exam result is guaranteed. The concept focuses on reading kanji in daily care records. If it helps with exam study, that would be a bonus, not a claim we can make yet.</p>
+            <p class="ja" lang="ja"><ruby>合格<rt>ごうかく</rt></ruby>は<ruby>保証<rt>ほしょう</rt></ruby>できません。これは<ruby>過去問<rt>かこもん</rt></ruby>の<ruby>問題集<rt>もんだいしゅう</rt></ruby>ではありません。</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is this medical or care advice?</summary>
+          <div class="answer">
+            <p>No. This is language-learning content about words, not medical, nursing, or care instructions. If you are unsure about a resident’s condition or a procedure, follow your facility’s rules and ask a qualified senior staff member. For an emergency, follow your facility’s emergency procedure and contact local emergency services.</p>
+            <p class="ja" lang="ja">これは<ruby>言葉<rt>ことば</rt></ruby>の<ruby>学習<rt>がくしゅう</rt></ruby>です。<ruby>医療<rt>いりょう</rt></ruby>や<ruby>介護<rt>かいご</rt></ruby>の<ruby>指示<rt>しじ</rt></ruby>ではありません。わからないときは、<ruby>施設<rt>しせつ</rt></ruby>の<ruby>手順<rt>てじゅん</rt></ruby>に<ruby>従<rt>したが</rt></ruby>ってください。</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens to my data?</summary>
+          <div class="answer">
+            <p>The email waitlist uses your email address, your role, your first language, and an optional message. Please do not include patient or resident information. Your details are used only to contact you about this concept. Reply to any email to ask us to delete them.</p>
+            <p class="ja" lang="ja">メールアドレス、<ruby>立場<rt>たちば</rt></ruby>、<ruby>言語<rt>げんご</rt></ruby>だけを<ruby>聞<rt>き</rt></ruby>きます。<ruby>患者<rt>かんじゃ</rt></ruby>さんの<ruby>情報<rt>じょうほう</rt></ruby>は<ruby>書<rt>か</rt></ruby>かないでください。</p>
+          </div>
+        </details>
+        <details>
+          <summary>Why only English and Japanese?</summary>
+          <div class="answer">
+            <p>Many care workers in Japan speak Vietnamese, Indonesian, Malay, Filipino, or Nepali. We know English and Japanese alone are not enough. This first page uses English and easy Japanese for validation; other languages would need native reviewers and care-specific checks before launch.</p>
+            <p class="ja" lang="ja">ベトナム<ruby>語<rt>ご</rt></ruby>・インドネシア<ruby>語<rt>ご</rt></ruby>・マレー<ruby>語<rt>ご</rt></ruby>・フィリピン<ruby>語<rt>ご</rt></ruby>・ネパール<ruby>語<rt>ご</rt></ruby>を<ruby>使<rt>つか</rt></ruby>う<ruby>方<rt>かた</rt></ruby>もいます。このページはまず<ruby>英語<rt>えいご</rt></ruby>とやさしい<ruby>日本語<rt>にほんご</rt></ruby>だけです。</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you have testimonials or user numbers?</summary>
+          <div class="answer">
+            <p>No. There is no product, so there are no users and no testimonials. We will not invent them. If real quotes are added later, they will be attributed, used with permission, and shown without edited claims.</p>
+            <p class="ja" lang="ja"><ruby>製品<rt>せいひん</rt></ruby>がないので、ユーザーも<ruby>声<rt>こえ</rt></ruby>もありません。うその<ruby>声<rt>こえ</rt></ruby>は<ruby>作<rt>つく</rt></ruby>りません。</p>
+          </div>
+        </details>
+        <details>
+          <summary>When will it launch?</summary>
+          <div class="answer">
+            <p>No date is set. Development starts only if the validation thresholds are met: 25 valid worker waitlist signups, 3 B2B inquiries with at least one written pilot intent, 5 completed interviews with the right pain signal, and a committed care/Japanese reviewer. If those are not met, we will not pretend the product is coming.</p>
+            <p class="ja" lang="ja">できる<ruby>日<rt>ひ</rt></ruby>はまだ<ruby>決<rt>き</rt></ruby>まっていません。<ruby>必要<rt>ひつよう</rt></ruby>な<ruby>条件<rt>じょうけん</rt></ruby>を<ruby>満<rt>み</rt></ruby>たさないときは、<ruby>作<rt>つく</rt></ruby>らない<ruby>決定<rt>けってい</rt></ruby>をすることもあります。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand"><span class="brand-mark" aria-hidden="true">漢</span> Care Kanji <span style="font-weight:400;color:#a9bbb2">— working title</span></div>
+    <p class="footer-legal"><strong>This page describes a concept, not a released product.</strong> It is independent and is not affiliated with, endorsed by, or connected to the Ministry of Health, Labour and Welfare, the Immigration Services Agency, SSSC (社会福祉振興・試験センター), any care facility, or any 登録支援機関. Sample readings and meanings are for illustration and are pending review by a qualified care professional. Nothing here is medical, nursing, legal, visa, or exam advice, and no exam result, employment, or visa outcome is guaranteed. The waitlist and pilot inquiries are handled by email; this page does not collect or transmit any data. A privacy policy and contact details will be published before any pilot begins.</p>
+    <p class="footer-legal" lang="ja">このページは<ruby>製品<rt>せいひん</rt></ruby>の<ruby>紹介<rt>しょうかい</rt></ruby>ではありません。まだ<ruby>開発<rt>かいはつ</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>の<ruby>考<rt>かんが</rt></ruby>えです。<ruby>政府<rt>せいふ</rt></ruby>・<ruby>試験<rt>しけん</rt></ruby><ruby>機関<rt>きかん</rt></ruby>・<ruby>施設<rt>しせつ</rt></ruby>と<ruby>関係<rt>かんけい</rt></ruby>ありません。サンプルの<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>と<ruby>意味<rt>いみ</rt></ruby>は、<ruby>専門家<rt>せんもんか</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby><ruby>前<rt>まえ</rt></ruby>です。<ruby>医療<rt>いりょう</rt></ruby>・<ruby>介護<rt>かいご</rt></ruby>・<ruby>法律<rt>ほうりつ</rt></ruby>・ビザ・<ruby>試験<rt>しけん</rt></ruby>のアドバイスではありません。</p>
+    <div class="footer-meta">
+      <span>© 2026 Care Kanji (working title)</span>
+      <span>Static page · no analytics or third-party scripts</span>
+      <a href="#samples">Sample cards</a>
+      <a href="#pilot">Pilot interview</a>
+      <a href="#waitlist">Waitlist</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
