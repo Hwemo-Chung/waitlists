@@ -1,0 +1,1722 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>영주 신청 전 셀프 점검 키트 | 고도인재 포인트 무료 계산</title>
+<meta name="description" content="일본 회사에 다니는 한국인 IT 엔지니어를 위한 영주 신청 전 셀프 점검 키트. 고도인재 포인트를 신청 시점·1년 전·3년 전 시점으로 계산하는 무료 데모. 2027-04-01 이후 적용되는 개정 가이드라인 안내 포함. 참고용이며 공식 확인이 필요합니다.">
+<style>
+  :root{
+    --paper:#f6f1e6;
+    --paper-2:#ece3d2;
+    --ink:#17201b;
+    --muted:#59635c;
+    --forest:#153c2f;
+    --forest-2:#1d4a3b;
+    --amber:#f0c04b;
+    --amber-2:#e4ae2f;
+    --line:#d5cbb8;
+    --white:#fffdf7;
+    --red:#b34a38;
+    --max:1120px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  section[id]{scroll-margin-top:24px}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    word-break:keep-all;
+  }
+  h1,h2,h3,p,ul,ol,dl,dd{margin-top:0}
+  h1,h2,h3{line-height:1.18;letter-spacing:-.04em;font-weight:900}
+  a{color:inherit}
+  button,input,select{font:inherit}
+  ::selection{background:var(--amber);color:var(--ink)}
+  :focus-visible{outline:3px solid #2f6f57;outline-offset:3px}
+  .hero :focus-visible,.price-section :focus-visible,.site-footer :focus-visible{outline-color:var(--amber)}
+  .wrap{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+  .sr-only{
+    position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+  }
+  .skip-link{
+    position:absolute;left:16px;top:-80px;z-index:100;
+    background:var(--amber);color:var(--ink);padding:10px 16px;
+    border:2px solid var(--ink);border-radius:8px;font-weight:800;text-decoration:none;
+  }
+  .skip-link:focus{top:12px}
+
+  .site-header{background:rgba(246,241,230,.96);border-bottom:1px solid var(--line)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+  .brand-mark{
+    width:36px;height:36px;flex:0 0 36px;display:grid;place-items:center;
+    background:var(--amber);border:2px solid var(--ink);border-radius:6px;
+    box-shadow:3px 3px 0 var(--ink);font-weight:900;font-size:14px;transform:rotate(-3deg);
+  }
+  .brand-text{font-weight:900;letter-spacing:-.035em;font-size:15px;line-height:1.25}
+  .brand-text small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em;font-weight:800;margin-top:2px}
+  .site-nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:800}
+  .site-nav a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
+  .site-nav a:hover{border-bottom-color:var(--ink)}
+  .site-nav .nav-cta{
+    background:var(--ink);color:var(--white);border:2px solid var(--ink);
+    border-radius:999px;padding:9px 16px;
+  }
+  .site-nav .nav-cta:hover{background:var(--forest);border-bottom-color:var(--forest)}
+
+  .hero{
+    position:relative;overflow:hidden;background:var(--forest);color:var(--white);
+    padding:76px 0 70px;
+  }
+  .hero::before{
+    content:"";position:absolute;right:-150px;top:-190px;width:540px;height:540px;
+    border:1px solid rgba(255,255,255,.14);border-radius:50%;
+    box-shadow:0 0 0 70px rgba(255,255,255,.035),0 0 0 150px rgba(255,255,255,.02);
+  }
+  .hero::after{
+    content:"";position:absolute;left:-100px;bottom:-170px;width:360px;height:360px;
+    border:1px solid rgba(240,192,75,.14);border-radius:50%;
+  }
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    color:#c4d9cd;font-size:12px;font-weight:900;letter-spacing:.1em;
+    margin:0 0 18px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--amber)}
+  .hero h1{
+    font-size:clamp(2.5rem,5.2vw,4.55rem);
+    line-height:1.09;letter-spacing:-.06em;margin:0 0 24px;
+  }
+  .hero h1 .hero-line{display:block;color:var(--amber)}
+  .mobile-break{display:none}
+  .hero-lead{max-width:620px;color:#dce8e0;font-size:18px;line-height:1.72;margin:0 0 28px}
+  .hero-lead strong{color:var(--white);font-weight:800}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:50px;padding:13px 22px;border-radius:999px;
+    border:2px solid var(--ink);background:var(--white);color:var(--ink);
+    font-weight:900;font-size:15px;line-height:1.2;text-decoration:none;
+    box-shadow:4px 4px 0 rgba(23,32,27,.28);
+    transition:transform .16s ease,box-shadow .16s ease,background .16s ease;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(23,32,27,.3)}
+  .btn:active{transform:translate(1px,1px);box-shadow:2px 2px 0 rgba(23,32,27,.3)}
+  .btn-primary{background:var(--amber);border-color:var(--ink);color:var(--ink)}
+  .btn-primary:hover{background:#f6cc68}
+  .btn-light{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55);box-shadow:none}
+  .btn-light:hover{background:var(--white);color:var(--forest);box-shadow:none;transform:none}
+  .btn-ghost{background:transparent;box-shadow:none;border-color:#a69c89}
+  .btn-ghost:hover{background:#fff;box-shadow:none;transform:none}
+  .micro{font-size:12.5px;color:#b9c9bf;margin:0;line-height:1.6}
+
+  .ticket{
+    position:relative;background:var(--white);color:var(--ink);
+    border:2px solid var(--ink);border-radius:22px;padding:26px 26px 22px;
+    box-shadow:10px 10px 0 rgba(240,192,75,.92);transform:rotate(1.2deg);
+  }
+  .ticket-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+  .ticket-top span:first-child{font-size:12px;font-weight:900;letter-spacing:.06em;color:var(--red)}
+  .ticket-tag{
+    font-size:10.5px;font-weight:900;letter-spacing:.08em;color:var(--forest);
+    border:1px solid #b9c9bf;border-radius:999px;padding:4px 9px;background:#edf5ef;
+  }
+  .ticket-label{font-size:13px;font-weight:800;color:var(--muted);margin:0 0 2px}
+  .ticket-price{font-size:clamp(4.2rem,8vw,6.2rem);line-height:.95;font-weight:900;letter-spacing:-.075em;margin:0 0 6px}
+  .ticket-price .unit{font-size:.32em;letter-spacing:-.02em;margin-left:6px;font-weight:900}
+  .ticket-sub{font-size:12.5px;color:var(--muted);margin:0 0 18px}
+  .ticket-rule{border-top:1px dashed #b9af9d;margin:0 0 14px}
+  .ticket-facts{display:grid;gap:9px;margin:0 0 18px}
+  .ticket-facts div{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+  .ticket-facts dt{font-size:12.5px;color:var(--muted)}
+  .ticket-facts dd{margin:0;font-size:14px;font-weight:900;white-space:nowrap}
+  .ticket-source{
+    display:inline-block;font-size:11.5px;color:var(--muted);
+    text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere;
+  }
+  .ticket-source:hover{color:var(--ink)}
+
+  .section{padding:78px 0}
+  .section-paper{background:var(--paper)}
+  .section-dark{background:#1a352c;color:var(--white)}
+  .section-tint{background:var(--paper-2)}
+  .kicker{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:11.5px;font-weight:900;letter-spacing:.13em;
+    color:var(--red);text-transform:uppercase;margin:0 0 14px;
+  }
+  .kicker::before{content:"";width:24px;height:2px;background:currentColor}
+  .section-dark .kicker{color:var(--amber)}
+  .section h2{font-size:clamp(1.85rem,3.6vw,2.9rem);line-height:1.16;margin:0 0 18px;max-width:840px}
+  .lede{font-size:17.5px;line-height:1.75;color:var(--muted);max-width:780px;margin:0 0 34px}
+  .section-dark .lede{color:#c9d8cf}
+  .source-link{
+    color:inherit;font-size:12px;line-height:1.5;opacity:.76;
+    text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere;
+  }
+  .source-link:hover{opacity:1}
+  .section-dark .source-link{color:#c9d8cf}
+  .fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .fact-card{
+    background:var(--white);border:2px solid var(--ink);border-radius:16px;
+    padding:22px;box-shadow:4px 4px 0 rgba(23,32,27,.14);
+    display:flex;flex-direction:column;min-height:210px;
+  }
+  .fact-value{font-size:clamp(1.7rem,3vw,2.35rem);font-weight:900;line-height:1.05;letter-spacing:-.05em;margin:0 0 10px}
+  .fact-value .small-unit{font-size:.5em;letter-spacing:-.02em}
+  .fact-card p{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 16px}
+  .fact-card .source-link{margin-top:auto}
+  .fee-note{
+    margin:26px 0 0;padding:18px 20px;border-left:4px solid var(--amber);
+    background:rgba(240,192,75,.12);font-size:14px;line-height:1.65;
+  }
+  .fee-note strong{font-weight:900}
+
+  .guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 18px}
+  .guide-card{
+    background:var(--white);border:2px solid var(--ink);border-radius:16px;
+    padding:22px;box-shadow:4px 4px 0 rgba(23,32,27,.13);
+  }
+  .guide-tag{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--red);margin:0 0 8px}
+  .guide-card h3{font-size:19px;line-height:1.35;margin:0 0 8px}
+  .guide-card p{font-size:13.5px;line-height:1.72;color:var(--muted);margin:0}
+  .guide-note{
+    border:1px solid var(--line);background:#fbf6ea;border-radius:12px;
+    padding:18px 20px;margin:0 0 16px;
+  }
+  .guide-note h3{font-size:15px;margin:0 0 8px}
+  .guide-note ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.75;color:var(--muted)}
+  .guide-note li{margin-bottom:4px}
+  .guide-note li:last-child{margin-bottom:0}
+  .guide-source{font-size:12px;line-height:1.7;color:var(--muted);margin:14px 0 0}
+  .guide-source a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+
+  .reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .reason-card{
+    background:var(--forest-2);border:1px solid rgba(255,255,255,.16);
+    border-radius:16px;padding:24px;min-height:210px;
+  }
+  .reason-num{font-size:11px;font-weight:900;letter-spacing:.14em;color:var(--amber);margin:0 0 14px}
+  .reason-card h3{font-size:19px;margin:0 0 10px;line-height:1.35}
+  .reason-card p{font-size:14px;line-height:1.72;color:#d3dfd7;margin:0 0 14px}
+  .reason-card .source-link{font-size:11.5px}
+
+  .kit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:10px 0 24px}
+  .kit-card{
+    background:var(--white);border:2px solid var(--ink);border-radius:18px;
+    padding:26px;box-shadow:5px 5px 0 rgba(23,32,27,.13);
+  }
+  .kit-card .kit-num{
+    display:inline-grid;place-items:center;width:32px;height:32px;
+    border:2px solid var(--ink);border-radius:50%;background:var(--amber);
+    font-size:13px;font-weight:900;margin-bottom:14px;
+  }
+  .kit-card h3{font-size:20px;margin:0 0 8px}
+  .kit-card p{font-size:14.5px;color:var(--muted);line-height:1.7;margin:0}
+  .scope-note{
+    border:1px solid var(--line);background:#fbf6ea;border-radius:12px;
+    padding:16px 18px;font-size:13.5px;color:var(--muted);margin:0;
+  }
+  .scope-note strong{color:var(--ink)}
+
+  .guideline-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;margin:24px 0 18px}
+  .guideline-box{
+    background:var(--white);border:2px solid var(--ink);border-radius:18px;
+    padding:24px;box-shadow:5px 5px 0 rgba(23,32,27,.13);
+  }
+  .guideline-box h3{font-size:19px;margin:0 0 10px}
+  .guideline-box p{font-size:13.5px;line-height:1.7;color:var(--muted);margin:0 0 12px}
+  .guideline-list{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7;color:var(--muted)}
+  .guideline-list li{margin-bottom:6px}
+  .guideline-callout{
+    background:var(--amber);border:2px solid var(--ink);border-radius:18px;
+    padding:24px;box-shadow:5px 5px 0 rgba(23,32,27,.13);
+  }
+  .guideline-callout h3{font-size:17px;margin:0 0 8px}
+  .guideline-callout p{font-size:13px;line-height:1.68;color:#3f330d;margin:0 0 10px}
+  .guideline-callout p:last-child{margin-bottom:0}
+  .guideline-callout strong{font-weight:900}
+
+  .inquiry-strip{
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+    border:2px solid var(--ink);background:var(--amber);border-radius:18px;
+    padding:24px 26px;margin-top:28px;box-shadow:6px 6px 0 rgba(23,32,27,.16);
+  }
+  .inquiry-strip p{margin:0;font-size:14px;line-height:1.6}
+  .inquiry-strip strong{font-weight:900}
+  .inquiry-strip .btn{flex:0 0 auto;background:var(--ink);color:var(--white);border-color:var(--ink);box-shadow:none;min-height:46px;padding:11px 18px;font-size:14px}
+  .inquiry-strip .btn:hover{background:var(--forest);transform:none;box-shadow:none}
+
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:38px}
+    .ticket{max-width:540px;transform:none}
+    .fact-grid{grid-template-columns:1fr 1fr}
+    .fact-card{min-height:0}
+  }
+  @media (max-width:720px){
+    .wrap{width:min(calc(100% - 28px),var(--max))}
+    .header-inner{flex-wrap:wrap;gap:12px;padding:13px 0}
+    .brand-text small{display:none}
+    .site-nav{width:100%;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:11px;font-size:12.5px}
+    .site-nav .nav-cta{padding:7px 12px}
+    .hero{padding:52px 0 48px}
+    .hero-lead{font-size:16px}
+    .btn-row{flex-direction:column}
+    .btn{width:100%}
+    .section{padding:58px 0}
+    .lede{font-size:16px}
+    .reason-grid,.kit-grid{grid-template-columns:1fr}
+    .inquiry-strip{flex-direction:column;align-items:flex-start;padding:20px}
+    .inquiry-strip .btn{width:100%}
+  }
+  @media (max-width:520px){
+    .fact-grid{grid-template-columns:1fr}
+    .score-row{grid-template-columns:1fr}
+    .score-summary{grid-template-columns:1fr}
+    .ticket{padding:22px}
+    .ticket-top{align-items:flex-start}
+    .ticket-price{font-size:4.6rem}
+    .hero h1{font-size:2.35rem}
+    .mobile-break{display:inline}
+    .brand-text{font-size:13.5px}
+    .brand-mark{width:32px;height:32px;flex-basis:32px}
+  }
+  .demo-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:8px}
+  .demo-head h2{margin-bottom:0}
+  .demo-badge{
+    flex:0 0 auto;background:var(--ink);color:var(--amber);
+    border:2px solid var(--ink);border-radius:999px;padding:8px 14px;
+    font-size:11.5px;font-weight:900;letter-spacing:.04em;white-space:nowrap;
+  }
+  .demo-card{
+    background:var(--white);border:2px solid var(--ink);border-radius:22px;
+    box-shadow:10px 10px 0 var(--ink);overflow:hidden;margin-top:26px;
+  }
+  .demo-card-head{
+    background:var(--forest);color:var(--white);padding:18px 24px;
+    border-bottom:2px solid var(--ink);display:flex;align-items:center;
+    justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .demo-card-head strong{font-size:15px;letter-spacing:-.02em}
+  .demo-card-head span{font-size:11.5px;color:#c4d9cd}
+  .demo-form{padding:24px}
+  .form-lead{font-size:13.5px;color:var(--muted);margin:0 0 18px;line-height:1.65}
+  .form-lead strong{color:var(--ink)}
+  .score-head{
+    display:grid;grid-template-columns:1.05fr repeat(3,minmax(0,1fr));
+    gap:12px;padding:0 0 8px;border-bottom:1px solid var(--line);
+    font-size:10.5px;font-weight:900;letter-spacing:.08em;color:var(--muted);
+  }
+  .score-row{
+    display:grid;grid-template-columns:1.05fr repeat(3,minmax(0,1fr));
+    gap:12px;align-items:center;padding:15px 0;border-top:1px solid var(--line);
+  }
+  .score-row:first-of-type,.score-head + .score-row{border-top:0}
+  .score-label strong{display:block;font-size:14px;font-weight:900;line-height:1.4}
+  .score-label small{display:block;font-size:11.5px;line-height:1.55;color:var(--muted);margin-top:3px}
+  .score-cell{display:block;min-width:0}
+  .cell-tag{display:none;font-size:10.5px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.02em}
+  .score-cell select{
+    width:100%;min-height:46px;padding:9px 11px;
+    border:1.5px solid #b8ae9c;border-radius:10px;background:#fff;
+    color:var(--ink);font-size:13.5px;line-height:1.35;
+  }
+  .score-cell select:focus{border-color:var(--forest);outline:3px solid rgba(47,111,87,.3);outline-offset:1px}
+  .check-cell{
+    display:flex;align-items:center;gap:8px;min-height:46px;padding:9px 11px;
+    border:1.5px solid #b8ae9c;border-radius:10px;background:#fff;
+    font-size:12.5px;line-height:1.35;cursor:pointer;
+  }
+  .check-cell input{width:18px;height:18px;flex:0 0 18px;margin:0;accent-color:var(--forest);cursor:pointer}
+  .check-cell:focus-within{border-color:var(--forest);outline:3px solid rgba(47,111,87,.3);outline-offset:1px}
+  .form-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding-top:20px;border-top:1px dashed #c8bfae}
+  .form-actions .btn{min-height:46px;padding:11px 20px;font-size:14px}
+  .form-error{
+    margin:18px 0 0;padding:14px 16px;border:1.5px solid var(--red);
+    border-radius:10px;background:#fceeea;color:#7f2e20;
+    font-size:13px;font-weight:700;line-height:1.6;
+  }
+  .form-error[hidden]{display:none}
+  .result{
+    margin:24px 0 0;padding:24px;border:2px solid var(--ink);
+    border-radius:18px;background:#f8f2e5;
+  }
+  .result[hidden]{display:none!important}
+  .verdict{
+    background:var(--forest);color:var(--white);border-radius:14px;
+    padding:20px;margin-bottom:18px;border:1px solid var(--forest);
+  }
+  .verdict .verdict-label{font-size:10.5px;font-weight:900;letter-spacing:.12em;color:var(--amber);margin:0 0 6px}
+  .verdict h3{font-size:20px;line-height:1.4;margin:0 0 8px;letter-spacing:-.025em}
+  .verdict p{font-size:13.5px;line-height:1.7;color:#d5e2d9;margin:0}
+  .route-list{display:grid;gap:9px;margin-top:14px}
+  .route-item{
+    border:1px solid rgba(255,255,255,.22);border-radius:10px;
+    padding:11px 13px;background:rgba(255,255,255,.06);
+  }
+  .route-item strong{display:block;font-size:13.5px;line-height:1.45;color:var(--white)}
+  .route-item strong .route-status{color:var(--amber);margin-left:6px}
+  .route-item strong .route-status.miss{color:#f0b7aa}
+  .route-item span{display:block;font-size:12px;line-height:1.6;color:#c9d8cf;margin-top:2px}
+  .score-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+  .score-box{border:1.5px solid #c5bba8;border-radius:12px;background:#fff;padding:14px 16px}
+  .score-box span{display:block;font-size:11px;font-weight:800;color:var(--muted);margin-bottom:2px}
+  .score-box strong{font-size:30px;line-height:1.05;letter-spacing:-.05em;font-weight:900}
+  .score-box strong small{font-size:13px;letter-spacing:0;margin-left:2px}
+  .result-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border:1px solid #c5bba8;border-radius:10px;overflow:hidden}
+  .result-table caption{text-align:left;font-size:11.5px;font-weight:800;color:var(--muted);padding:0 0 6px}
+  .result-table th,.result-table td{padding:9px 10px;border-bottom:1px solid #e2d9c9;text-align:right;vertical-align:middle}
+  .result-table th:first-child,.result-table td:first-child{text-align:left}
+  .result-table thead th{background:#eee5d5;font-size:11px;color:#3d4a42;text-align:right}
+  .result-table thead th:first-child{text-align:left}
+  .result-table tbody tr:last-child th,.result-table tbody tr:last-child td{border-bottom:0}
+  .result-table .total-row th,.result-table .total-row td{background:var(--amber);font-weight:900;font-size:14px}
+  .result-notes{margin:14px 0 0;padding-left:18px;font-size:12px;line-height:1.7;color:var(--muted)}
+  .result-notes li{margin-bottom:4px}
+  .result-source{font-size:11.5px;margin:12px 0 0;line-height:1.65;color:var(--muted)}
+  .date-tool{margin-top:20px;padding-top:18px;border-top:1px dashed #c8bfae}
+  .date-tool h3{font-size:15px;margin:0 0 4px}
+  .date-tool > p{font-size:12px;color:var(--muted);margin:0 0 12px;line-height:1.65}
+  .date-row{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap}
+  .date-row .field{flex:1 1 220px}
+  .date-row label{display:block;font-size:11.5px;font-weight:800;margin-bottom:4px}
+  .date-row input{
+    width:100%;min-height:44px;padding:8px 11px;border:1.5px solid #b8ae9c;
+    border-radius:10px;background:#fff;color:var(--ink);font-size:13.5px;
+  }
+  .date-row .btn{min-height:44px;padding:9px 16px;font-size:13px;box-shadow:none}
+  .date-result{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .date-result[hidden]{display:none}
+  .date-chip{background:#fff;border:1px solid #c5bba8;border-radius:10px;padding:10px 12px}
+  .date-chip span{display:block;font-size:10.5px;color:var(--muted);font-weight:800;margin-bottom:2px}
+  .date-chip strong{font-size:15px;letter-spacing:-.02em}
+  .date-error{font-size:12px;color:var(--red);font-weight:800;margin:10px 0 0}
+  .date-error[hidden]{display:none}
+  .date-caveat{font-size:11px;color:var(--muted);margin:10px 0 0;line-height:1.6}
+  .demo-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+  .demo-note{background:rgba(255,253,247,.6);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .demo-note strong{display:block;font-size:12px;margin-bottom:2px}
+  .demo-note span{font-size:11.5px;color:var(--muted);line-height:1.55;display:block}
+  .noscript{margin-top:16px;padding:12px 14px;border:1.5px solid var(--red);border-radius:10px;background:#fceeea;color:#7f2e20;font-size:13px;font-weight:700}
+
+  .price-section{background:var(--forest);color:var(--white);padding:78px 0}
+  .price-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .price-card{
+    background:var(--amber);color:var(--ink);border:2px solid var(--ink);
+    border-radius:22px;padding:30px;box-shadow:12px 12px 0 rgba(0,0,0,.28);transform:rotate(-1deg);
+  }
+  .price-eyebrow{font-size:11.5px;font-weight:900;letter-spacing:.12em;margin:0 0 8px;color:#4d3a08}
+  .price-amount{font-size:clamp(3.8rem,7vw,5.8rem);line-height:.95;font-weight:900;letter-spacing:-.07em;margin:0 0 10px}
+  .price-amount .unit{font-size:.3em;letter-spacing:-.01em;margin-left:4px}
+  .price-note{font-size:14px;font-weight:800;line-height:1.6;margin:0 0 14px}
+  .price-note span{display:block;font-size:12px;font-weight:600;color:#5e4b1a;margin-top:3px}
+  .price-includes{border-top:1px dashed rgba(23,32,27,.45);padding-top:12px;margin:0;font-size:12.5px;line-height:1.7}
+  .price-copy h2{max-width:580px}
+  .price-copy p{color:#c9d8cf;font-size:15px;line-height:1.75}
+  .price-copy strong{color:var(--white)}
+  .threshold-box{border:1px solid rgba(255,255,255,.24);border-radius:12px;padding:14px 16px;margin:18px 0;background:rgba(255,255,255,.04);font-size:13px;line-height:1.65;color:#d5e2d9}
+  .threshold-box strong{color:var(--amber)}
+  .price-copy .btn{box-shadow:4px 4px 0 rgba(0,0,0,.25)}
+  .price-copy .micro{color:#a9bdb1;margin-top:12px}
+
+  .limits-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+  .limit-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+  .limit-list li{display:grid;grid-template-columns:36px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .limit-num{font-size:11px;font-weight:900;color:var(--red);letter-spacing:.05em;padding-top:4px}
+  .limit-list h3{font-size:16px;margin:0 0 4px}
+  .limit-list p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}
+  .limit-list .source-link{font-size:11px}
+
+  .faq-list{max-width:860px;border-top:2px solid var(--ink);margin-top:8px}
+  .faq-list details{border-bottom:1px solid var(--line);padding:16px 0}
+  .faq-list summary{
+    display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+    cursor:pointer;font-weight:900;font-size:15px;line-height:1.5;list-style:none;
+  }
+  .faq-list summary::-webkit-details-marker{display:none}
+  .faq-list summary::after{content:"+";font-size:22px;line-height:1;font-weight:500;flex:0 0 auto;color:var(--muted)}
+  .faq-list details[open] summary::after{content:"−"}
+  .faq-list details p{font-size:13.5px;line-height:1.75;color:var(--muted);margin:10px 0 0;max-width:760px}
+  .faq-list details p a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+
+  .final-cta{background:var(--amber);padding:56px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .final-inner{display:flex;align-items:center;justify-content:space-between;gap:32px}
+  .final-inner h2{font-size:clamp(1.8rem,3.5vw,2.7rem);margin:0 0 8px;max-width:720px}
+  .final-inner p{font-size:14px;line-height:1.7;margin:0;color:#4f400f;max-width:680px}
+  .final-inner .btn{flex:0 0 auto;background:var(--ink);color:var(--white);border-color:var(--ink);box-shadow:5px 5px 0 rgba(255,255,255,.4)}
+  .final-inner .btn:hover{background:var(--forest);box-shadow:7px 7px 0 rgba(255,255,255,.4)}
+
+  .site-footer{background:#111a16;color:#dfe8e1;padding:46px 0 34px;font-size:13px}
+  .footer-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px}
+  .footer-brand{font-weight:900;font-size:15px;letter-spacing:-.02em;margin:0 0 8px;color:var(--white)}
+  .footer-p{color:#9fb0a6;line-height:1.75;margin:0 0 12px;max-width:600px}
+  .footer-p a{color:#dfe8e1;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+  .footer-meta{border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#81968a;font-size:11.5px;line-height:1.7}
+
+  @media (max-width:980px){
+    .demo-head{align-items:flex-start;flex-direction:column;gap:12px}
+    .price-grid,.limits-grid,.guideline-grid{grid-template-columns:1fr;gap:32px}
+    .price-card{max-width:520px;transform:none}
+    .final-inner{flex-direction:column;align-items:flex-start;gap:22px}
+    .final-inner .btn{width:100%}
+    .footer-grid{grid-template-columns:1fr;gap:24px}
+  }
+  @media (max-width:720px){
+    .demo-card{box-shadow:6px 6px 0 var(--ink)}
+    .demo-form{padding:18px}
+    .score-head{display:none}
+    .score-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:16px 0}
+    .score-label{grid-column:1/-1}
+    .cell-tag{display:block;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .score-cell select{font-size:11.5px;padding:7px 6px;min-height:48px}
+    .check-cell{flex-wrap:wrap;padding:7px 6px;min-height:48px;gap:5px;font-size:11px}
+    .check-cell .cell-tag{flex:0 0 100%}
+    .check-cell input{width:16px;height:16px;flex-basis:16px}
+    .score-summary{grid-template-columns:repeat(3,1fr);gap:6px}
+    .score-box{padding:10px 8px}
+    .score-box strong{font-size:24px}
+    .score-box span{font-size:9.5px}
+    .guideline-grid{grid-template-columns:1fr}
+    .guide-grid{grid-template-columns:1fr}
+    .demo-notes{grid-template-columns:1fr}
+    .date-result{grid-template-columns:1fr}
+    .result{padding:16px}
+    .form-actions{flex-direction:column}
+    .form-actions .btn{width:100%}
+    .price-section{padding:58px 0}
+    .price-card{padding:24px}
+    .footer-meta{flex-direction:column;gap:8px}
+    .verdict h3{font-size:18px}
+  }
+  @media (max-width:520px){
+    .result-table th,.result-table td{padding:8px 6px;font-size:11.5px}
+    .result-table .total-row th,.result-table .total-row td{font-size:12.5px}
+    .score-box strong{font-size:26px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="영주 신청 전 셀프 점검 키트, 맨 위로">
+      <span class="brand-mark" aria-hidden="true">영</span>
+      <span class="brand-text">영주 신청 전 셀프 점검 키트<small>고도인재 포인트 경로</small></span>
+    </a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#demo">무료 데모</a>
+      <a href="#guideline">2027 개정</a>
+      <a href="#price">예정가</a>
+      <a class="nav-cta" href="mailto:tolaria@naver.com?subject=%EC%98%81%EC%A3%BC%20%EC%85%80%ED%94%84%20%EC%A0%90%EA%B2%80%20%ED%82%A4%ED%8A%B8%20%EB%AC%B8%EC%9D%98">이메일 문의</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">일본 회사에 다니는 한국인 IT 엔지니어 · 기술·인문지식·국제업무</p>
+        <h1>영주 신청, 20만 엔<br class="mobile-break"> 내기 전에<span class="hero-line">내 점수와 날짜부터.</span></h1>
+        <p class="hero-lead">
+          2026년 10월 1일부터 영주 허가 수수료가 <strong>20만 엔</strong>이 되었습니다.
+          이 키트는 신청 전에 고도인재 포인트를 <strong>신청 시점·1년 전·3년 전 시점</strong>으로 나눠 계산하고,
+          <strong>70점 3년·80점 1년</strong> 경로의 재류기간과 납부 증빙을 정리하는 한국어 셀프 점검 도구입니다.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:tolaria@naver.com?subject=%EC%98%81%EC%A3%BC%20%EC%85%80%ED%94%84%20%EC%A0%90%EA%B2%80%20%ED%82%A4%ED%8A%B8%20%EB%AC%B8%EC%9D%98">키트 문의하기</a>
+          <a class="btn btn-light" href="#demo">무료 데모 먼저 해보기</a>
+        </div>
+        <p class="micro">결제 없음 · 데모는 브라우저 안에서만 계산 · 참고용</p>
+      </div>
+
+      <aside class="ticket" aria-label="영주 허가 수수료 요약">
+        <div class="ticket-top">
+          <span>2026.10.01부터</span>
+          <span class="ticket-tag">창구 수수료</span>
+        </div>
+        <p class="ticket-label">영주 허가 수수료</p>
+        <p class="ticket-price">20<span class="unit">만 엔</span></p>
+        <p class="ticket-sub">2026.09.30까지 접수분은 1만 엔</p>
+        <div class="ticket-rule"></div>
+        <dl class="ticket-facts">
+          <div><dt>가족 3명이면</dt><dd>60만 엔</dd></div>
+          <div><dt>납부 시점</dt><dd>허가 시</dd></div>
+          <div><dt>80점 경로</dt><dd>신청·1년 전 80점 이상</dd></div>
+          <div><dt>70점 경로</dt><dd>신청·3년 전 70점 이상</dd></div>
+        </dl>
+        <a class="ticket-source" href="https://eijyuken-help.com/eijyuken-tesuryo-neage-2026/" target="_blank" rel="noopener noreferrer">수수료 근거 확인하기 (새 창)</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section-paper" id="fee">
+    <div class="wrap">
+      <p class="kicker">왜 지금 문제인가</p>
+      <h2>수수료만 오른 것이 아닙니다. 준비 순서가 더 중요해졌습니다.</h2>
+      <p class="lede">
+        영주 허가 수수료는 2026년 10월 1일부터 20만 엔입니다. 2026년 9월 30일까지 접수분은 1만 엔이었고,
+        가족 3명이면 60만 엔이며 납부는 허가 시에 이루어집니다.
+        비용이 커진 만큼, 신청 전에 점수와 날짜와 증빙을 한 번에 확인하는 일이 필요합니다.
+      </p>
+
+      <div class="fact-grid">
+        <article class="fact-card">
+          <p class="fact-value">20<span class="small-unit">만 엔</span></p>
+          <p>2026-10-01부터 영주 허가 수수료(창구). 2026-09-30까지 접수분은 1만 엔입니다.</p>
+          <a class="source-link" href="https://eijyuken-help.com/eijyuken-tesuryo-neage-2026/" target="_blank" rel="noopener noreferrer">출처: eijyuken-help.com</a>
+        </article>
+        <article class="fact-card">
+          <p class="fact-value">60<span class="small-unit">만 엔</span></p>
+          <p>가족 3명이 신청하는 경우의 수수료입니다. 납부는 허가 시에 이루어집니다.</p>
+          <a class="source-link" href="https://eijyuken-help.com/eijyuken-tesuryo-neage-2026/" target="_blank" rel="noopener noreferrer">출처: eijyuken-help.com</a>
+        </article>
+        <article class="fact-card">
+          <p class="fact-value">70·80<span class="small-unit">점 경로</span></p>
+          <p>80점 경로는 신청 시점과 1년 전 시점 모두 80점 이상, 70점 경로는 신청 시점과 3년 전 시점 모두 70점 이상이어야 합니다.</p>
+          <a class="source-link" href="https://www.moj.go.jp/isa/10_00279.html" target="_blank" rel="noopener noreferrer">출처: 출입국재류관리청 가이드라인</a>
+        </article>
+        <article class="fact-card">
+          <p class="fact-value">1<span class="small-unit">년 재류</span></p>
+          <p>재류기간이 1년이면 ‘최장 재류기간’ 요건을 충족하지 못할 수 있습니다.</p>
+          <a class="source-link" href="https://korea.horiuchi-gyosei.com/%ec%9d%bc%eb%b3%b8%eb%b9%84%ec%9e%90-%ea%b3%a0%eb%8f%84%ec%9d%b8%ec%9e%ac%eb%a1%9c-%ec%98%81%ec%a3%bc%ea%b6%8c-%ec%8b%a0%ec%b2%ad/" target="_blank" rel="noopener noreferrer">출처: korea.horiuchi-gyosei.com</a>
+        </article>
+      </div>
+
+      <p class="fee-note">
+        <strong>확인해 두실 점:</strong> 잔업수당은 포인트 연봉에 포함되지 않고, 상여는 포함됩니다.
+        세금·연금·건강보험의 기한 내 납부도 핵심 심사 포인트입니다.
+        이 페이지의 계산은 참고용이며, 공식 계산표와 행정서사 확인이 필요합니다.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="why">
+    <div class="wrap">
+      <p class="kicker">왜 직접 확인해야 하나</p>
+      <h2>점수는 한 번만 보는 숫자가 아닙니다.</h2>
+      <p class="lede">
+        70점 경로는 신청 시점과 3년 전 시점 모두 70점, 80점 경로는 신청 시점과 1년 전 시점 모두 80점을 봅니다.
+        신청 전에 세 시점과 재류기간, 납부 이력을 함께 놓고 봐야 합니다.
+      </p>
+      <div class="reason-grid">
+        <article class="reason-card">
+          <p class="reason-num">01 / POINTS</p>
+          <h3>80점도 70점도 두 번 봅니다.</h3>
+          <p>80점 경로는 신청 시점과 1년 전 시점 모두 80점 이상, 70점 경로는 신청 시점과 3년 전 시점 모두 70점 이상이어야 합니다. 한쪽이 기준 미만이면 해당 경로의 두 시점 요건을 충족하지 못합니다.</p>
+          <a class="source-link" href="https://www.moj.go.jp/isa/10_00279.html" target="_blank" rel="noopener noreferrer">근거: 출입국재류관리청 가이드라인</a>
+        </article>
+        <article class="reason-card">
+          <p class="reason-num">02 / STATUS</p>
+          <h3>1년 재류기간의 함정.</h3>
+          <p>재류기간이 1년이면 ‘최장 재류기간’ 요건을 충족하지 못할 수 있습니다. 점수가 높아도 재류기간을 따로 확인해야 하는 이유입니다.</p>
+          <a class="source-link" href="https://korea.horiuchi-gyosei.com/%ec%9d%bc%eb%b3%b8%eb%b9%84%ec%9e%90-%ea%b3%a0%eb%8f%84%ec%9d%b8%ec%9e%ac%eb%a1%9c-%ec%98%81%ec%a3%bc%ea%b6%8c-%ec%8b%a0%ec%b2%ad/" target="_blank" rel="noopener noreferrer">근거: korea.horiuchi-gyosei.com</a>
+        </article>
+        <article class="reason-card">
+          <p class="reason-num">03 / PAYMENTS</p>
+          <h3>납부 이력도 심사 포인트입니다.</h3>
+          <p>세금·연금·건강보험의 기한 내 납부가 핵심 심사 포인트입니다. 점수와 별도로 증빙을 준비해야 합니다.</p>
+          <a class="source-link" href="https://eijyuken-help.com/eijyuken-tesuryo-neage-2026/" target="_blank" rel="noopener noreferrer">근거: eijyuken-help.com</a>
+        </article>
+        <article class="reason-card">
+          <p class="reason-num">04 / SCOPE</p>
+          <h3>서류 작성은 별도의 영역입니다.</h3>
+          <p>이 키트는 일반 정보와 자가 점검을 제공합니다. 개별 신청서·이유서 작성 대행은 하지 않습니다. 필요하면 행정서사에게 맡기셔야 합니다.</p>
+          <a class="source-link" href="https://www.hyotokyo.or.jp/news/proper/20138.html" target="_blank" rel="noopener noreferrer">근거: 行政書士法 第19条 안내</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-paper" id="guideline">
+    <div class="wrap">
+      <p class="kicker">2027-04-01 이후 신청분</p>
+      <h2>2027년 4월 1일 이후 신청분부터 개정 가이드라인이 적용됩니다.</h2>
+      <p class="lede">
+        2027년 4월 1일 이후 신청분부터 <strong>永住許可に関するガイドライン（令和8年10月1日改定）</strong>이 적용됩니다(第6).
+        고도인재 70점·80점 경로의 정의와 새로 명시된 고려 요소를 확인해 두세요.
+      </p>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <p class="guide-tag">70점 경로 · 第3の6</p>
+          <h3>70점 이상 + 3년</h3>
+          <p>
+            70점 이상이면서 (1) 고도인재외국인으로 3년 이상 계속 재류하거나,
+            (2) 신청일 3년 전 시점 기준으로 70점 이상이었고 3년 이상 계속 70점 이상으로 재류하는 경우입니다.
+          </p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-tag">80점 경로 · 第3の7</p>
+          <h3>80점 이상 + 1년</h3>
+          <p>
+            80점 이상이면서 (1) 고도인재외국인으로 1년 이상 재류하거나,
+            (2) 신청일 1년 전 시점 기준으로 80점 이상이었고 1년 이상 계속 80점 이상으로 재류하는 경우입니다.
+          </p>
+        </article>
+      </div>
+      <div class="guideline-grid">
+        <div class="guideline-box">
+          <h3>새로 명시된 고려 요소</h3>
+          <ul class="guideline-list">
+            <li>세대 연수입이 세대 인원별 일본인 세대 평균 수입을 넘는 수준인지</li>
+            <li>연금 수급 예상액</li>
+            <li>공조공과(세금·건강보험·연금) 적정 납부 — 과거 체납 처분 포함</li>
+            <li>일본어 B1 상당 — 단, 第3の6~8 고도인재는 본인 요건에서 제외</li>
+            <li>일본 제도·규칙 이해 확인</li>
+            <li>학령기 자녀 취학</li>
+          </ul>
+        </div>
+        <aside class="guideline-callout">
+          <h3>재류기간 ‘3년’의 취급</h3>
+          <p>재류기간 ‘3년’을 최장 재류기간으로 취급하는 것은 <strong>2027-03-31까지 신청분</strong>입니다. 이후에는 경과 조치가 제한적입니다.</p>
+          <p>이 데모에서는 신청 시점·1년 전·3년 전 세 시점을 함께 입력해 두 경로의 점수 조건을 확인합니다.</p>
+        </aside>
+      </div>
+      <div class="guide-note">
+        <h3>원칙 10년 경로</h3>
+        <ul>
+          <li>10년 이상 계속 재류하고, 그중 취로·거주 자격이 5년 이상이어야 합니다.</li>
+          <li>과거 10년 내 1회 반년 이상 또는 통산 2년 6개월 이상 출국한 경우 원칙적으로 소극 평가됩니다.</li>
+        </ul>
+      </div>
+      <p class="guide-source">
+        공식 안내: <a href="https://www.moj.go.jp/isa/10_00279.html" target="_blank" rel="noopener noreferrer">永住許可に関するガイドライン（令和8年10月1日改定） · 출입국재류관리청 (새 창)</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-paper" id="kit">
+    <div class="wrap">
+      <p class="kicker">한국어 셀프 점검 키트</p>
+      <h2>신청 전에, 내 위치를 정리하는 도구입니다.</h2>
+      <p class="lede">
+        점수 하나만 계산하고 끝내는 것이 아니라, 세 시점의 점수와 경로별 날짜, 납부 증빙, 전문가에게 맡길지의 판단을 한 흐름으로 정리합니다.
+      </p>
+      <div class="kit-grid">
+        <article class="kit-card">
+          <span class="kit-num" aria-hidden="true">1</span>
+          <h3>포인트 자가계산</h3>
+          <p>공식 계산표를 기준으로 신청 시점·1년 전·3년 전 시점의 점수를 각각 계산합니다. 세 숫자를 나란히 놓고 80점·70점 경로의 두 시점 요건을 확인합니다.</p>
+        </article>
+        <article class="kit-card">
+          <span class="kit-num" aria-hidden="true">2</span>
+          <h3>경로별 재류기간 날짜</h3>
+          <p>10년 경로, 70점 3년 경로, 80점 1년 경로를 구분해 재류기간 날짜를 계산합니다. 어느 경로의 날짜를 봐야 하는지 헷갈리지 않게 정리합니다.</p>
+        </article>
+        <article class="kit-card">
+          <span class="kit-num" aria-hidden="true">3</span>
+          <h3>납부 증빙 체크리스트</h3>
+          <p>주민세·연금·건강보험에 대해 무엇을 어디서 떼는지 정리합니다. 기한 내 납부 이력을 증빙으로 준비하는 순서를 확인합니다.</p>
+        </article>
+        <article class="kit-card">
+          <span class="kit-num" aria-hidden="true">4</span>
+          <h3>행정서사 판단표</h3>
+          <p>혼자 준비할 수 있는 부분과 전문가에게 맡겨야 하는 부분을 구분하는 판단표입니다. 맡길 경우 무엇을 준비해 가면 되는지도 정리합니다.</p>
+        </article>
+      </div>
+      <p class="scope-note">
+        <strong>범위를 분명히 합니다.</strong> 이 키트는 일반 정보와 자가 점검 도구입니다. 개별 신청서·이유서 작성 대행은 하지 않으며,
+        허가를 보장하지 않습니다. 법령상 자격이 필요한 서류 작성은 행정서사에게 맡기셔야 합니다.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="demo">
+    <div class="wrap">
+      <div class="demo-head">
+        <div>
+          <p class="kicker">무료 데모</p>
+          <h2>내 점수를 세 시점으로 계산해 보세요.</h2>
+        </div>
+        <p class="demo-badge">브라우저 안에서만 계산</p>
+      </div>
+      <p class="lede">
+        1호 로의 주요 8개 항목과 학력 가산 2개를 계산합니다. 같은 항목을 <strong>신청 시점·1년 전 시점·3년 전 시점</strong> 세 열로 입력해 주세요.
+        모든 계산은 이 브라우저 안에서만 이루어지고, 어디에도 전송되지 않습니다.
+      </p>
+
+      <div class="demo-card">
+        <div class="demo-card-head">
+          <strong>고도인재 포인트 간이 계산</strong>
+          <span>참고용 · 공식 계산표 확인 필요</span>
+        </div>
+        <form id="pointForm" class="demo-form" novalidate>
+          <p class="form-lead">
+            연봉은 <strong>상여 포함, 잔업수당 제외</strong> 금액으로 선택해 주세요.
+            복수 학위와 MBA·MOT 가산은 학력과 별도로 체크해 주세요.
+            나이와 연봉 구간이 맞지 않거나 N2와 일본 학위를 함께 고르면 계산을 멈추고 안내합니다.
+          </p>
+
+          <div class="score-head" aria-hidden="true">
+            <span>항목</span><span>신청 시점</span><span>1년 전 시점</span><span>3년 전 시점</span>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>연봉</strong><small>상여 포함 · 잔업수당 제외</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="salaryNow" aria-label="신청 시점 연봉" required>
+                <option value="">선택</option>
+                <option value="40">1,000만 엔 이상 · 40점</option>
+                <option value="35">900만 엔 이상 · 35점</option>
+                <option value="30">800만 엔 이상 · 30점</option>
+                <option value="25">700만 엔 이상 · 25점 (39세 이하)</option>
+                <option value="20">600만 엔 이상 · 20점 (39세 이하)</option>
+                <option value="15">500만 엔 이상 · 15점 (34세 이하)</option>
+                <option value="10">400만 엔 이상 · 10점 (29세 이하)</option>
+                <option value="0">300만 엔 이상 400만 엔 미만 · 0점</option>
+                <option value="under300">300만 엔 미만 · 대상 아님</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="salaryPast" aria-label="1년 전 시점 연봉" required>
+                <option value="">선택</option>
+                <option value="40">1,000만 엔 이상 · 40점</option>
+                <option value="35">900만 엔 이상 · 35점</option>
+                <option value="30">800만 엔 이상 · 30점</option>
+                <option value="25">700만 엔 이상 · 25점 (39세 이하)</option>
+                <option value="20">600만 엔 이상 · 20점 (39세 이하)</option>
+                <option value="15">500만 엔 이상 · 15점 (34세 이하)</option>
+                <option value="10">400만 엔 이상 · 10점 (29세 이하)</option>
+                <option value="0">300만 엔 이상 400만 엔 미만 · 0점</option>
+                <option value="under300">300만 엔 미만 · 대상 아님</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="salaryPast3" aria-label="3년 전 시점 연봉" required>
+                <option value="">선택</option>
+                <option value="40">1,000만 엔 이상 · 40점</option>
+                <option value="35">900만 엔 이상 · 35점</option>
+                <option value="30">800만 엔 이상 · 30점</option>
+                <option value="25">700만 엔 이상 · 25점 (39세 이하)</option>
+                <option value="20">600만 엔 이상 · 20점 (39세 이하)</option>
+                <option value="15">500만 엔 이상 · 15점 (34세 이하)</option>
+                <option value="10">400만 엔 이상 · 10점 (29세 이하)</option>
+                <option value="0">300만 엔 이상 400만 엔 미만 · 0점</option>
+                <option value="under300">300만 엔 미만 · 대상 아님</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>나이</strong><small>각 시점의 나이</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="ageNow" aria-label="신청 시점 나이" required>
+                <option value="">선택</option>
+                <option value="29">29세 이하 · 15점</option>
+                <option value="34">30~34세 · 10점</option>
+                <option value="39">35~39세 · 5점</option>
+                <option value="40">40세 이상 · 나이 점수 없음</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="agePast" aria-label="1년 전 시점 나이" required>
+                <option value="">선택</option>
+                <option value="29">29세 이하 · 15점</option>
+                <option value="34">30~34세 · 10점</option>
+                <option value="39">35~39세 · 5점</option>
+                <option value="40">40세 이상 · 나이 점수 없음</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="agePast3" aria-label="3년 전 시점 나이" required>
+                <option value="">선택</option>
+                <option value="29">29세 이하 · 15점</option>
+                <option value="34">30~34세 · 10점</option>
+                <option value="39">35~39세 · 5점</option>
+                <option value="40">40세 이상 · 나이 점수 없음</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>학력</strong><small>최종 학력 기준 · 복수 학위와 MBA·MOT는 아래에서 별도 체크</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="educationNow" aria-label="신청 시점 학력" required>
+                <option value="">선택</option>
+                <option value="doctor">박사 · 30점</option>
+                <option value="master">석사 · 20점</option>
+                <option value="bachelor">대학 졸업 · 10점</option>
+                <option value="none">해당 없음 · 0점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="educationPast" aria-label="1년 전 시점 학력" required>
+                <option value="">선택</option>
+                <option value="doctor">박사 · 30점</option>
+                <option value="master">석사 · 20점</option>
+                <option value="bachelor">대학 졸업 · 10점</option>
+                <option value="none">해당 없음 · 0점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="educationPast3" aria-label="3년 전 시점 학력" required>
+                <option value="">선택</option>
+                <option value="doctor">박사 · 30점</option>
+                <option value="master">석사 · 20점</option>
+                <option value="bachelor">대학 졸업 · 10점</option>
+                <option value="none">해당 없음 · 0점</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>복수 학위 가산</strong><small>학력 점수에 +5점</small></div>
+            <label class="score-cell check-cell"><span class="cell-tag">신청 시점</span>
+              <input type="checkbox" id="dualDegreeNow" aria-label="신청 시점 복수 학위 가산">
+              <span>해당 · +5점</span>
+            </label>
+            <label class="score-cell check-cell"><span class="cell-tag">1년 전 시점</span>
+              <input type="checkbox" id="dualDegreePast" aria-label="1년 전 시점 복수 학위 가산">
+              <span>해당 · +5점</span>
+            </label>
+            <label class="score-cell check-cell"><span class="cell-tag">3년 전 시점</span>
+              <input type="checkbox" id="dualDegreePast3" aria-label="3년 전 시점 복수 학위 가산">
+              <span>해당 · +5점</span>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>MBA·MOT 가산</strong><small>학력 점수에 +5점</small></div>
+            <label class="score-cell check-cell"><span class="cell-tag">신청 시점</span>
+              <input type="checkbox" id="mbaMotNow" aria-label="신청 시점 MBA 또는 MOT 가산">
+              <span>해당 · +5점</span>
+            </label>
+            <label class="score-cell check-cell"><span class="cell-tag">1년 전 시점</span>
+              <input type="checkbox" id="mbaMotPast" aria-label="1년 전 시점 MBA 또는 MOT 가산">
+              <span>해당 · +5점</span>
+            </label>
+            <label class="score-cell check-cell"><span class="cell-tag">3년 전 시점</span>
+              <input type="checkbox" id="mbaMotPast3" aria-label="3년 전 시점 MBA 또는 MOT 가산">
+              <span>해당 · +5점</span>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>직력</strong><small>관련 분야 경력</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="workNow" aria-label="신청 시점 직력" required>
+                <option value="">선택</option>
+                <option value="10">10년 이상 · 20점</option>
+                <option value="7">7년 이상 · 15점</option>
+                <option value="5">5년 이상 · 10점</option>
+                <option value="3">3년 이상 · 5점</option>
+                <option value="0">3년 미만 · 0점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="workPast" aria-label="1년 전 시점 직력" required>
+                <option value="">선택</option>
+                <option value="10">10년 이상 · 20점</option>
+                <option value="7">7년 이상 · 15점</option>
+                <option value="5">5년 이상 · 10점</option>
+                <option value="3">3년 이상 · 5점</option>
+                <option value="0">3년 미만 · 0점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="workPast3" aria-label="3년 전 시점 직력" required>
+                <option value="">선택</option>
+                <option value="10">10년 이상 · 20점</option>
+                <option value="7">7년 이상 · 15점</option>
+                <option value="5">5년 이상 · 10점</option>
+                <option value="3">3년 이상 · 5점</option>
+                <option value="0">3년 미만 · 0점</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>일본 고등교육기관 학위</strong><small>일본 대학 등의 학위</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="japanDegreeNow" aria-label="신청 시점 일본 고등교육기관 학위" required>
+                <option value="no">없음 · 0점</option>
+                <option value="yes">있음 · 10점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="japanDegreePast" aria-label="1년 전 시점 일본 고등교육기관 학위" required>
+                <option value="no">없음 · 0점</option>
+                <option value="yes">있음 · 10점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="japanDegreePast3" aria-label="3년 전 시점 일본 고등교육기관 학위" required>
+                <option value="no">없음 · 0점</option>
+                <option value="yes">있음 · 10점</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>JLPT·일본어</strong><small>N2는 일본 학위가 있으면 제외</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="jlptNow" aria-label="신청 시점 JLPT 또는 일본어 전공" required>
+                <option value="">선택</option>
+                <option value="n1">N1 또는 일본어 전공 · 15점</option>
+                <option value="n2">N2 · 10점</option>
+                <option value="none">해당 없음 · 0점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="jlptPast" aria-label="1년 전 시점 JLPT 또는 일본어 전공" required>
+                <option value="">선택</option>
+                <option value="n1">N1 또는 일본어 전공 · 15점</option>
+                <option value="n2">N2 · 10점</option>
+                <option value="none">해당 없음 · 0점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="jlptPast3" aria-label="3년 전 시점 JLPT 또는 일본어 전공" required>
+                <option value="">선택</option>
+                <option value="n1">N1 또는 일본어 전공 · 15점</option>
+                <option value="n2">N2 · 10점</option>
+                <option value="none">해당 없음 · 0점</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>일본 국가자격</strong><small>1개 5점 · 최대 10점</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="japanQualNow" aria-label="신청 시점 일본 국가자격" required>
+                <option value="none">없음 · 0점</option>
+                <option value="one">1개 · 5점</option>
+                <option value="two">2개 이상 · 10점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="japanQualPast" aria-label="1년 전 시점 일본 국가자격" required>
+                <option value="none">없음 · 0점</option>
+                <option value="one">1개 · 5점</option>
+                <option value="two">2개 이상 · 10점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="japanQualPast3" aria-label="3년 전 시점 일본 국가자격" required>
+                <option value="none">없음 · 0점</option>
+                <option value="one">1개 · 5점</option>
+                <option value="two">2개 이상 · 10점</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="score-row">
+            <div class="score-label"><strong>외국 자격</strong><small>해당 자격 보유</small></div>
+            <label class="score-cell"><span class="cell-tag">신청 시점</span>
+              <select id="foreignQualNow" aria-label="신청 시점 외국 자격" required>
+                <option value="no">없음 · 0점</option>
+                <option value="yes">있음 · 5점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">1년 전 시점</span>
+              <select id="foreignQualPast" aria-label="1년 전 시점 외국 자격" required>
+                <option value="no">없음 · 0점</option>
+                <option value="yes">있음 · 5점</option>
+              </select>
+            </label>
+            <label class="score-cell"><span class="cell-tag">3년 전 시점</span>
+              <select id="foreignQualPast3" aria-label="3년 전 시점 외국 자격" required>
+                <option value="no">없음 · 0점</option>
+                <option value="yes">있음 · 5점</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">점수 계산하기</button>
+            <button type="reset" class="btn btn-ghost">입력 초기화</button>
+          </div>
+          <div id="formError" class="form-error" role="alert" hidden></div>
+
+          <div class="date-tool">
+            <h3>재류기간 참고 날짜 <span class="small" style="font-weight:600;color:#59635c">(선택)</span></h3>
+            <p>기산일을 넣으면 달력상 1년·3년 뒤 날짜를 계산합니다. 비워 두어도 점수 계산에는 영향이 없습니다.</p>
+            <div class="date-row">
+              <div class="field">
+                <label for="baseDate">재류기간 기산일</label>
+                <input type="date" id="baseDate" min="1900-01-01" max="2100-12-31" aria-describedby="dateCaveat">
+              </div>
+              <button type="button" class="btn btn-ghost" id="dateBtn">날짜 계산</button>
+            </div>
+            <p id="dateError" class="date-error" role="alert" hidden></p>
+            <div id="dateResult" class="date-result" hidden>
+              <div class="date-chip"><span>기산일 +1년 (참고)</span><strong id="dateOne">—</strong></div>
+              <div class="date-chip"><span>기산일 +3년 (참고)</span><strong id="dateThree">—</strong></div>
+            </div>
+            <p id="dateCaveat" class="date-caveat">달력상 참고일일 뿐, 재류기간 요건 충족을 판정하지 않습니다. 실제 재류기간은 재류카드와 공식 안내로 확인해 주세요.</p>
+          </div>
+        </form>
+      </div>
+
+      <div id="result" class="result" aria-live="polite" tabindex="-1" hidden></div>
+
+      <div class="demo-notes">
+        <div class="demo-note">
+          <strong>전송 없음</strong>
+          <span>입력값은 서버로 보내지 않고, 브라우저에도 저장하지 않습니다.</span>
+        </div>
+        <div class="demo-note">
+          <strong>참고용</strong>
+          <span>공식 계산표와 행정서사 확인이 필요합니다. 허가를 보장하지 않습니다.</span>
+        </div>
+        <div class="demo-note">
+          <strong>공식 자료</strong>
+          <span><a class="source-link" href="https://www.moj.go.jp/isa/content/930001657.pdf" target="_blank" rel="noopener noreferrer">출입국재류관리청 포인트 계산표 (PDF)</a></span>
+        </div>
+      </div>
+      <noscript><p class="noscript">이 데모는 브라우저의 JavaScript가 필요합니다. 스크립트를 켜면 계산할 수 있습니다. 공식 계산표는 위 링크에서 확인해 주세요.</p></noscript>
+    </div>
+  </section>
+
+  <section class="price-section" id="price">
+    <div class="wrap price-grid">
+      <div class="price-card">
+        <p class="price-eyebrow">출시 예정가</p>
+        <p class="price-amount">4,980<span class="unit">엔</span></p>
+        <p class="price-note">예정가입니다. 지금은 결제를 받지 않습니다.<span>체크아웃·카드 입력·선주문 없음</span></p>
+        <p class="price-includes">
+          포함 예정: 포인트 자가계산 · 경로별 재류기간 날짜 · 납부 증빙 체크리스트 · 행정서사 판단표
+        </p>
+      </div>
+      <div class="price-copy">
+        <p class="kicker">결제 대신 문의</p>
+        <h2>지금은 결제 대신, 문의를 받습니다.</h2>
+        <p>
+          공개 후 <strong>14일 안에 이메일 문의 5건</strong>이 모이면 실제 개발을 진행할 예정입니다.
+          5건이 모이지 않으면 개발하지 않습니다. 지금 결제를 받지 않으므로, 문의만으로 비용이 발생하지 않습니다.
+        </p>
+        <div class="threshold-box">
+          <strong>개발 기준:</strong> 공개 후 14일 이내, 대상에 해당하는 분의 고유 이메일 문의 5건.<br>
+          스팸·중복·대상이 아닌 문의는 세지 않습니다.
+        </div>
+        <a class="btn btn-primary" href="mailto:tolaria@naver.com?subject=%EC%98%81%EC%A3%BC%20%EC%85%80%ED%94%84%20%EC%A0%90%EA%B2%80%20%ED%82%A4%ED%8A%B8%20%EB%AC%B8%EC%9D%98">이메일로 문의하기</a>
+        <p class="micro">4,980엔은 예정가이며, 결제는 실제 출시 전까지 받지 않습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-paper" id="limits">
+    <div class="wrap limits-grid">
+      <div>
+        <p class="kicker">하지 않는 일</p>
+        <h2>이 키트가 하지 않는 일을 먼저 알려 드립니다.</h2>
+        <p class="lede">
+          경계를 분명히 하는 것이 안전합니다. 아래 업무는 이 키트에 포함되지 않으며, 필요하면 자격을 갖춘 전문가에게 맡기셔야 합니다.
+        </p>
+      </div>
+      <ul class="limit-list">
+        <li>
+          <span class="limit-num">01</span>
+          <div>
+            <h3>개별 서류 작성·대행을 하지 않습니다.</h3>
+            <p>신청서·이유서 등 개별 문서를 대신 작성하거나 제출하지 않습니다. 키트는 일반 정보와 자가 점검만 제공합니다.</p>
+          </div>
+        </li>
+        <li>
+          <span class="limit-num">02</span>
+          <div>
+            <h3>행정서사를 대신하지 않습니다.</h3>
+            <p>行政書士法 第19条상 자격이 없는 사람이 보수를 받고 관공서 제출 서류를 작성하는 업무는 할 수 없습니다. 개별 서류 작업은 행정서사에게 문의해 주세요.</p>
+            <a class="source-link" href="https://www.hyotokyo.or.jp/news/proper/20138.html" target="_blank" rel="noopener noreferrer">근거: 行政書士法 第19条 안내</a>
+          </div>
+        </li>
+        <li>
+          <span class="limit-num">03</span>
+          <div>
+            <h3>허가를 보장하지 않습니다.</h3>
+            <p>점수와 요건을 정리해 드릴 뿐, 영주 허가 결과를 보장하지 않습니다. 최종 확인은 공식 기관과 전문가를 통해 이루어져야 합니다.</p>
+          </div>
+        </li>
+        <li>
+          <span class="limit-num">04</span>
+          <div>
+            <h3>법률·세무·행정 상담이 아닙니다.</h3>
+            <p>이 페이지와 키트는 일반 정보이며, 개인별 법률·세무·행정 자문이 아닙니다. 개별 상황은 전문가에게 확인해 주세요.</p>
+          </div>
+        </li>
+        <li>
+          <span class="limit-num">05</span>
+          <div>
+            <h3>일본어 통역·번역 서비스가 아닙니다.</h3>
+            <p>키트와 페이지는 한국어로 제공됩니다. 일본어 문서의 번역이나 일본어 상담을 보장하지 않습니다.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-tint" id="faq">
+    <div class="wrap">
+      <p class="kicker">자주 묻는 질문</p>
+      <h2>문의 전에 확인해 주세요.</h2>
+      <div class="faq-list">
+        <details>
+          <summary>계산 결과가 정확한가요?</summary>
+          <p>참고용입니다. 이 데모는 1호 로의 주요 8개 항목과 학력 가산 2개만 계산하며, 일부 항목은 포함하지 않습니다. 실제 점수와 요건은 <a href="https://www.moj.go.jp/isa/content/930001657.pdf" target="_blank" rel="noopener noreferrer">공식 계산표(PDF)</a>와 행정서사 확인이 필요합니다.</p>
+        </details>
+        <details>
+          <summary>2027년 4월 이후 신청도 계산할 수 있나요?</summary>
+          <p>점수 계산은 참고할 수 있지만, 2027년 4월 1일 이후 신청분부터는 개정 가이드라인이 적용됩니다. 70점·80점 경로 정의와 새로 명시된 고려 요소는 <a href="https://www.moj.go.jp/isa/10_00279.html" target="_blank" rel="noopener noreferrer">출입국재류관리청 공식 안내</a>에서 확인해 주세요. 이 데모는 개정 가이드라인의 모든 요건을 판정하지 않습니다.</p>
+        </details>
+        <details>
+          <summary>신청서나 이유서를 대신 써 주나요?</summary>
+          <p>아니요. 개별 신청서·이유서 작성 대행은 하지 않습니다. 이 키트는 일반 정보와 자가 점검 도구이며, 법령상 자격이 필요한 서류 작성은 행정서사에게 맡기셔야 합니다.</p>
+        </details>
+        <details>
+          <summary>지금 결제할 수 있나요?</summary>
+          <p>아니요. 4,980엔은 예정가이고 지금은 결제를 받지 않습니다. 공개 후 14일 안에 이메일 문의 5건이 모이면 실제 개발을 진행할 예정입니다.</p>
+        </details>
+        <details>
+          <summary>데모에 입력한 내용이 어디로 전송되나요?</summary>
+          <p>어디에도 전송되지 않습니다. 계산은 브라우저 안에서만 이루어지며, 입력값을 저장하거나 추적하지 않습니다. 이 페이지에는 분석 스크립트나 쿠키가 없습니다.</p>
+        </details>
+        <details>
+          <summary>왜 14일과 5건인가요?</summary>
+          <p>결제를 받기 전에 실제 수요를 확인하기 위한 기준입니다. 공개 후 14일 이내에 대상에 해당하는 분의 고유 이메일 문의가 5건 모이면 개발을 시작하고, 모이지 않으면 개발하지 않습니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="wrap final-inner">
+      <div>
+        <h2>20만 엔을 내기 전에, 내 점수와 날짜부터 확인하세요.</h2>
+        <p>지금은 결제 없이 이메일 문의만 받습니다. 궁금한 점이나 이 키트가 필요한 이유를 적어 보내 주세요.</p>
+      </div>
+      <a class="btn" href="mailto:tolaria@naver.com?subject=%EC%98%81%EC%A3%BC%20%EC%85%80%ED%94%84%20%EC%A0%90%EA%B2%80%20%ED%82%A4%ED%8A%B8%20%EB%AC%B8%EC%9D%98">이메일로 문의하기</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">영주 신청 전 셀프 점검 키트</p>
+        <p class="footer-p">
+          일본 회사에 다니는 한국인 IT 엔지니어를 위한 독립 프로젝트입니다.
+          일반 정보와 자가 점검 도구를 제공하며, 개별 서류 작성·대행이나 법률·세무·행정 상담을 제공하지 않습니다.
+        </p>
+        <p class="footer-p">
+          이 사이트는 Google, 일본 정부, 그 밖의 어떤 회사와도 제휴하거나 후원받지 않은 독립 프로젝트입니다.
+        </p>
+      </div>
+      <div>
+        <p class="footer-p">
+          문의: <a href="mailto:tolaria@naver.com?subject=%EC%98%81%EC%A3%BC%20%EC%85%80%ED%94%84%20%EC%A0%90%EA%B2%80%20%ED%82%A4%ED%8A%B8%20%EB%AC%B8%EC%9D%98">tolaria@naver.com</a>
+        </p>
+        <p class="footer-p">
+          이 페이지는 추적 스크립트와 쿠키를 사용하지 않습니다. 데모 입력값은 브라우저 밖으로 전송되지 않습니다.
+        </p>
+        <p class="footer-p">
+          4,980엔은 예정가이며 현재 결제를 받지 않습니다. 이 페이지의 내용은 일반 정보이며 법률·세무·행정 자문이 아닙니다.
+        </p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 영주 신청 전 셀프 점검 키트</span>
+      <span>공개 후 14일 이내 이메일 문의 5건이 개발 기준입니다.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var KEYS = ["salary", "age", "education", "dualDegree", "mbaMot", "work", "japanDegree", "jlpt", "japanQual", "foreignQual"];
+  var COLUMNS = [
+    { suffix: "Now", label: "신청 시점" },
+    { suffix: "Past", label: "1년 전 시점" },
+    { suffix: "Past3", label: "3년 전 시점" }
+  ];
+  var LABELS = {
+    salary: "연봉",
+    age: "나이",
+    education: "학력",
+    dualDegree: "복수 학위 가산",
+    mbaMot: "MBA·MOT 가산",
+    work: "직력",
+    japanDegree: "일본 학위",
+    jlpt: "JLPT·일본어",
+    japanQual: "일본 국가자격",
+    foreignQual: "외국 자격"
+  };
+  var SCORES = {
+    salary: { "40": 40, "35": 35, "30": 30, "25": 25, "20": 20, "15": 15, "10": 10, "0": 0 },
+    age: { "29": 15, "34": 10, "39": 5, "40": 0 },
+    education: { doctor: 30, master: 20, bachelor: 10, none: 0 },
+    dualDegree: { yes: 5, no: 0 },
+    mbaMot: { yes: 5, no: 0 },
+    work: { "10": 20, "7": 15, "5": 10, "3": 5, "0": 0 },
+    japanDegree: { yes: 10, no: 0 },
+    jlpt: { n1: 15, n2: 10, none: 0 },
+    japanQual: { two: 10, one: 5, none: 0 },
+    foreignQual: { yes: 5, no: 0 }
+  };
+  var SALARY_AGE_MAX = { "25": 39, "20": 39, "15": 34, "10": 29 };
+  var SALARY_LABEL = {
+    "40": "1,000만 엔 이상",
+    "35": "900만 엔 이상",
+    "30": "800만 엔 이상",
+    "25": "700만 엔 이상",
+    "20": "600만 엔 이상",
+    "15": "500만 엔 이상",
+    "10": "400만 엔 이상",
+    "0": "300만 엔 이상 400만 엔 미만",
+    "under300": "300만 엔 미만"
+  };
+
+  var form = document.getElementById("pointForm");
+  var formError = document.getElementById("formError");
+  var result = document.getElementById("result");
+  var baseDate = document.getElementById("baseDate");
+  var dateBtn = document.getElementById("dateBtn");
+  var dateError = document.getElementById("dateError");
+  var dateResult = document.getElementById("dateResult");
+  var dateOne = document.getElementById("dateOne");
+  var dateThree = document.getElementById("dateThree");
+
+  function byId(id) {
+    return document.getElementById(id);
+  }
+
+  function readColumn(suffix) {
+    var values = {};
+    var els = {};
+    var missing = [];
+    KEYS.forEach(function (key) {
+      var el = byId(key + suffix);
+      els[key] = el;
+      if (el.type === "checkbox") {
+        values[key] = el.checked ? "yes" : "no";
+      } else {
+        values[key] = el.value;
+        if (!el.value) {
+          missing.push({ key: key, el: el });
+        }
+      }
+    });
+    return { values: values, els: els, missing: missing };
+  }
+
+  function scoreColumn(values) {
+    var total = 0;
+    KEYS.forEach(function (key) {
+      var score = SCORES[key][values[key]];
+      if (typeof score === "number") {
+        total += score;
+      }
+    });
+    return total;
+  }
+
+  function pointsLabel(key, value) {
+    if (key === "age" && value === "40") {
+      return "없음";
+    }
+    var score = SCORES[key][value];
+    return typeof score === "number" ? score + "점" : "—";
+  }
+
+  function addMessage(container, text) {
+    var li = document.createElement("li");
+    li.textContent = text;
+    container.appendChild(li);
+  }
+
+  function showFormError(messages, invalidEls) {
+    formError.replaceChildren();
+    var strong = document.createElement("strong");
+    strong.textContent = "입력한 내용을 확인해 주세요.";
+    formError.appendChild(strong);
+    var ul = document.createElement("ul");
+    ul.style.margin = "6px 0 0";
+    ul.style.paddingLeft = "18px";
+    messages.forEach(function (message) {
+      addMessage(ul, message);
+    });
+    formError.appendChild(ul);
+    formError.hidden = false;
+    result.hidden = true;
+
+    form.querySelectorAll("select").forEach(function (el) {
+      el.removeAttribute("aria-invalid");
+    });
+    (invalidEls || []).forEach(function (el) {
+      if (el) {
+        el.setAttribute("aria-invalid", "true");
+      }
+    });
+    if (invalidEls && invalidEls[0]) {
+      invalidEls[0].focus();
+    }
+  }
+
+  function validateColumn(column, label) {
+    var messages = [];
+    var invalidEls = [];
+    var v = column.values;
+
+    if (v.salary === "under300") {
+      messages.push(label + ": 연봉 300만 엔 미만은 고도인재 포인트 대상이 아닙니다.");
+      invalidEls.push(column.els.salary);
+    }
+
+    if (v.salary && v.age && SALARY_AGE_MAX[v.salary] && Number(v.age) > SALARY_AGE_MAX[v.salary]) {
+      messages.push(
+        label + ": " + SALARY_LABEL[v.salary] + " 구간은 " + SALARY_AGE_MAX[v.salary] +
+        "세 이하 조건입니다. 나이 또는 연봉을 다시 확인해 주세요."
+      );
+      invalidEls.push(column.els.salary, column.els.age);
+    }
+
+    if (v.jlpt === "n2" && v.japanDegree === "yes") {
+      messages.push(
+        label + ": N2 점수는 일본 학위가 있는 경우 제외됩니다. JLPT를 N1 또는 ‘해당 없음’으로 바꾸거나 일본 학위를 확인해 주세요."
+      );
+      invalidEls.push(column.els.jlpt, column.els.japanDegree);
+    }
+
+    return { messages: messages, invalidEls: invalidEls };
+  }
+
+  function getVerdict(now, oneYear, threeYear) {
+    var route80 = now >= 80 && oneYear >= 80;
+    var route70 = now >= 70 && threeYear >= 70;
+    var label;
+    var title;
+    if (route80 && route70) {
+      label = "80점·70점 경로 · 점수 조건 충족";
+      title = "80점 경로와 70점 경로 모두, 이 데모의 점수 조건을 충족합니다.";
+    } else if (route80) {
+      label = "80점 경로 · 점수 조건 충족";
+      title = "80점 경로의 점수 조건을 충족합니다.";
+    } else if (route70) {
+      label = "70점 경로 · 점수 조건 충족";
+      title = "70점 경로의 점수 조건을 충족합니다.";
+    } else {
+      label = "70점·80점 경로 · 점수 조건 미충족";
+      title = "이 데모의 점수 조건에서는 두 경로 모두 미충족입니다.";
+    }
+    return {
+      label: label,
+      title: title,
+      body: "80점 경로는 신청 시점과 1년 전 시점이 각각 80점 이상, 70점 경로는 신청 시점과 3년 전 시점이 각각 70점 이상이어야 합니다. 아래 판정은 입력한 세 시점의 점수만 본 것이며, 계속 재류 요건과 재류기간·납부 이력 등은 별도로 확인해야 합니다.",
+      route80: route80,
+      route70: route70
+    };
+  }
+
+  function buildTable(headerLabels, rows, totals) {
+    var table = document.createElement("table");
+    table.className = "result-table";
+    var caption = document.createElement("caption");
+    caption.textContent = "항목별 포인트 (참고용)";
+    table.appendChild(caption);
+
+    var thead = document.createElement("thead");
+    var headRow = document.createElement("tr");
+    ["항목"].concat(headerLabels).forEach(function (text) {
+      var th = document.createElement("th");
+      th.scope = "col";
+      th.textContent = text;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    var tbody = document.createElement("tbody");
+    rows.forEach(function (row) {
+      var tr = document.createElement("tr");
+      var th = document.createElement("th");
+      th.scope = "row";
+      th.textContent = row.label;
+      tr.appendChild(th);
+      row.values.forEach(function (value) {
+        var td = document.createElement("td");
+        td.textContent = value;
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+
+    var totalRow = document.createElement("tr");
+    totalRow.className = "total-row";
+    var totalTh = document.createElement("th");
+    totalTh.scope = "row";
+    totalTh.textContent = "합계";
+    totalRow.appendChild(totalTh);
+    totals.forEach(function (value) {
+      var td = document.createElement("td");
+      td.textContent = value + "점";
+      totalRow.appendChild(td);
+    });
+    tbody.appendChild(totalRow);
+    table.appendChild(tbody);
+    return table;
+  }
+
+  function renderResult(scores, values) {
+    var nowScore = scores[0];
+    var oneYearScore = scores[1];
+    var threeYearScore = scores[2];
+    var verdict = getVerdict(nowScore, oneYearScore, threeYearScore);
+    result.replaceChildren();
+    result.setAttribute("aria-label", "계산 결과");
+
+    var verdictBox = document.createElement("div");
+    verdictBox.className = "verdict";
+    var verdictLabel = document.createElement("p");
+    verdictLabel.className = "verdict-label";
+    verdictLabel.textContent = verdict.label;
+    var verdictTitle = document.createElement("h3");
+    verdictTitle.textContent = verdict.title;
+    var verdictBody = document.createElement("p");
+    verdictBody.textContent = verdict.body;
+    verdictBox.appendChild(verdictLabel);
+    verdictBox.appendChild(verdictTitle);
+    verdictBox.appendChild(verdictBody);
+
+    var routeList = document.createElement("div");
+    routeList.className = "route-list";
+    [
+      {
+        label: "80점 경로 · 第3の7",
+        ok: verdict.route80,
+        detail: "신청 시점 " + nowScore + "점 · 1년 전 시점 " + oneYearScore + "점"
+      },
+      {
+        label: "70점 경로 · 第3の6",
+        ok: verdict.route70,
+        detail: "신청 시점 " + nowScore + "점 · 3년 전 시점 " + threeYearScore + "점"
+      }
+    ].forEach(function (route) {
+      var item = document.createElement("div");
+      item.className = "route-item";
+      var strong = document.createElement("strong");
+      strong.textContent = route.label;
+      var status = document.createElement("span");
+      status.className = "route-status" + (route.ok ? "" : " miss");
+      status.textContent = route.ok ? "충족" : "미충족";
+      strong.appendChild(status);
+      var detail = document.createElement("span");
+      detail.textContent = route.detail + (route.ok ? " — 두 시점 모두 기준 이상입니다." : " — 기준 미만인 시점이 있습니다.");
+      item.appendChild(strong);
+      item.appendChild(detail);
+      routeList.appendChild(item);
+    });
+    verdictBox.appendChild(routeList);
+    result.appendChild(verdictBox);
+
+    var summary = document.createElement("div");
+    summary.className = "score-summary";
+    COLUMNS.forEach(function (column, index) {
+      var box = document.createElement("div");
+      box.className = "score-box";
+      var label = document.createElement("span");
+      label.textContent = column.label;
+      var score = document.createElement("strong");
+      score.textContent = scores[index];
+      var unit = document.createElement("small");
+      unit.textContent = "점";
+      score.appendChild(unit);
+      box.appendChild(label);
+      box.appendChild(score);
+      summary.appendChild(box);
+    });
+    result.appendChild(summary);
+
+    var rows = KEYS.map(function (key) {
+      return {
+        label: LABELS[key],
+        values: values.map(function (columnValues) {
+          return pointsLabel(key, columnValues[key]);
+        })
+      };
+    });
+    result.appendChild(buildTable(COLUMNS.map(function (column) {
+      return column.label;
+    }), rows, scores));
+
+    var notes = document.createElement("ul");
+    notes.className = "result-notes";
+    addMessage(notes, "연봉은 상여 포함, 잔업수당 제외로 계산했습니다.");
+    addMessage(notes, "이 데모는 1호 로의 주요 8개 항목과 학력 가산 2개만 계산합니다. 일부 항목은 포함되지 않았습니다.");
+    addMessage(notes, "80점 경로는 신청 시점·1년 전 시점 모두 80점 이상, 70점 경로는 신청 시점·3년 전 시점 모두 70점 이상일 때만 충족으로 표시합니다.");
+    addMessage(notes, "이 데모는 각 경로의 스냅샷 점수 조건만 확인합니다. 고도인재외국인으로 계속 재류하는 조건과 ‘계속 70점·80점 이상’ 요건, 재류기간은 별도로 확인해야 합니다.");
+    addMessage(notes, "복수 학위·MBA·MOT 가산은 체크한 시점에 각각 +5점으로 계산했습니다.");
+    if (values.some(function (columnValues) { return columnValues.age === "40"; })) {
+      addMessage(notes, "나이 40세 이상은 이 데모에서 나이 점수를 더하지 않았습니다. 공식 계산표에서 확인해 주세요.");
+    }
+    result.appendChild(notes);
+
+    var source = document.createElement("p");
+    source.className = "result-source";
+    source.appendChild(document.createTextNode("공식 계산표: "));
+    var link = document.createElement("a");
+    link.className = "source-link";
+    link.href = "https://www.moj.go.jp/isa/content/930001657.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "출입국재류관리청 PDF (새 창)";
+    source.appendChild(link);
+    source.appendChild(document.createTextNode(" · 개정 가이드라인: "));
+    var guidelineLink = document.createElement("a");
+    guidelineLink.className = "source-link";
+    guidelineLink.href = "https://www.moj.go.jp/isa/10_00279.html";
+    guidelineLink.target = "_blank";
+    guidelineLink.rel = "noopener noreferrer";
+    guidelineLink.textContent = "2027-04-01 이후 적용 안내 (새 창)";
+    source.appendChild(guidelineLink);
+    source.appendChild(document.createTextNode(" · 참고용이며, 공식 계산표와 행정서사 확인이 필요합니다. 허가를 보장하지 않습니다."));
+    result.appendChild(source);
+
+    result.hidden = false;
+    result.focus({ preventScroll: true });
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    result.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }
+
+  function parseDate(value) {
+    var match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    if (!match) {
+      return null;
+    }
+    var year = Number(match[1]);
+    var month = Number(match[2]);
+    var day = Number(match[3]);
+    if (year < 1900 || year > 2100 || month < 1 || month > 12 || day < 1) {
+      return null;
+    }
+    var date = new Date(year, month - 1, day);
+    if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
+      return null;
+    }
+    return date;
+  }
+
+  function addYears(date, years) {
+    var year = date.getFullYear() + years;
+    var month = date.getMonth();
+    var day = date.getDate();
+    var lastDay = new Date(year, month + 1, 0).getDate();
+    return new Date(year, month, Math.min(day, lastDay));
+  }
+
+  function formatDate(date) {
+    var year = String(date.getFullYear()).padStart(4, "0");
+    var month = String(date.getMonth() + 1).padStart(2, "0");
+    var day = String(date.getDate()).padStart(2, "0");
+    return year + "-" + month + "-" + day;
+  }
+
+  function calculateDates(showEmptyMessage) {
+    dateError.hidden = true;
+    dateError.textContent = "";
+    var value = baseDate.value.trim();
+    if (!value) {
+      dateResult.hidden = true;
+      if (showEmptyMessage) {
+        dateError.textContent = "기산일을 입력하면 참고 날짜를 계산합니다.";
+        dateError.hidden = false;
+      }
+      return;
+    }
+    var date = parseDate(value);
+    if (!date) {
+      dateResult.hidden = true;
+      dateError.textContent = "날짜를 YYYY-MM-DD 형식의 실제 날짜로 입력해 주세요. 예: 2024-02-29";
+      dateError.hidden = false;
+      return;
+    }
+    dateOne.textContent = formatDate(addYears(date, 1));
+    dateThree.textContent = formatDate(addYears(date, 3));
+    dateResult.hidden = false;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    formError.hidden = true;
+    var columns = COLUMNS.map(function (column) {
+      return { label: column.label, data: readColumn(column.suffix) };
+    });
+    var missing = [];
+    columns.forEach(function (column) {
+      missing = missing.concat(column.data.missing);
+    });
+
+    if (missing.length) {
+      var messages = missing.map(function (item) {
+        var label = item.el.getAttribute("aria-label") || LABELS[item.key];
+        return label + " 항목을 선택해 주세요.";
+      });
+      showFormError(messages, missing.map(function (item) { return item.el; }));
+      return;
+    }
+
+    var messages = [];
+    var invalidEls = [];
+    columns.forEach(function (column) {
+      var check = validateColumn(column.data, column.label);
+      messages = messages.concat(check.messages);
+      invalidEls = invalidEls.concat(check.invalidEls);
+    });
+
+    if (messages.length) {
+      showFormError(messages, invalidEls);
+      return;
+    }
+
+    form.querySelectorAll("select").forEach(function (el) {
+      el.removeAttribute("aria-invalid");
+    });
+    formError.hidden = true;
+    var scores = columns.map(function (column) {
+      return scoreColumn(column.data.values);
+    });
+    var values = columns.map(function (column) {
+      return column.data.values;
+    });
+    renderResult(scores, values);
+    calculateDates(false);
+  });
+
+  dateBtn.addEventListener("click", function () {
+    calculateDates(true);
+  });
+
+  form.addEventListener("reset", function () {
+    window.setTimeout(function () {
+      result.hidden = true;
+      result.replaceChildren();
+      formError.hidden = true;
+      formError.replaceChildren();
+      form.querySelectorAll("select").forEach(function (el) {
+        el.removeAttribute("aria-invalid");
+      });
+      dateResult.hidden = true;
+      dateError.hidden = true;
+      dateError.textContent = "";
+    }, 0);
+  });
+})();
+</script>
+</body>
+</html>

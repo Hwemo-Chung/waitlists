@@ -1,0 +1,1872 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Play Production Access Re-apply Kit — for solo Android developers rejected after a 14-day closed test</title>
+  <meta name="description" content="A planned US$9 kit for solo Android developers with a personal Play Console account created after 13 November 2023, whose production access was rejected after a 14-day closed test. Try the free browser-only date calculator and answer builder.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e211b'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%23dbe5ad' stroke-width='4'/%3E%3Cpath d='M32 19v13l9 5' fill='none' stroke='%23f5f1e8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --paper: #f5f1e8;
+      --paper-2: #ece7db;
+      --cream: #fbf8f1;
+      --white: #fffdf8;
+      --ink: #1e211b;
+      --ink-soft: #343830;
+      --muted: #62645a;
+      --line: #d5cebf;
+      --accent: #b34722;
+      --accent-dark: #8f3417;
+      --accent-pale: #f3ded4;
+      --lime: #dbe5ad;
+      --dark: #1f241e;
+      --radius: 18px;
+      --max: 1120px;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--accent); }
+
+    button,
+    input,
+    textarea { font: inherit; }
+
+    button { cursor: pointer; }
+
+    [hidden] { display: none !important; }
+
+    ::selection {
+      background: var(--lime);
+      color: var(--ink);
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(179, 71, 34, 0.35);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 12px;
+      z-index: 100;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .skip-link:focus { left: 16px; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--line);
+      background: rgba(245, 241, 232, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .brand:hover { color: var(--ink); }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-top {
+      display: block;
+      color: var(--muted);
+      font-size: 0.62rem;
+      line-height: 1.2;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brand-main {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-left: auto;
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .site-nav a {
+      color: var(--ink-soft);
+      text-decoration: none;
+    }
+
+    .site-nav a:hover { color: var(--accent-dark); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: background 0.18s ease, transform 0.18s ease, color 0.18s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-dark);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-small {
+      min-height: 40px;
+      padding: 9px 16px;
+      font-size: 0.82rem;
+    }
+
+    .btn-ghost {
+      border-color: var(--ink);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .btn-ghost:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .btn-dark:hover {
+      background: var(--accent-dark);
+      color: #fff;
+    }
+
+    .btn-light {
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+    .btn-light:hover {
+      background: #fff;
+      color: var(--accent-dark);
+    }
+
+    .btn-text {
+      min-height: 40px;
+      padding: 9px 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--accent-dark);
+      font-size: 0.86rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .btn-text:hover {
+      background: transparent;
+      color: var(--accent);
+      transform: none;
+    }
+
+    .hero {
+      padding: 76px 0 70px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.22fr) minmax(300px, 0.78fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 13px;
+      color: var(--accent-dark);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      flex: none;
+      width: 22px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      margin: 0;
+      font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+      font-weight: 750;
+      line-height: 1.01;
+      letter-spacing: -0.045em;
+    }
+
+    .hero h1 em {
+      color: var(--accent-dark);
+      font-style: normal;
+    }
+
+    .hero .lede {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.03rem, 1.45vw, 1.17rem);
+      line-height: 1.6;
+    }
+
+    .hero .lede strong { color: var(--ink); }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .micro {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .case-card {
+      padding: 26px 26px 22px;
+      border: 1px solid #333a30;
+      border-radius: 24px;
+      background: var(--dark);
+      color: var(--cream);
+      box-shadow: 0 24px 60px rgba(30, 33, 27, 0.18);
+    }
+
+    .case-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #3a4236;
+    }
+
+    .case-top > span:first-child {
+      color: #aeb6a5;
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .case-light {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--lime);
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .case-light::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 0 4px rgba(219, 229, 173, 0.12);
+    }
+
+    .loop {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .loop li {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 12px;
+      padding: 16px 0;
+      border-bottom: 1px solid #3a4236;
+    }
+
+    .loop li:last-child {
+      padding-bottom: 4px;
+      border-bottom: 0;
+    }
+
+    .loop-num {
+      padding-top: 3px;
+      color: #9ba391;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+    }
+
+    .loop strong {
+      display: block;
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+
+    .loop span {
+      display: block;
+      margin-top: 3px;
+      color: #b9c0af;
+      font-size: 0.8rem;
+    }
+
+    .loop .warn { color: var(--lime); }
+
+    .case-foot {
+      margin: 16px 0 0;
+      padding-top: 14px;
+      border-top: 1px solid #3a4236;
+      color: #9ba391;
+      font-size: 0.7rem;
+    }
+
+    .case-foot a { color: #cfd6c3; }
+
+    .section { padding: 88px 0; }
+
+    .section-alt {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--paper-2);
+    }
+
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 38px;
+    }
+
+    .section-head h2,
+    .section h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 3.7vw, 3rem);
+      font-weight: 750;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .section-head p {
+      max-width: 700px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .why-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--cream);
+    }
+
+    .why-card h3 {
+      margin: 0;
+      font-size: 1.12rem;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+    }
+
+    .why-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .why-card blockquote {
+      margin: 0;
+      padding: 11px 13px;
+      border-left: 3px solid var(--accent);
+      background: #fff;
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .why-card blockquote + blockquote { margin-top: 2px; }
+
+    .source-link {
+      margin-top: auto;
+      padding-top: 4px;
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .source-link:hover { text-decoration: underline; }
+
+    .community {
+      margin-top: 38px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .community h3 {
+      margin: 0 0 4px;
+      font-size: 1.08rem;
+    }
+
+    .community .sub {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .threads {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .threads li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4px 18px;
+      align-items: baseline;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .threads a {
+      font-size: 0.93rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .threads a:hover { text-decoration: underline; }
+
+    .thread-meta {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .fine {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.55;
+    }
+
+    .kit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .kit-card {
+      position: relative;
+      overflow: hidden;
+      padding: 28px 26px 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--cream);
+    }
+
+    .kit-card::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--paper-2);
+    }
+
+    .kit-num {
+      position: relative;
+      z-index: 1;
+      color: var(--accent-dark);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+    }
+
+    .kit-card h3 {
+      position: relative;
+      z-index: 1;
+      margin: 14px 0 8px;
+      font-size: 1.12rem;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+    }
+
+    .kit-card p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .callout {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      background: var(--cream);
+      font-size: 0.92rem;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .demo-section {
+      padding: 88px 0;
+      background: var(--dark);
+      color: var(--cream);
+    }
+
+    .demo-section .kicker { color: var(--lime); }
+
+    .demo-section .section-head p { color: #b8bfad; }
+
+    .demo-section :focus-visible { outline-color: var(--lime); }
+
+    .demo-tool {
+      margin-top: 18px;
+      padding: clamp(20px, 3.6vw, 34px);
+      border-radius: 24px;
+      background: var(--cream);
+      color: var(--ink);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    .tool-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+
+    .tool-num {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .tool-head h3 {
+      margin: 4px 0 0;
+      font-size: 1.3rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .tool-intro {
+      max-width: 760px;
+      margin: 8px 0 22px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .calc-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 26px;
+      align-items: start;
+    }
+
+    .field { margin-bottom: 16px; }
+
+    .field label,
+    .rejoin-row label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .field input,
+    .field textarea,
+    .rejoin-row input {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #c9c1b0;
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .field textarea {
+      min-height: 82px;
+      resize: vertical;
+    }
+
+    .field input:hover,
+    .field textarea:hover,
+    .rejoin-row input:hover { border-color: #a89f8c; }
+
+    .field input:focus,
+    .field textarea:focus,
+    .rejoin-row input:focus {
+      border-color: var(--accent);
+      outline: 3px solid rgba(179, 71, 34, 0.28);
+      outline-offset: 1px;
+    }
+
+    .hint {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.5;
+    }
+
+    .optional {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .rejoin-row {
+      position: relative;
+      margin: 10px 0 0;
+      padding: 12px 14px 14px;
+      border: 1px dashed #c9c1b0;
+      border-radius: 12px;
+      background: #f3eee3;
+    }
+
+    .rejoin-row label { padding-right: 64px; }
+
+    .remove-row {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      padding: 4px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .remove-row:hover { color: var(--accent-dark); }
+
+    .form-error {
+      margin: 12px 0 0;
+      padding: 10px 12px;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      background: var(--accent-pale);
+      color: #6e2913;
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .calc-aside {
+      min-height: 220px;
+      padding: 24px;
+      border-radius: 18px;
+      background: var(--dark);
+      color: var(--cream);
+    }
+
+    .mini-label {
+      margin: 0 0 10px;
+      color: var(--lime);
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .calc-hint p:last-child {
+      margin: 0;
+      color: #c2c9b8;
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .result-kicker {
+      margin: 0;
+      color: #aeb6a5;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .result-date {
+      overflow-wrap: anywhere;
+      margin: 6px 0 10px;
+      color: var(--lime);
+      font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+      font-weight: 750;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .calc-result p {
+      margin: 0;
+      color: #d4d9cc;
+      font-size: 0.87rem;
+      line-height: 1.55;
+    }
+
+    .calc-result .result-status {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #3a4236;
+      color: var(--cream);
+      font-weight: 650;
+    }
+
+    .calc-result .fine {
+      margin-top: 12px;
+      color: #9fa795;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 16px;
+    }
+
+    .field-full { grid-column: 1 / -1; }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 2px;
+    }
+
+    .draft-wrap {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .draft-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .draft-head h4 {
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .btn-copy {
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .btn-copy:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    #draft-output {
+      max-height: 460px;
+      overflow: auto;
+      margin: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 0.86rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .copy-status {
+      min-height: 1.2em;
+      margin: 8px 0 0;
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+    }
+
+    .draft-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.5;
+    }
+
+    .privacy-note {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border: 1px solid #46503f;
+      border-radius: 14px;
+      background: #252b23;
+      color: #d2d8c8;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    .privacy-note strong { color: var(--lime); }
+
+    .noscript-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--lime);
+      border-radius: 0 10px 10px 0;
+      background: #2a3128;
+      color: #e5e9dc;
+      font-size: 0.88rem;
+    }
+
+    .price-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 44px;
+      padding: clamp(26px, 5vw, 54px);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--cream);
+      box-shadow: 0 18px 50px rgba(30, 33, 27, 0.07);
+    }
+
+    .price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .price-figure {
+      margin: 16px 0 6px;
+      font-size: clamp(3.6rem, 7.5vw, 6rem);
+      font-weight: 750;
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+    }
+
+    .price-figure span {
+      margin-left: 6px;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .price-lead {
+      max-width: 420px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .price-lead strong { color: var(--ink); }
+
+    .price-details h3 {
+      margin: 0 0 12px;
+      font-size: 1.05rem;
+    }
+
+    .price-list {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .price-list li {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.9rem;
+    }
+
+    .price-list li::before {
+      content: "—";
+      margin-right: 8px;
+      color: var(--accent-dark);
+    }
+
+    .limits-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 42px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .limits-list li {
+      padding: 17px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .limits-list strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink);
+      font-size: 0.98rem;
+    }
+
+    .cta {
+      padding: 76px 0;
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .cta .kicker { color: #fff0e8; }
+
+    .cta h2 {
+      max-width: 780px;
+      color: #fff;
+    }
+
+    .cta p {
+      max-width: 680px;
+      color: #ffe8df;
+      font-size: 1.02rem;
+    }
+
+    .cta .btn {
+      margin-top: 12px;
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+    .cta .btn:hover {
+      background: #fff;
+      color: var(--accent-dark);
+    }
+
+    .cta .fine {
+      max-width: 700px;
+      color: #fff0e8;
+    }
+
+    .site-footer {
+      padding: 36px 0;
+      background: var(--dark);
+      color: #b9c0af;
+      font-size: 0.82rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .footer-inner p { margin: 4px 0; }
+
+    .footer-brand {
+      color: var(--cream);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .site-footer a { color: var(--cream); }
+
+    .footer-meta { text-align: right; }
+
+    @media (max-width: 960px) {
+      .site-nav { display: none; }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .case-card { max-width: 560px; }
+
+      .why-grid,
+      .kit-grid { grid-template-columns: 1fr; }
+
+      .calc-layout { grid-template-columns: 1fr; }
+
+      .price-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .limits-list {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+
+      .header-inner {
+        min-height: 62px;
+        gap: 12px;
+      }
+
+      .brand-top { display: none; }
+
+      .brand-main { font-size: 0.94rem; }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+      }
+
+      .btn-small {
+        min-height: 40px;
+        padding: 8px 12px;
+        font-size: 0.76rem;
+      }
+
+      .hero { padding: 52px 0 46px; }
+
+      .hero h1 { font-size: clamp(2.2rem, 10.5vw, 3.2rem); }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn { width: 100%; }
+
+      .section,
+      .demo-section { padding: 64px 0; }
+
+      .form-grid { grid-template-columns: 1fr; }
+
+      .threads li {
+        grid-template-columns: 1fr;
+        gap: 3px;
+      }
+
+      .thread-meta {
+        text-align: left;
+        white-space: normal;
+      }
+
+      .case-card { padding: 22px; }
+
+      .cta { padding: 58px 0; }
+
+      .footer-inner { display: block; }
+
+      .footer-meta {
+        margin-top: 14px;
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Play Production Access Re-apply Kit — back to top">
+      <span class="brand-mark" aria-hidden="true">RP</span>
+      <span>
+        <span class="brand-top">Play production access</span>
+        <span class="brand-main">Re-apply Kit</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Page sections">
+      <a href="#why">Why it hurts</a>
+      <a href="#kit">The kit</a>
+      <a href="#demo">Free demo</a>
+      <a href="#price">Planned price</a>
+      <a href="#limits">Limits</a>
+    </nav>
+    <a class="btn btn-small" href="mailto:tolaria@naver.com?subject=Play%20Production%20Kit%20-%20waitlist">Join the waitlist</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">For solo Android developers rejected after a 14-day closed test</p>
+          <h1>Your next production-access application needs <em>evidence</em> — not another 14-day guess.</h1>
+          <p class="lede">The <strong>Play Production Access Re-apply Kit</strong> is a planned US$9 kit that turns your own closed-test records into a specific re-application. It is for solo Android developers with a <strong>personal</strong> Google Play Console account created after 13 November 2023, whose production-access application was rejected at least once after a 14-day closed test.</p>
+          <div class="hero-actions">
+            <a class="btn" href="mailto:tolaria@naver.com?subject=Play%20Production%20Kit%20-%20waitlist">Email to join the waitlist</a>
+            <a class="btn btn-ghost" href="#demo">Try the free demo</a>
+          </div>
+          <p class="micro">No payment is collected now. No testers, installs, or reviews are sold. The demo runs entirely in your browser.</p>
+        </div>
+        <aside class="case-card" aria-label="The rejection loop">
+          <div class="case-top">
+            <span>The loop</span>
+            <span class="case-light">14-day cycle</span>
+          </div>
+          <ol class="loop">
+            <li>
+              <span class="loop-num">01</span>
+              <div><strong>12+ testers opted in</strong><span>Continuously for 14 days</span></div>
+            </li>
+            <li>
+              <span class="loop-num">02</span>
+              <div><strong>Three-part questionnaire</strong><span>Closed test · app/game · production readiness</span></div>
+            </li>
+            <li>
+              <span class="loop-num">03</span>
+              <div><strong>Rejection</strong><span class="warn">Another 14 days</span></div>
+            </li>
+          </ol>
+          <p class="case-foot">Based on Google Play Console Help. <a href="https://support.google.com/googleplay/android-developer/answer/14151465?hl=en" target="_blank" rel="noopener noreferrer">Read the requirements</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Why it hurts</p>
+        <h2>The expensive part isn't the rejection email. It's the reset.</h2>
+        <p>Meeting the tester rule is not the same as passing review. One developer with 30+ testers reported being rejected twice. The rejection message can be: <strong>“More testing required to access Google Play production.”</strong> Then the clock starts again.</p>
+      </div>
+      <div class="why-grid">
+        <article class="why-card">
+          <h3>14 continuous days, then a three-part form</h3>
+          <p>Google requires 12+ testers opted in continuously for 14 days. After that, you answer “About your closed test”, “About your app/game”, and “About your production readiness”.</p>
+          <a class="source-link" href="https://support.google.com/googleplay/android-developer/answer/14151465?hl=en" target="_blank" rel="noopener noreferrer">Source: Google Play Console Help</a>
+        </article>
+        <article class="why-card">
+          <h3>The rejection reasons are specific — and vague</h3>
+          <blockquote>“Testers were not engaged with your app during your closed test”</blockquote>
+          <blockquote>“You didn't follow testing best practices, which may include gathering and acting on user feedback through updates to your app”</blockquote>
+          <a class="source-link" href="https://support.google.com/googleplay/android-developer/answer/14151465?hl=en" target="_blank" rel="noopener noreferrer">Source: Google Play Console Help</a>
+        </article>
+        <article class="why-card">
+          <h3>Each rejection costs another 14 days</h3>
+          <p>Google says review usually takes 7 days or less. It also says an opt-out followed by a re-join restarts the 14 days.</p>
+          <a class="source-link" href="https://support.google.com/googleplay/android-developer/answer/14151465?hl=en" target="_blank" rel="noopener noreferrer">Source: Google Play Console Help</a>
+        </article>
+      </div>
+      <div class="community">
+        <h3>You're not the only one in this loop</h3>
+        <p class="sub">Public examples from developers describing the same wall:</p>
+        <ul class="threads">
+          <li>
+            <a href="https://www.reddit.com/r/androiddev/comments/1kahbkg/app_refused_for_prod_second_time_after_completing/" target="_blank" rel="noopener noreferrer">“App refused for prod second time after completing 14 days of closed testing”</a>
+            <span class="thread-meta">r/androiddev · 30+ testers · rejected twice</span>
+          </li>
+          <li>
+            <a href="https://www.reddit.com/r/androiddev/comments/1km9t14/google_keeps_rejecting_the_app_release/" target="_blank" rel="noopener noreferrer">“Google keeps rejecting the app release”</a>
+            <span class="thread-meta">r/androiddev · 12 friends/family · 14 days twice</span>
+          </li>
+          <li>
+            <a href="https://www.reddit.com/r/androiddev/comments/1mxxyz9/my_app_keeps_getting_rejected_by_google_play_need/" target="_blank" rel="noopener noreferrer">“My app keeps getting rejected by Google Play – need advice”</a>
+            <span class="thread-meta">r/androiddev · public rejection thread</span>
+          </li>
+        </ul>
+        <p class="fine">These are public posts by other developers, not customers, testimonials, or endorsements of this kit.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="kit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">What the kit is</p>
+        <h2>Turn your own test records into a re-application you can explain.</h2>
+        <p>A planned three-part kit for US$9. It does not sell testers or run your closed test. It gives structure to what you already did.</p>
+      </div>
+      <div class="kit-grid">
+        <article class="kit-card">
+          <span class="kit-num">01 / LOG</span>
+          <h3>14-day evidence log</h3>
+          <p>A daily tester task list, a feedback log, and a changelog per build. You finish the 14 days with a record instead of a folder of scattered notes.</p>
+        </article>
+        <article class="kit-card">
+          <span class="kit-num">02 / WORKSHEET</span>
+          <h3>Questionnaire answer worksheet</h3>
+          <p>Turns your own logs into specific answers for “About your closed test”, “About your app/game”, and “About your production readiness”.</p>
+        </article>
+        <article class="kit-card">
+          <span class="kit-num">03 / CHECKLIST</span>
+          <h3>Rejection diagnosis checklist</h3>
+          <p>A pre-submission check for gaps in your evidence, compared with the reasons in your rejection, before you apply again.</p>
+        </article>
+      </div>
+      <div class="callout">
+        <strong>No tester supply. No shortcuts.</strong>
+        The kit assumes you run a real closed test with real testers. It helps you document it honestly.
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section" id="demo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Free demo · working now</p>
+        <h2>Two tools. Nothing leaves this page.</h2>
+        <p>Try the date calculator and the answer-structure builder. They run with vanilla JavaScript in your browser. No account, no email required, no data sent anywhere.</p>
+      </div>
+
+      <noscript>
+        <p class="noscript-note">The date calculator and answer-structure builder need JavaScript to run. The rest of the page is readable. When JavaScript is enabled, both tools run locally in your browser and send nothing.</p>
+      </noscript>
+
+      <article class="demo-tool">
+        <div class="tool-head">
+          <span class="tool-num" aria-hidden="true">01</span>
+          <div><h3 id="calc-title">Earliest apply date</h3></div>
+        </div>
+        <p class="tool-intro">Enter the date your 12th tester opted in. If someone opted out and re-joined, add the date you were back to 12 opted-in testers — Google says that restarts the 14 days.</p>
+        <div class="calc-layout">
+          <div id="calc-form" role="group" aria-labelledby="calc-title">
+            <div class="field">
+              <label for="start-date">Date your 12th tester opted in</label>
+              <input type="date" id="start-date" name="start-date" autocomplete="off" aria-describedby="start-hint">
+              <p class="hint" id="start-hint">Use the opt-in date, not the date you submitted the application.</p>
+            </div>
+            <div id="rejoin-rows"></div>
+            <button type="button" class="btn btn-text" id="add-rejoin">+ Add an opt-out / re-join date</button>
+            <p class="hint">Leave a row blank if no one opted out. If a tester opted out and did not re-join, check that you still have 12+ opted-in testers; this tool only calculates the 14-day restart.</p>
+            <p class="form-error" id="calc-error" role="alert" hidden></p>
+            <div class="form-actions">
+              <button type="button" class="btn btn-dark" id="calc-submit">Calculate earliest date</button>
+            </div>
+          </div>
+          <aside class="calc-aside">
+            <div class="calc-hint" id="calc-hint">
+              <p class="mini-label">How it works</p>
+              <p>14 calendar days from the opt-in date. If a tester opted out and re-joined, the count restarts when you were back to 12 opted-in testers.</p>
+            </div>
+            <div class="calc-result" id="calc-result" role="status" aria-live="polite" hidden>
+              <p class="result-kicker">Earliest apply date</p>
+              <p class="result-date" id="calc-date"></p>
+              <p id="calc-detail"></p>
+              <p class="result-status" id="calc-status"></p>
+              <p class="fine">Date arithmetic based on the 14-day rule in Google Play Console Help. Confirm your tester status and exact timing in Play Console. This is not an approval prediction or legal advice.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+
+      <article class="demo-tool">
+        <div class="tool-head">
+          <span class="tool-num" aria-hidden="true">02</span>
+          <div><h3 id="builder-title">Answer-structure builder</h3></div>
+        </div>
+        <p class="tool-intro">Use only facts from your own test. The builder assembles a draft under the three questionnaire sections. It does not add testers, feedback, changes, or results.</p>
+        <div id="builder-form" role="group" aria-labelledby="builder-title">
+          <div class="form-grid">
+            <div class="field">
+              <label for="app-name">App name <span class="optional">(optional)</span></label>
+              <input type="text" id="app-name" name="app-name" maxlength="120" autocomplete="off" placeholder="e.g. My app">
+            </div>
+            <div class="field">
+              <label for="app-who">Who is it for?</label>
+              <input type="text" id="app-who" name="app-who" maxlength="300" autocomplete="off" placeholder="The people the app is built for.">
+            </div>
+            <div class="field field-full">
+              <label for="app-what">What does the app do?</label>
+              <textarea id="app-what" name="app-what" rows="2" maxlength="500" placeholder="One or two sentences, in your own words."></textarea>
+            </div>
+            <div class="field field-full">
+              <label for="app-recruit">How did you recruit testers, and how many were opted in at the end?</label>
+              <textarea id="app-recruit" name="app-recruit" rows="2" maxlength="600" placeholder="Where you found testers, and the final opted-in count."></textarea>
+            </div>
+            <div class="field field-full">
+              <label for="app-activity">What did testers actually do during the 14 days?</label>
+              <textarea id="app-activity" name="app-activity" rows="2" maxlength="800" placeholder="Daily tasks, features tested, how often they used the app."></textarea>
+            </div>
+            <div class="field">
+              <label for="app-feedback">What feedback did you receive?</label>
+              <textarea id="app-feedback" name="app-feedback" rows="3" maxlength="1000" placeholder="Specific comments or themes from testers."></textarea>
+            </div>
+            <div class="field">
+              <label for="app-changes">What changed in response?</label>
+              <textarea id="app-changes" name="app-changes" rows="3" maxlength="1000" placeholder="Include build/version and date where you can."></textarea>
+            </div>
+            <div class="field">
+              <label for="app-unfixed">Known issues not fixed <span class="optional">(optional)</span></label>
+              <textarea id="app-unfixed" name="app-unfixed" rows="3" maxlength="600" placeholder="What still is not done, and why."></textarea>
+            </div>
+            <div class="field">
+              <label for="app-ready">Why are you ready for production now?</label>
+              <textarea id="app-ready" name="app-ready" rows="3" maxlength="800" placeholder="What the test taught you about readiness, and what is different now."></textarea>
+            </div>
+          </div>
+          <p class="form-error" id="builder-error" role="alert" hidden></p>
+          <div class="form-actions">
+            <button type="button" class="btn btn-dark" id="build-draft">Build my draft</button>
+          </div>
+        </div>
+        <div class="draft-wrap" id="draft-wrap" hidden>
+          <div class="draft-head">
+            <h4>Your draft</h4>
+            <button type="button" class="btn-copy" id="copy-draft">Copy draft</button>
+          </div>
+          <pre id="draft-output" tabindex="0"></pre>
+          <p class="draft-note" id="draft-note"></p>
+          <p class="copy-status" id="copy-status" aria-live="polite"></p>
+        </div>
+      </article>
+
+      <div class="privacy-note">
+        <strong>Nothing is sent anywhere.</strong> The demo makes no network requests, sets no cookies, and stores nothing. The page does not save your inputs. Do not enter sensitive information.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="price">
+    <div class="wrap">
+      <div class="price-card">
+        <div>
+          <span class="price-badge">Planned — not on sale</span>
+          <p class="price-figure">US$9 <span>one-time</span></p>
+          <p class="price-lead"><strong>No payment is collected now.</strong> The price is planned, not active. Emailing the waitlist does not charge you or commit you to anything.</p>
+        </div>
+        <div class="price-details">
+          <h3>What the planned US$9 covers</h3>
+          <ul class="price-list">
+            <li>14-day evidence log template</li>
+            <li>Questionnaire answer worksheet for all three sections</li>
+            <li>Rejection diagnosis checklist</li>
+          </ul>
+          <p class="fine">The price does not include testers, installs, reviews, consulting, or an approval guarantee. If the kit is not built, nothing is charged.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="limits">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">What it does not do</p>
+        <h2>Honest limits, before you email.</h2>
+        <p>This is a documentation kit, not a way around Google's requirements.</p>
+      </div>
+      <ul class="limits-list">
+        <li><strong>No testers, installs, or reviews.</strong> It does not supply testers, paid installs, or reviews, and it does not support fake or incentivized activity.</li>
+        <li><strong>No approval guarantee.</strong> Google decides production access. The kit cannot guarantee a different result.</li>
+        <li><strong>No invented answers.</strong> The builder only organizes what you type. It does not create test activity, feedback, builds, or results.</li>
+        <li><strong>No account management.</strong> It does not submit your application, manage your Play Console account, or run your closed test.</li>
+        <li><strong>No legal advice.</strong> It is an independent documentation tool, not legal or compliance advice.</li>
+        <li><strong>Not affiliated with Google.</strong> It is an independent project and is not endorsed by Google, any government body, or any company.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta" id="waitlist">
+    <div class="wrap">
+      <p class="kicker">If this is your situation</p>
+      <h2>Register interest. No payment, no obligation.</h2>
+      <p>Email me if you are a solo Android developer with a personal Play Console account created after 13 November 2023, and your production access was rejected at least once after a 14-day closed test. Development starts only if at least 5 people email within 14 days of this page going live.</p>
+      <a class="btn" href="mailto:tolaria@naver.com?subject=Play%20Production%20Kit%20-%20waitlist">Email to join the waitlist</a>
+      <p class="fine">This opens your email app. The address is tolaria@naver.com. There is no form, no account, and no checkout on this page.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-brand">Play Production Access Re-apply Kit</p>
+      <p>Independent project. Not affiliated with Google, any government body, or any company.</p>
+      <p>Contact: <a href="mailto:tolaria@naver.com">tolaria@naver.com</a></p>
+    </div>
+    <div class="footer-meta">
+      <p>No trackers, cookies, or external scripts.</p>
+      <p>The free demo runs locally in your browser.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    'use strict';
+
+    var DAY = 24 * 60 * 60 * 1000;
+    var dateFormatter = new Intl.DateTimeFormat('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+      timeZone: 'UTC'
+    });
+
+    function parseDateOnly(value) {
+      if (!value) return null;
+      var match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+      if (!match) return null;
+
+      var year = Number(match[1]);
+      var month = Number(match[2]);
+      var day = Number(match[3]);
+      if (month < 1 || month > 12 || day < 1 || day > 31) return null;
+
+      var time = Date.UTC(year, month - 1, day);
+      var date = new Date(time);
+      if (
+        date.getUTCFullYear() !== year ||
+        date.getUTCMonth() !== month - 1 ||
+        date.getUTCDate() !== day
+      ) {
+        return null;
+      }
+      return time;
+    }
+
+    function formatDate(time) {
+      return dateFormatter.format(new Date(time));
+    }
+
+    function localTodayAsUTC() {
+      var now = new Date();
+      return Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    }
+
+    function showMessage(element, message) {
+      element.textContent = message;
+      element.hidden = !message;
+    }
+
+    var startInput = document.getElementById('start-date');
+    var rejoinRows = document.getElementById('rejoin-rows');
+    var addRejoinButton = document.getElementById('add-rejoin');
+    var calcSubmit = document.getElementById('calc-submit');
+    var calcError = document.getElementById('calc-error');
+    var calcHint = document.getElementById('calc-hint');
+    var calcResult = document.getElementById('calc-result');
+    var calcDate = document.getElementById('calc-date');
+    var calcDetail = document.getElementById('calc-detail');
+    var calcStatus = document.getElementById('calc-status');
+    var rejoinCounter = 0;
+
+    function addRejoinRow() {
+      var isFirst = rejoinRows.children.length === 0;
+      rejoinCounter += 1;
+
+      var row = document.createElement('div');
+      row.className = 'rejoin-row';
+
+      var fieldId = 'rejoin-date-' + rejoinCounter;
+      var label = document.createElement('label');
+      label.htmlFor = fieldId;
+      label.textContent = isFirst
+        ? 'If a tester opted out: date you were back to 12 opted-in testers (optional)'
+        : 'Another opt-out: date you were back to 12 opted-in testers';
+
+      var input = document.createElement('input');
+      input.type = 'date';
+      input.id = fieldId;
+      input.name = fieldId;
+      input.className = 'rejoin-date';
+      input.autocomplete = 'off';
+
+      var remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'remove-row';
+      remove.textContent = 'Remove';
+      remove.setAttribute('aria-label', 'Remove this opt-out date');
+      remove.addEventListener('click', function () {
+        row.remove();
+        showMessage(calcError, '');
+        resetCalcView();
+      });
+
+      row.appendChild(label);
+      row.appendChild(input);
+      row.appendChild(remove);
+      rejoinRows.appendChild(row);
+    }
+
+    function resetCalcView() {
+      calcResult.hidden = true;
+      calcHint.hidden = false;
+    }
+
+    function showCalcError(message, focusElement) {
+      showMessage(calcError, message);
+      resetCalcView();
+      if (focusElement) focusElement.focus();
+    }
+
+    function calculate() {
+      showMessage(calcError, '');
+
+      if (!startInput.value) {
+        showCalcError('Enter the date your 12th tester opted in.', startInput);
+        return;
+      }
+
+      var start = parseDateOnly(startInput.value);
+      if (start === null) {
+        showCalcError('That start date is not valid. Choose a real calendar date.', startInput);
+        return;
+      }
+
+      var base = start;
+      var resetDate = null;
+      var inputs = rejoinRows.querySelectorAll('.rejoin-date');
+
+      for (var i = 0; i < inputs.length; i += 1) {
+        var input = inputs[i];
+        if (!input.value) continue;
+
+        var rejoin = parseDateOnly(input.value);
+        if (rejoin === null) {
+          showCalcError('One of the opt-out dates is not valid. Check it or remove the row.', input);
+          return;
+        }
+
+        if (rejoin < start) {
+          showCalcError('A re-join date cannot be earlier than the date your 12th tester opted in.', input);
+          return;
+        }
+
+        if (rejoin > base) {
+          base = rejoin;
+          resetDate = rejoin;
+        }
+      }
+
+      var earliest = base + (14 * DAY);
+      var today = localTodayAsUTC();
+      var days = Math.round((earliest - today) / DAY);
+
+      calcHint.hidden = true;
+      calcResult.hidden = false;
+      calcDate.textContent = formatDate(earliest);
+
+      if (resetDate !== null) {
+        calcDetail.textContent = 'Counted from ' + formatDate(base) + ', because an opt-out and re-join restarts the 14 days.';
+      } else {
+        calcDetail.textContent = 'Counted from ' + formatDate(base) + ', the date your 12th tester opted in.';
+      }
+
+      if (days > 0) {
+        calcStatus.textContent = days + (days === 1 ? ' day remains' : ' days remain') + ' before the 14-day window is complete.';
+      } else if (days === 0) {
+        calcStatus.textContent = 'The 14-day window is complete today. Confirm your tester status in Play Console before applying.';
+      } else {
+        var passed = Math.abs(days);
+        calcStatus.textContent = 'The 14-day window has been complete for ' + passed + (passed === 1 ? ' day' : ' days') + '. Confirm your tester status in Play Console before applying.';
+      }
+    }
+
+    addRejoinRow();
+    addRejoinButton.addEventListener('click', function () {
+      addRejoinRow();
+      showMessage(calcError, '');
+      resetCalcView();
+    });
+    calcSubmit.addEventListener('click', calculate);
+    startInput.addEventListener('input', function () {
+      showMessage(calcError, '');
+      resetCalcView();
+    });
+    rejoinRows.addEventListener('input', function () {
+      showMessage(calcError, '');
+      resetCalcView();
+    });
+
+    function handleCalcEnter(event) {
+      if (event.key === 'Enter' && event.target.tagName === 'INPUT') {
+        event.preventDefault();
+        calculate();
+      }
+    }
+
+    startInput.addEventListener('keydown', handleCalcEnter);
+    rejoinRows.addEventListener('keydown', handleCalcEnter);
+
+    var builderFields = {
+      appName: document.getElementById('app-name'),
+      what: document.getElementById('app-what'),
+      who: document.getElementById('app-who'),
+      recruit: document.getElementById('app-recruit'),
+      activity: document.getElementById('app-activity'),
+      feedback: document.getElementById('app-feedback'),
+      changes: document.getElementById('app-changes'),
+      unfixed: document.getElementById('app-unfixed'),
+      ready: document.getElementById('app-ready')
+    };
+
+    var builderForm = document.getElementById('builder-form');
+    var builderError = document.getElementById('builder-error');
+    var buildButton = document.getElementById('build-draft');
+    var draftWrap = document.getElementById('draft-wrap');
+    var draftOutput = document.getElementById('draft-output');
+    var draftNote = document.getElementById('draft-note');
+    var copyButton = document.getElementById('copy-draft');
+    var copyStatus = document.getElementById('copy-status');
+
+    function readValue(input) {
+      return input.value.replace(/\r\n/g, '\n').trim();
+    }
+
+    function fill(value, label, missing) {
+      if (value) return value;
+      missing.push(label);
+      return '[Add ' + label + ']';
+    }
+
+    function buildDraft() {
+      showMessage(builderError, '');
+
+      var values = {};
+      var keys = Object.keys(builderFields);
+      for (var i = 0; i < keys.length; i += 1) {
+        values[keys[i]] = readValue(builderFields[keys[i]]);
+      }
+
+      var substantiveKeys = ['what', 'who', 'recruit', 'activity', 'feedback', 'changes', 'unfixed', 'ready'];
+      var hasContent = substantiveKeys.some(function (key) {
+        return values[key] !== '';
+      });
+
+      if (!hasContent) {
+        showMessage(builderError, 'Add at least one detail from your own closed test. The builder does not invent answers.');
+        draftWrap.hidden = true;
+        builderFields.what.focus();
+        return;
+      }
+
+      var missing = [];
+      var appName = values.appName || '[Add app name]';
+      var draft = [
+        'App: ' + appName,
+        '',
+        'About your closed test',
+        '',
+        'Q: How did you recruit testers, and how many were opted in at the end of the 14-day test?',
+        'A: ' + fill(values.recruit, 'how you recruited testers and the final opted-in count', missing),
+        '',
+        'Q: What did testers actually do during the 14 days?',
+        'A: ' + fill(values.activity, 'what testers actually did', missing),
+        '',
+        'Q: What feedback did you receive?',
+        'A: ' + fill(values.feedback, 'feedback you received', missing),
+        '',
+        'Q: What did you change in response? Include build/version and date where possible.',
+        'A: ' + fill(values.changes, 'changes you made, with build/version and date', missing),
+        '',
+        'About your app/game',
+        '',
+        'Q: What does the app do?',
+        'A: ' + fill(values.what, 'what the app does', missing),
+        '',
+        'Q: Who is it for?',
+        'A: ' + fill(values.who, 'who the app is for', missing),
+        '',
+        'About your production readiness',
+        '',
+        'Q: Why are you ready for production now?',
+        'A: ' + fill(values.ready, 'why you are ready for production now', missing),
+        '',
+        'Q: What known issues remain?',
+        'A: ' + fill(values.unfixed, 'known issues not fixed', missing),
+        '',
+        '---',
+        'Draft structure only. Every statement must come from your own records. Check build numbers, dates, tester counts, and feedback before using it.'
+      ].join('\n');
+
+      draftOutput.textContent = draft;
+      draftWrap.hidden = false;
+      copyStatus.textContent = '';
+      draftNote.textContent = missing.length
+        ? 'Placeholders mark details you did not add. Fill them with your own facts before using the draft.'
+        : 'Every answer here came from your inputs. Verify dates, build numbers, tester counts, and feedback before using it.';
+    }
+
+    function legacyCopy(text) {
+      var helper = document.createElement('textarea');
+      helper.value = text;
+      helper.setAttribute('readonly', '');
+      helper.style.position = 'fixed';
+      helper.style.top = '-1000px';
+      helper.style.left = '-1000px';
+      document.body.appendChild(helper);
+      helper.focus();
+      helper.select();
+
+      var copied = false;
+      try {
+        copied = document.execCommand('copy');
+      } catch (error) {
+        copied = false;
+      }
+
+      document.body.removeChild(helper);
+      return copied;
+    }
+
+    function copyDraft() {
+      var text = draftOutput.textContent || '';
+      if (!text) {
+        copyStatus.textContent = 'Build a draft first.';
+        return;
+      }
+
+      function finish(copied) {
+        copyStatus.textContent = copied
+          ? 'Copied to your clipboard.'
+          : 'Copy failed. Select the draft and copy it manually.';
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () {
+          finish(true);
+        }, function () {
+          finish(legacyCopy(text));
+        });
+      } else {
+        finish(legacyCopy(text));
+      }
+    }
+
+    buildButton.addEventListener('click', buildDraft);
+    copyButton.addEventListener('click', copyDraft);
+    builderForm.addEventListener('input', function () { showMessage(builderError, ''); });
+    builderForm.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' && event.target.tagName === 'INPUT') {
+        event.preventDefault();
+        buildDraft();
+      }
+    });
+  }());
+</script>
+</body>
+</html>
