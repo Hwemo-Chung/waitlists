@@ -1,0 +1,1645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Japan Pension Refund Kit — for JET ALTs leaving Japan</title>
+<meta name="description" content="A self-help kit for JET Programme ALTs leaving Japan with 6–60 months of Employees' Pension Insurance. Estimate the lump-sum withdrawal and the 20.42% tax refund. Waitlist open; no payment taken now.">
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --paper: #f7f4ec;
+    --paper-deep: #efeade;
+    --card: #fffdf8;
+    --ink: #1d241f;
+    --body: #333c35;
+    --muted: #5c655e;
+    --line: #d9d3c4;
+    --accent: #2e6b57;
+    --accent-dark: #245544;
+    --accent-soft: #e3ece6;
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --radius: 14px;
+    --shadow: 0 12px 32px rgba(29, 36, 31, 0.06);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--accent-soft); color: var(--ink); }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  a:hover { color: var(--accent-dark); }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+    outline: 3px solid rgba(46, 107, 87, 0.35);
+    outline-offset: 2px;
+  }
+
+  .wrap {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 16px;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    left: 12px;
+    top: 12px;
+    color: var(--paper);
+  }
+
+  .site-header {
+    border-bottom: 1px solid var(--line);
+    background: rgba(247, 244, 236, 0.96);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 15px 0;
+  }
+
+  .brand {
+    font-family: var(--serif);
+    font-size: 1.06rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .brand:hover { color: var(--ink); }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .pill {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 11px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .header-cta {
+    font-size: 0.88rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .hero {
+    padding: 66px 0 58px;
+    background:
+      radial-gradient(900px 420px at 12% -10%, #e9efe8 0%, rgba(233, 239, 232, 0) 70%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.22fr) minmax(280px, 0.78fr);
+    gap: 52px;
+    align-items: start;
+  }
+
+  .eyebrow,
+  .kicker {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0 0 18px;
+    font-family: var(--serif);
+    font-size: clamp(2.35rem, 5.5vw, 4.05rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  .lede {
+    max-width: 640px;
+    margin: 0;
+    color: var(--body);
+    font-size: 1.12rem;
+    line-height: 1.68;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 28px 0 14px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 21px;
+    border: 1px solid var(--accent);
+    border-radius: 9px;
+    background: var(--accent);
+    color: #ffffff;
+    font-family: var(--sans);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
+  }
+
+  .btn:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    color: #ffffff;
+  }
+
+  .btn:active { transform: translateY(1px); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  .btn-ghost:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--ink);
+  }
+
+  .btn-on-dark {
+    width: 100%;
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--ink);
+  }
+
+  .btn-on-dark:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent-soft);
+    color: var(--ink);
+  }
+
+  .fine {
+    max-width: 560px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .fact-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 26px 26px 22px;
+    box-shadow: var(--shadow);
+  }
+
+  .fact-card h2 {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .fact-list {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .fact-list li {
+    display: grid;
+    gap: 2px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+
+  .fact-list li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .fact-num {
+    font-family: var(--serif);
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .fact-num:hover { color: var(--accent-dark); }
+
+  .fact-list span {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .fact-note {
+    margin: 20px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .section {
+    padding: 60px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .section-head {
+    max-width: 780px;
+    margin-bottom: 30px;
+  }
+
+  .section-head h2 {
+    margin: 0 0 12px;
+    font-family: var(--serif);
+    font-size: clamp(1.75rem, 3.4vw, 2.55rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.14;
+  }
+
+  .section-head p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    padding: 23px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 1.02rem;
+    line-height: 1.35;
+  }
+
+  .card p {
+    margin: 0 0 14px;
+    color: var(--body);
+    font-size: 0.94rem;
+  }
+
+  .card p:last-child { margin-bottom: 0; }
+
+  .src {
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .src a { font-weight: 600; }
+
+  .panel {
+    padding: 26px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  .demo-panel { max-width: 900px; }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .field label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .field input {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 13px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #ffffff;
+    color: var(--ink);
+    font: inherit;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .field input:hover { border-color: #bdb6a5; }
+
+  .field input[aria-invalid="true"] {
+    border-color: var(--accent);
+    box-shadow: inset 0 0 0 1px var(--accent);
+  }
+
+  .hint {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.48;
+  }
+
+  .form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .message {
+    margin: 16px 0 0;
+    padding: 12px 14px;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    background: var(--accent-soft);
+    color: var(--ink);
+    font-size: 0.92rem;
+  }
+
+  .message[hidden] { display: none; }
+
+  .message.error {
+    background: #efe7d8;
+    font-weight: 600;
+  }
+
+  .results {
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+
+  .results:focus { outline: none; }
+
+  .results h3 {
+    margin: 0 0 4px;
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .results-summary {
+    margin: 0 0 16px;
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--line);
+  }
+
+  .result-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 15px;
+    background: var(--card);
+  }
+
+  .result-cell.highlight { background: var(--accent-soft); }
+
+  .rlabel {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.35;
+  }
+
+  .rvalue {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .subhead {
+    margin: 28px 0 8px;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .small {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  th,
+  td {
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: var(--paper-deep);
+    color: var(--ink);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  tbody tr:last-child td { border-bottom: 0; }
+
+  td.num {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .table-note {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .demo-table { min-width: 560px; }
+
+  .check-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+    gap: 28px;
+    align-items: start;
+  }
+
+  .checklist {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .checklist li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .checklist li:last-child { border-bottom: 0; }
+
+  .checklist label {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    padding: 11px 0;
+    cursor: pointer;
+  }
+
+  .checklist input {
+    width: 18px;
+    height: 18px;
+    margin: 3px 0 0;
+    accent-color: var(--accent);
+    cursor: pointer;
+  }
+
+  .checklist strong {
+    display: block;
+    font-size: 0.93rem;
+    line-height: 1.4;
+  }
+
+  .checklist span span {
+    display: block;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 0.81rem;
+    line-height: 1.45;
+  }
+
+  .check-note {
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .timeline-form { margin-bottom: 20px; }
+
+  .timeline {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .timeline li {
+    position: relative;
+    margin-left: 7px;
+    padding: 0 0 20px 27px;
+    border-left: 2px solid var(--line);
+  }
+
+  .timeline li:last-child {
+    padding-bottom: 0;
+    border-left-color: transparent;
+  }
+
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -7px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--card);
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .tl-date {
+    display: block;
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .timeline strong {
+    display: block;
+    margin: 1px 0 3px;
+    font-size: 0.94rem;
+  }
+
+  .timeline p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .kit-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.16fr) minmax(300px, 0.84fr);
+    gap: 30px;
+    align-items: start;
+  }
+
+  .kit-list {
+    display: grid;
+    gap: 13px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .kit-list li {
+    position: relative;
+    padding-left: 27px;
+    color: var(--body);
+    font-size: 0.95rem;
+  }
+
+  .kit-list li::before {
+    content: "✓";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .kit-list strong { color: var(--ink); }
+
+  .price-card {
+    padding: 28px;
+    border-radius: 18px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .price-label {
+    margin: 0;
+    color: #c9d3cb;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: baseline;
+    margin: 10px 0 10px;
+  }
+
+  .price .amount {
+    font-family: var(--serif);
+    font-size: 3.15rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .price .term {
+    color: #c9d3cb;
+    font-size: 0.9rem;
+  }
+
+  .price-copy {
+    margin: 0 0 20px;
+    color: #e5e9e4;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .price-fine {
+    margin: 16px 0 0;
+    color: #b9c4bc;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .price-card .btn {
+    margin-top: 2px;
+  }
+
+  .source-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .source-list li {
+    padding: 15px 17px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+  }
+
+  .source-list a {
+    display: inline-block;
+    margin-bottom: 2px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .source-list span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .legal {
+    padding: 26px;
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-size: 0.92rem;
+  }
+
+  .legal p { margin: 0 0 12px; }
+
+  .legal ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+  }
+
+  .legal li { margin-bottom: 6px; }
+
+  .legal-note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .final {
+    padding: 64px 0 68px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .final h2 {
+    max-width: 760px;
+    margin: 0 auto 12px;
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.8vw, 2.7rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.14;
+  }
+
+  .final p {
+    max-width: 640px;
+    margin: 0 auto 22px;
+    color: var(--muted);
+    font-size: 0.98rem;
+  }
+
+  .final .fine {
+    margin: 14px auto 0;
+    font-size: 0.8rem;
+  }
+
+  .site-footer {
+    padding: 22px 0 38px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 20px;
+  }
+
+  .footer-inner a { font-weight: 600; }
+
+  @media (max-width: 860px) {
+    .hero-grid,
+    .kit-grid,
+    .check-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .hero { padding: 48px 0 44px; }
+
+    .grid-3 { grid-template-columns: 1fr; }
+
+    .fact-card { max-width: 560px; }
+  }
+
+  @media (max-width: 620px) {
+    .wrap { width: calc(100% - 28px); }
+
+    .header-inner { padding: 13px 0; }
+
+    .pill { display: none; }
+
+    .header-cta { font-size: 0.82rem; }
+
+    .hero { padding: 40px 0 38px; }
+
+    .lede { font-size: 1.03rem; }
+
+    .cta-row .btn { width: 100%; }
+
+    .section { padding: 44px 0; }
+
+    .panel { padding: 20px; }
+
+    .form-grid { grid-template-columns: 1fr; }
+
+    .result-grid { grid-template-columns: 1fr 1fr; }
+
+    .result-cell:last-child { grid-column: 1 / -1; }
+
+    .price-card { padding: 23px; }
+
+    .price .amount { font-size: 2.8rem; }
+
+    .final { padding: 48px 0 52px; }
+
+    .compare-table,
+    .demo-table {
+      min-width: 0;
+    }
+
+    .compare-table thead,
+    .demo-table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .compare-table,
+    .compare-table tbody,
+    .compare-table tr,
+    .compare-table td,
+    .demo-table,
+    .demo-table tbody,
+    .demo-table tr,
+    .demo-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .compare-table tr,
+    .demo-table tr {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .compare-table tr:last-child,
+    .demo-table tr:last-child { border-bottom: 0; }
+
+    .compare-table td,
+    .demo-table td {
+      padding: 4px 16px;
+      border: 0;
+      white-space: normal;
+    }
+
+    .compare-table td::before,
+    .demo-table td::before {
+      display: block;
+      margin-bottom: 1px;
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .compare-table td:nth-child(1)::before,
+    .demo-table td:nth-child(1)::before { display: none; }
+
+    .compare-table td:nth-child(2)::before { content: "Offer"; }
+    .compare-table td:nth-child(3)::before { content: "Published price"; }
+    .compare-table td:nth-child(4)::before { content: "Notes"; }
+    .demo-table td:nth-child(2)::before { content: "Published fee"; }
+    .demo-table td:nth-child(3)::before { content: "Share of your refundable tax"; }
+
+    .compare-table td:first-child,
+    .demo-table td:first-child {
+      padding-top: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .brand { font-size: 0.95rem; }
+
+    .result-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Japan Pension Refund Kit</a>
+    <div class="header-right">
+      <span class="pill">Waitlist · no payment now</span>
+      <a class="header-cta" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20Japan%20Pension%20Refund%20Kit">Join the waitlist</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">For JET Programme ALTs leaving Japan</p>
+        <h1>Leaving Japan with pension money still on the table?</h1>
+        <p class="lede">If you are finishing your JET contract and leaving for good with 6–60 months of Employees' Pension Insurance, there are two payments to understand: the lump-sum withdrawal and the 20.42% tax withheld from it. A plain-English, self-help kit is planned to help you claim both — without paying an agency.</p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20Japan%20Pension%20Refund%20Kit">Join the waitlist</a>
+          <a class="btn btn-ghost" href="#demo">Try the free calculator</a>
+        </div>
+        <p class="fine">This is a waitlist, not a shop. No payment is taken now. The paid kit does not exist yet; the calculator and checklist below are free to use.</p>
+      </div>
+
+      <aside class="fact-card" aria-labelledby="short-version">
+        <h2 id="short-version">The short version</h2>
+        <ul class="fact-list">
+          <li>
+            <a class="fact-num" href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">20.42%</a>
+            <span>income tax withheld from the lump-sum withdrawal</span>
+          </li>
+          <li>
+            <a class="fact-num" href="https://www.nenkin.go.jp/international/japanese-system/withdrawalpayment/payment.html" target="_blank" rel="noopener noreferrer">2 years</a>
+            <span>to apply after leaving Japan</span>
+          </li>
+          <li>
+            <a class="fact-num" href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">~6 months</a>
+            <span>typical end-to-end process, including the tax refund</span>
+          </li>
+        </ul>
+        <p class="fact-note">Figures from the Japan Pension Service and Kubota SR office. Estimates only; the Japan Pension Service decides the amount.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="problem">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">The problem</p>
+        <h2>Two payments. Two clocks. One departure.</h2>
+        <p>The refund is not one payment. It is a lump sum with tax already taken out, followed by a separate tax claim that depends on someone still living in Japan. Miss a step, and the money is easy to leave behind.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>20.42% is withheld at source</h3>
+          <p>JPS pays about 79.58% of the lump sum first. The rest is income tax withheld, recovered only after a tax representative in Japan files a return. The whole process takes about six months.</p>
+          <p class="src">Source: <a href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">Kubota SR office</a></p>
+        </article>
+
+        <article class="card">
+          <h3>The 2-year window is hard</h3>
+          <p>Apply within two years after leaving Japan, once you are no longer covered. If your residence status is not cancelled, waiting for it to expire can push you past the deadline.</p>
+          <p class="src">Sources: <a href="https://www.nenkin.go.jp/international/japanese-system/withdrawalpayment/payment.html" target="_blank" rel="noopener noreferrer">Japan Pension Service</a>, <a href="https://www.pref.saitama.lg.jp/documents/5982/out_on_a_high_note_2026.pdf" target="_blank" rel="noopener noreferrer">Saitama leaving guide</a></p>
+        </article>
+
+        <article class="card">
+          <h3>The chain has many links</h3>
+          <p>Pension number, tax representative form, moving-out notice, claim form, residence-card surrender, and the original decision notice sent back to Japan. Each one has its own timing.</p>
+          <p class="src">Source: <a href="https://www.pref.saitama.lg.jp/documents/5982/out_on_a_high_note_2026.pdf" target="_blank" rel="noopener noreferrer">Saitama leaving guide</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Free demo</p>
+        <h2>Estimate your lump sum — and see what the tax refund is worth.</h2>
+        <p>Enter your months of coverage and average monthly standard remuneration. The calculator runs entirely in your browser; nothing is sent or stored.</p>
+      </div>
+
+      <div class="panel demo-panel">
+        <form id="calc-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="months">Months of Employees' Pension coverage</label>
+              <input id="months" name="months" type="number" inputmode="numeric" step="1" min="1" placeholder="e.g. 36" autocomplete="off">
+              <p class="hint">Whole months. 6–60 months is the standard range; above 60 months is capped.</p>
+            </div>
+            <div class="field">
+              <label for="salary">Average monthly standard remuneration (JPY)</label>
+              <input id="salary" name="salary" type="number" inputmode="numeric" step="1" min="1" placeholder="e.g. 300000" autocomplete="off">
+              <p class="hint">Check your payslip for 標準報酬月額, or approximate with average monthly gross including bonuses ÷ months.</p>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Calculate my estimate</button>
+            <button class="btn btn-ghost" type="button" id="calc-reset">Reset</button>
+          </div>
+        </form>
+
+        <p class="message error" id="calc-error" role="alert" hidden></p>
+        <p class="message" id="calc-warning" role="status" hidden></p>
+
+        <div class="results" id="calc-results" tabindex="-1" hidden>
+          <h3>Your estimate</h3>
+          <p class="results-summary" id="out-summary"></p>
+
+          <div class="result-grid">
+            <div class="result-cell">
+              <span class="rlabel">Payment rate</span>
+              <span class="rvalue" id="out-rate">—</span>
+            </div>
+            <div class="result-cell">
+              <span class="rlabel">Gross lump sum</span>
+              <span class="rvalue" id="out-gross">—</span>
+            </div>
+            <div class="result-cell">
+              <span class="rlabel">Tax withheld (20.42%)</span>
+              <span class="rvalue" id="out-withheld">—</span>
+            </div>
+            <div class="result-cell highlight">
+              <span class="rlabel">First payment (~79.58%)</span>
+              <span class="rvalue" id="out-first">—</span>
+            </div>
+            <div class="result-cell">
+              <span class="rlabel">Refundable tax (via tax rep)</span>
+              <span class="rvalue" id="out-refund">—</span>
+            </div>
+          </div>
+
+          <h4 class="subhead">What an agency fee would mean for this refund</h4>
+          <p class="small">Published full-service fees, compared with the 20.42% tax you would be trying to recover. These are not quotes, and we are not affiliated with these providers.</p>
+          <div class="table-wrap">
+            <table class="demo-table">
+              <thead>
+                <tr>
+                  <th scope="col">Agency option</th>
+                  <th scope="col">Published fee</th>
+                  <th scope="col">Share of your refundable tax</th>
+                </tr>
+              </thead>
+              <tbody id="agency-rows"></tbody>
+            </table>
+          </div>
+          <p class="table-note">Fee sources: <a href="https://mbs-jp.com/service/" target="_blank" rel="noopener noreferrer">Maeda Business Support</a>, <a href="https://penpos.beyondcompanies.net/index_ja.php" target="_blank" rel="noopener noreferrer">PenPos</a>, <a href="https://dattai.roumujapan.com/service2-8.html" target="_blank" rel="noopener noreferrer">ACROSEED</a>. Paid agencies can file claims and represent clients; this kit does not.</p>
+          <p class="table-note">This is an estimate using average standard remuneration × payment rate. The Japan Pension Service decides the final amount. See the <a href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">published rate table</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="checklist">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Leaving checklist</p>
+        <h2>Know the order. Protect the deadline.</h2>
+        <p>The official sequence is short, but the timing is unforgiving. Tick the steps you have handled, then build a dated timeline from your departure date.</p>
+      </div>
+
+      <div class="check-grid">
+        <div class="panel">
+          <h3 class="subhead" style="margin-top:0">The sequence</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox"><span><strong>Keep your pension number</strong><span>You will need it for the claim and later paperwork.</span></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Appoint a tax representative</strong><span>Any resident of Japan can act. Use the 所得税・消費税の納税管理人の届出書.</span></span></label></li>
+            <li><label><input type="checkbox"><span><strong>File your moving-out notification</strong><span>The 転出届 is part of the no-residence condition.</span></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Take the claim form home</strong><span>Claim forms are available in 14 languages from the Japan Pension Service.</span></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Surrender your residence card at the airport</strong><span>If your status is not cancelled, you may have to wait until it expires — possibly past the 2-year deadline.</span></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Mail the claim to JPS after leaving</strong><span>Apply within two years after leaving Japan, once no longer covered.</span></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Send the original decision notice to your tax representative</strong><span>The 脱退一時金支給決定通知書 is needed for the tax return.</span></span></label></li>
+            <li><label><input type="checkbox"><span><strong>Your tax representative files for the 20.42%</strong><span>About two months after the first payment; about six months end to end.</span></span></label></li>
+          </ul>
+          <p class="check-note">Checkboxes are just for you — nothing is saved or sent. Sources: <a href="https://www.pref.saitama.lg.jp/documents/5982/out_on_a_high_note_2026.pdf" target="_blank" rel="noopener noreferrer">Saitama leaving guide</a>, <a href="https://www.nenkin.go.jp/international/japanese-system/withdrawalpayment/payment.html" target="_blank" rel="noopener noreferrer">Japan Pension Service</a>, <a href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">Kubota SR office</a>.</p>
+        </div>
+
+        <div class="panel">
+          <h3 class="subhead" style="margin-top:0">Build your dated timeline</h3>
+          <form class="timeline-form" id="timeline-form" novalidate>
+            <div class="field">
+              <label for="departure">Your departure date</label>
+              <input id="departure" name="departure" type="date">
+              <p class="hint">We use this only to calculate dates in your browser.</p>
+            </div>
+            <div class="form-actions">
+              <button class="btn" type="submit">Show my timeline</button>
+            </div>
+          </form>
+
+          <p class="message error" id="timeline-error" role="alert" hidden></p>
+          <p class="message" id="timeline-note" role="status" hidden></p>
+
+          <div class="results" id="timeline-results" tabindex="-1" hidden>
+            <h3>Your dates</h3>
+            <p class="results-summary">Illustrative, assuming you mail the claim around your departure date.</p>
+            <ol class="timeline" id="timeline-list"></ol>
+            <p class="table-note">Deadline: <a href="https://www.nenkin.go.jp/international/japanese-system/withdrawalpayment/payment.html" target="_blank" rel="noopener noreferrer">Japan Pension Service</a>. Payment timing: <a href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">Kubota SR office</a>. Residence-card warning: <a href="https://www.pref.saitama.lg.jp/documents/5982/out_on_a_high_note_2026.pdf" target="_blank" rel="noopener noreferrer">Saitama leaving guide</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">The paid kit</p>
+        <h2>A start-to-finish workbook, designed around the official steps.</h2>
+        <p>The free demo shows the math. The paid kit will organise the whole process — what to do before you leave, what to send after, and how to follow the tax refund — in one place.</p>
+      </div>
+
+      <div class="kit-grid">
+        <div>
+          <ul class="kit-list">
+            <li><strong>Route map:</strong> the official sequence from pre-departure preparation to the tax refund, with the Japanese form names and direct links.</li>
+            <li><strong>Eligibility and scenario guide:</strong> the six conditions, plus branches for leaving soon, already left, lost documents, residence status not cancelled, and a claim near the deadline.</li>
+            <li><strong>Document pack:</strong> pension number, claim form, tax representative form, 転出届, residence-card surrender, the original 脱退一時金支給決定通知書, and proof of mailing.</li>
+            <li><strong>Tax representative worksheet:</strong> who can act, what to send, when to send it, and what they file.</li>
+            <li><strong>Dated timeline planner:</strong> your 2-year deadline, the ~4-month first payment, the ~2-month tax refund, and the ~6-month total.</li>
+            <li><strong>Worked examples:</strong> every payment-rate band, so you can sanity-check your own estimate.</li>
+            <li><strong>Message templates and follow-up tracker:</strong> English messages to JPS and your tax representative, plus a simple log of what was sent and when.</li>
+            <li><strong>Official source library and change watch:</strong> JPS, Saitama, MHLW and Kubota links, with the pending cap change clearly marked as pending.</li>
+            <li><strong>FAQ:</strong> the confusions that show up in public posts — the tax-office step, a lost notice, and whether a tax representative is required.</li>
+          </ul>
+          <p class="fine" style="margin-top:20px">The free calculator stays free. The paid kit is a self-help workbook, not a filing service. It does not file claims, act as a tax representative, receive refunds, or give individual legal or tax advice.</p>
+        </div>
+
+        <aside class="price-card" aria-labelledby="planned-price">
+          <p class="price-label" id="planned-price">Planned price</p>
+          <p class="price"><span class="amount">US$24</span><span class="term">one-time</span></p>
+          <p class="price-copy">One payment. No subscription. The kit is not built yet, and no payment is taken now.</p>
+          <a class="btn btn-on-dark" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20Japan%20Pension%20Refund%20Kit">Join the waitlist</a>
+          <p class="price-fine">If 5 waitlist emails arrive within 14 days — by 6 November 2026, JST — the kit will be built. If not, it will not be built, and nobody is charged.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Price context</p>
+        <h2>What agencies charge for help.</h2>
+        <p>These are published prices from agencies that provide paid support with the claim and tax refund. This kit will be self-help. The comparison is context, not a like-for-like claim.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table">
+          <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Published agency prices and the planned price of the Japan Pension Refund Kit</caption>
+          <thead>
+            <tr>
+              <th scope="col">Provider</th>
+              <th scope="col">Offer</th>
+              <th scope="col">Published price</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://penpos.beyondcompanies.net/index_ja.php" target="_blank" rel="noopener noreferrer">PenPos</a></td>
+              <td>Full support</td>
+              <td class="num">¥55,000 incl. tax</td>
+              <td>Fee deducted from the tax refund</td>
+            </tr>
+            <tr>
+              <td><a href="https://penpos.beyondcompanies.net/index_ja.php" target="_blank" rel="noopener noreferrer">PenPos</a></td>
+              <td>Tax-refund only</td>
+              <td class="num">¥33,000 incl. tax</td>
+              <td>Fee deducted from the tax refund</td>
+            </tr>
+            <tr>
+              <td><a href="https://mbs-jp.com/service/" target="_blank" rel="noopener noreferrer">Maeda Business Support</a></td>
+              <td>Full course</td>
+              <td class="num">¥25,000</td>
+              <td>Excl. consumption tax; excl. transfer/postage</td>
+            </tr>
+            <tr>
+              <td><a href="https://mbs-jp.com/service/" target="_blank" rel="noopener noreferrer">Maeda Business Support</a></td>
+              <td>Tax course</td>
+              <td class="num">¥20,000</td>
+              <td>Excl. consumption tax; excl. transfer/postage</td>
+            </tr>
+            <tr>
+              <td><a href="https://dattai.roumujapan.com/service2-8.html" target="_blank" rel="noopener noreferrer">ACROSEED</a></td>
+              <td>Full pack or tax-refund-only</td>
+              <td class="num">¥70,000 excl. tax</td>
+              <td>Options ¥10,000 each</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">Kubota SR office</a></td>
+              <td>Contingency fee</td>
+              <td class="num">10% of lump sum; min. ¥60,000 excl. tax</td>
+              <td>¥30,000–50,000 upfront</td>
+            </tr>
+            <tr>
+              <td><strong>Japan Pension Refund Kit</strong></td>
+              <td>Self-help kit — planned</td>
+              <td class="num"><strong>US$24 one-time</strong></td>
+              <td><strong>Waitlist only; no payment now</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Prices as published at the time of writing (23 October 2026), shown without currency conversion. Check each provider for current terms. We are not affiliated with any provider listed.</p>
+
+      <div class="panel" style="margin-top:22px">
+        <p style="margin:0;color:var(--body);font-size:0.94rem"><strong>Why the difference?</strong> An agency can file the claim and act as your tax representative. This kit is self-help information, worksheets and a calculator. You stay in control of the paperwork. The kit is planned at a low-cost price for people who want to handle the process themselves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sources">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Sources</p>
+        <h2>Check the rules at the source.</h2>
+        <p>The rules and published figures on this page come from these sources. The planned price and the waitlist threshold are our own commitments. When in doubt, the official page wins.</p>
+      </div>
+
+      <ul class="source-list">
+        <li>
+          <a href="https://www.nenkin.go.jp/international/japanese-system/withdrawalpayment/payment.html" target="_blank" rel="noopener noreferrer">Japan Pension Service — Lump-sum Withdrawal Payments</a>
+          <span>Deadline, conditions and claim forms in 14 languages. Page last updated 1 October 2026.</span>
+        </li>
+        <li>
+          <a href="https://www.pref.saitama.lg.jp/documents/5982/out_on_a_high_note_2026.pdf" target="_blank" rel="noopener noreferrer">Saitama Prefecture — "Out on a High Note 2026" (PDF)</a>
+          <span>Prefectural leaving guide with the eligibility conditions and the step-by-step departure sequence.</span>
+        </li>
+        <li>
+          <a href="https://www.kubota-sr-office.com/service/" target="_blank" rel="noopener noreferrer">Kubota SR office — service and payment-rate page</a>
+          <span>Published payment-rate table, 60-month cap and process timing. Kubota is a paid agency; this link is used as a source, not an endorsement.</span>
+        </li>
+        <li>
+          <a href="https://www.mhlw.go.jp/content/12500000/001537487.pdf" target="_blank" rel="noopener noreferrer">Ministry of Health, Labour and Welfare — future system change (PDF)</a>
+          <span>The pending cap rise and re-entry-permit rule. Not yet in force.</span>
+        </li>
+        <li>
+          <a href="https://office-kirin.com/kirinblog/dattai-ichijikin-kaisei/" target="_blank" rel="noopener noreferrer">Office Kirin — summary of the pending change</a>
+          <span>A secondary summary of the same pending change. Effective date not confirmed.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="legal">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Legal limits</p>
+        <h2>What this is — and what it is not.</h2>
+      </div>
+
+      <div class="legal">
+        <p><strong>The planned kit is self-help information, worksheets and a calculator.</strong></p>
+        <ul>
+          <li>We do <strong>not</strong> file claims, act as a tax representative, receive refunds, or give individual legal or tax advice. Those are the domains of licensed 社労士 (sharoushi) and 税理士 (zeirishi) in Japan.</li>
+          <li>All figures are estimates only. The Japan Pension Service decides the amount.</li>
+          <li>Not affiliated with the JET Programme, CLAIR or the Japan Pension Service.</li>
+        </ul>
+        <p class="legal-note">English-language explanations. Official Japanese forms are available from the linked source pages. No payment is taken now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="waitlist">
+    <div class="wrap">
+      <h2>Get the kit if it gets built.</h2>
+      <p>Join the waitlist. If 5 waitlist emails arrive within 14 days — by 6 November 2026, JST — the paid kit will be built. No payment is taken now. If the kit is not built, nobody is charged.</p>
+      <a class="btn" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20Japan%20Pension%20Refund%20Kit">Join the waitlist</a>
+      <p class="fine">The button opens your email app with a pre-addressed message. Nothing is sent until you send it. If your email app does not open, write to waitlist-hq@mail.grokbot.com with the subject “Waitlist: Japan Pension Refund Kit”.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>Japan Pension Refund Kit · Waitlist</span>
+    <span>This page sets no cookies and runs no trackers.</span>
+    <span><a href="../">All waitlists</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var yen = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'JPY',
+    maximumFractionDigits: 0
+  });
+
+  var dateFmt = new Intl.DateTimeFormat('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+  });
+
+  var RATE_BANDS = [
+    [6, 11, 0.5],
+    [12, 17, 1.1],
+    [18, 23, 1.6],
+    [24, 29, 2.2],
+    [30, 35, 2.7],
+    [36, 41, 3.3],
+    [42, 47, 3.8],
+    [48, 53, 4.4],
+    [54, 59, 4.9],
+    [60, Infinity, 5.5]
+  ];
+
+  var AGENCY_FEES = [
+    { name: 'Maeda full course', amount: 25000, note: 'excl. consumption tax', url: 'https://mbs-jp.com/service/' },
+    { name: 'PenPos full support', amount: 55000, note: 'incl. tax', url: 'https://penpos.beyondcompanies.net/index_ja.php' },
+    { name: 'ACROSEED full pack', amount: 70000, note: 'excl. tax', url: 'https://dattai.roumujapan.com/service2-8.html' }
+  ];
+
+  function byId(id) {
+    return document.getElementById(id);
+  }
+
+  function isWholeNumber(value) {
+    return typeof value === 'number' && isFinite(value) && Math.floor(value) === value;
+  }
+
+  function rateFor(months) {
+    for (var i = 0; i < RATE_BANDS.length; i += 1) {
+      if (months >= RATE_BANDS[i][0] && months <= RATE_BANDS[i][1]) {
+        return RATE_BANDS[i][2];
+      }
+    }
+    return null;
+  }
+
+  function setMessage(node, message) {
+    if (!node) {
+      return;
+    }
+    node.textContent = message;
+    node.hidden = !message;
+  }
+
+  function addMonths(date, months) {
+    var result = new Date(date.getFullYear(), date.getMonth() + months, date.getDate());
+    if (result.getDate() !== date.getDate()) {
+      result.setDate(0);
+    }
+    return result;
+  }
+
+  function addYears(date, years) {
+    return addMonths(date, years * 12);
+  }
+
+  function parseDateInput(value) {
+    var parts = value.split('-');
+    if (parts.length !== 3) {
+      return null;
+    }
+    var year = Number(parts[0]);
+    var month = Number(parts[1]);
+    var day = Number(parts[2]);
+    if (!isWholeNumber(year) || !isWholeNumber(month) || !isWholeNumber(day)) {
+      return null;
+    }
+    var date = new Date(year, month - 1, day);
+    if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
+      return null;
+    }
+    return date;
+  }
+
+  var calcForm = byId('calc-form');
+  var calcError = byId('calc-error');
+  var calcWarning = byId('calc-warning');
+  var calcResults = byId('calc-results');
+  var monthsInput = byId('months');
+  var salaryInput = byId('salary');
+  var agencyRows = byId('agency-rows');
+  var calcReset = byId('calc-reset');
+
+  function renderAgencyRows(refundable) {
+    if (!agencyRows) {
+      return;
+    }
+    agencyRows.textContent = '';
+    AGENCY_FEES.forEach(function (fee) {
+      var row = document.createElement('tr');
+
+      var nameCell = document.createElement('td');
+      var link = document.createElement('a');
+      link.href = fee.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = fee.name;
+      nameCell.appendChild(link);
+
+      var feeCell = document.createElement('td');
+      feeCell.className = 'num';
+      feeCell.textContent = yen.format(fee.amount) + ' ' + fee.note;
+
+      var shareCell = document.createElement('td');
+      if (refundable > 0) {
+        var share = (fee.amount / refundable) * 100;
+        if (share >= 100) {
+          shareCell.textContent = 'More than your refundable tax';
+        } else {
+          shareCell.textContent = 'About ' + Math.round(share) + '% of your refundable tax';
+        }
+      } else {
+        shareCell.textContent = '—';
+      }
+
+      row.appendChild(nameCell);
+      row.appendChild(feeCell);
+      row.appendChild(shareCell);
+      agencyRows.appendChild(row);
+    });
+  }
+
+  if (calcForm && calcError && calcWarning && calcResults && monthsInput && salaryInput) {
+    calcForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      setMessage(calcError, '');
+      setMessage(calcWarning, '');
+      calcResults.hidden = true;
+      monthsInput.removeAttribute('aria-invalid');
+      salaryInput.removeAttribute('aria-invalid');
+
+      var months = Number(monthsInput.value);
+      var salary = Number(salaryInput.value);
+
+      if (!monthsInput.value || !isWholeNumber(months) || months < 1) {
+        monthsInput.setAttribute('aria-invalid', 'true');
+        setMessage(calcError, 'Enter the months of coverage as a whole number (1 or more).');
+        monthsInput.focus();
+        return;
+      }
+
+      if (!salaryInput.value || !isWholeNumber(salary) || salary < 1) {
+        salaryInput.setAttribute('aria-invalid', 'true');
+        setMessage(calcError, 'Enter the average monthly remuneration in whole yen (1 or more).');
+        salaryInput.focus();
+        return;
+      }
+
+      if (months < 6) {
+        setMessage(calcWarning, 'Not eligible: the Lump-sum Withdrawal Payment requires at least 6 months of Employees\u2019 Pension coverage. No estimate is shown.');
+        return;
+      }
+
+      var monthsUsed = months;
+      if (months > 60) {
+        monthsUsed = 60;
+        setMessage(calcWarning, 'Coverage above 60 months is capped at 60 months for this estimate. The payment rate used is 5.5.');
+      }
+
+      var rate = rateFor(monthsUsed);
+      if (rate === null) {
+        setMessage(calcError, 'We could not calculate a rate for those months. Check the number and try again.');
+        return;
+      }
+
+      var gross = Math.round(salary * rate);
+      var withheld = Math.round(gross * 0.2042);
+      var first = gross - withheld;
+
+      byId('out-summary').textContent = 'Based on ' + monthsUsed + ' months at ' + yen.format(salary) + ' average monthly standard remuneration.';
+      byId('out-rate').textContent = rate.toFixed(1) + '\u00d7';
+      byId('out-gross').textContent = yen.format(gross);
+      byId('out-withheld').textContent = yen.format(withheld);
+      byId('out-first').textContent = yen.format(first);
+      byId('out-refund').textContent = yen.format(withheld);
+
+      renderAgencyRows(withheld);
+      calcResults.hidden = false;
+      calcResults.focus();
+    });
+  }
+
+  if (calcReset && calcForm && calcError && calcWarning && calcResults && monthsInput && salaryInput) {
+    calcReset.addEventListener('click', function () {
+      calcForm.reset();
+      setMessage(calcError, '');
+      setMessage(calcWarning, '');
+      calcResults.hidden = true;
+      monthsInput.removeAttribute('aria-invalid');
+      salaryInput.removeAttribute('aria-invalid');
+      monthsInput.focus();
+    });
+  }
+
+  var timelineForm = byId('timeline-form');
+  var departureInput = byId('departure');
+  var timelineError = byId('timeline-error');
+  var timelineNote = byId('timeline-note');
+  var timelineResults = byId('timeline-results');
+  var timelineList = byId('timeline-list');
+
+  function timelineItem(date, title, text) {
+    var item = document.createElement('li');
+    var dateEl = document.createElement('span');
+    dateEl.className = 'tl-date';
+    dateEl.textContent = dateFmt.format(date);
+    var titleEl = document.createElement('strong');
+    titleEl.textContent = title;
+    var textEl = document.createElement('p');
+    textEl.textContent = text;
+    item.appendChild(dateEl);
+    item.appendChild(titleEl);
+    item.appendChild(textEl);
+    return item;
+  }
+
+  if (timelineForm && departureInput && timelineError && timelineResults && timelineList) {
+    timelineForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      setMessage(timelineError, '');
+      setMessage(timelineNote, '');
+      timelineResults.hidden = true;
+
+      var departure = parseDateInput(departureInput.value);
+      if (!departure) {
+        departureInput.setAttribute('aria-invalid', 'true');
+        setMessage(timelineError, 'Choose your departure date first.');
+        departureInput.focus();
+        return;
+      }
+      departureInput.removeAttribute('aria-invalid');
+
+      var deadline = addYears(departure, 2);
+      var firstPayment = addMonths(departure, 4);
+      var taxRefund = addMonths(departure, 6);
+
+      timelineList.textContent = '';
+      timelineList.appendChild(timelineItem(departure, 'Leave Japan', 'The 2-year claim window starts when you leave and are no longer covered.'));
+      timelineList.appendChild(timelineItem(departure, 'Mail your claim (target)', 'If you mail the claim around your departure date, this is the start of the processing clock.'));
+      timelineList.appendChild(timelineItem(firstPayment, 'First payment expected', 'About 4 months after the claim, JPS pays roughly 79.58% of the lump sum.'));
+      timelineList.appendChild(timelineItem(taxRefund, 'Tax refund expected', 'About 2 months later, your tax representative claims the 20.42% that was withheld.'));
+      timelineList.appendChild(timelineItem(deadline, 'Hard deadline to apply', 'Apply within 2 years of leaving Japan. If your residence status is not cancelled, waiting for it to expire can push you past this date.'));
+
+      if (deadline.getTime() < Date.now()) {
+        setMessage(timelineNote, 'That deadline is already in the past. The 2-year window may have closed; check with the Japan Pension Service or a qualified professional.');
+      }
+
+      timelineResults.hidden = false;
+      timelineResults.focus();
+    });
+  }
+}());
+</script>
+</body>
+</html>
