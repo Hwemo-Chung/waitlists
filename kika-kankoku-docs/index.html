@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>韓国書類ナビ（帰化申請・特別永住者向け）</title>
+<meta name="description" content="在日韓国人の特別永住者で、本人1名の帰化申請を自分で準備する方のための書類チェックリスト。5つの質問から、本人・父・母の書類、除籍謄本、翻訳の確認事項を1枚にまとめます。">
+<style>
+:root{
+  --ink:#1c2430;
+  --ink-soft:#4a5568;
+  --muted:#6b7280;
+  --paper:#fbf8f2;
+  --paper-2:#f4eee3;
+  --white:#ffffff;
+  --line:#e4ddd1;
+  --line-strong:#c9bfae;
+  --navy:#18324a;
+  --navy-2:#244a6b;
+  --accent:#b23a2b;
+  --accent-soft:#f7e7e2;
+  --green:#2f6b52;
+  --green-soft:#e8f2ec;
+  --shadow:0 18px 50px rgba(24,50,74,.08);
+  --radius:18px;
+  --max:980px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP",Meiryo,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 0%,rgba(178,58,43,.06),transparent 32%),
+    radial-gradient(circle at 92% 10%,rgba(24,50,74,.07),transparent 30%),
+    var(--paper);
+  line-height:1.8;
+  font-size:16px;
+  letter-spacing:.01em;
+}
+h1,h2,h3,.price{
+  font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP","Times New Roman",serif;
+  font-weight:600;
+  line-height:1.35;
+  letter-spacing:.02em;
+}
+p{margin:0 0 1em}
+a{color:var(--navy)}
+img{max-width:100%}
+.wrap{width:min(100% - 40px,var(--max));margin-inline:auto}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:100}
+.skip-link:focus{left:12px;top:12px}
+:focus-visible{outline:3px solid rgba(178,58,43,.55);outline-offset:3px}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:20;
+  border-bottom:1px solid rgba(201,191,174,.6);
+  background:rgba(251,248,242,.92);
+  backdrop-filter:blur(10px);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15px;line-height:1.35}
+.brand-mark{
+  width:32px;height:32px;border-radius:9px;background:var(--navy);color:#fff;
+  display:grid;place-items:center;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+  font-size:15px;flex:none;
+}
+.brand small{display:block;font-size:10px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+.header-nav{display:flex;align-items:center;gap:18px;font-size:13px}
+.header-nav a{text-decoration:none;color:var(--ink-soft)}
+.header-nav a:hover{color:var(--navy)}
+.header-nav .nav-cta{
+  border:1px solid var(--line-strong);border-radius:999px;padding:8px 14px;color:var(--navy);font-weight:700;
+}
+@media(max-width:640px){.header-nav{display:none}}
+
+/* hero */
+.hero{padding:64px 0 48px}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:44px;align-items:center}
+.eyebrow{
+  margin:0 0 10px;color:var(--accent);font-size:12px;font-weight:700;
+  letter-spacing:.12em;line-height:1.6;
+}
+.hero h1{font-size:clamp(30px,5.2vw,48px);margin:0 0 18px;color:var(--navy)}
+.hero h1 .thin{color:var(--ink);font-weight:500}
+.lead{color:var(--ink-soft);font-size:16px;max-width:620px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 18px}
+.hero-notes{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.hero-notes li{
+  font-size:12px;color:var(--ink-soft);background:rgba(255,255,255,.7);
+  border:1px solid var(--line);border-radius:999px;padding:5px 11px;
+}
+.hero-panel{
+  background:var(--white);border:1px solid var(--line);border-radius:24px;
+  padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.hero-panel::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:5px;
+  background:linear-gradient(90deg,var(--navy),var(--accent));
+}
+.panel-label{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--accent);margin:0 0 8px}
+.hero-panel h2{font-size:23px;margin:0 0 16px;color:var(--navy)}
+.panel-list{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:9px}
+.panel-list li{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink-soft)}
+.panel-list li::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);
+  margin-top:9px;flex:none;
+}
+.panel-note{
+  margin:0;padding-top:14px;border-top:1px dashed var(--line);
+  font-size:12px;color:var(--muted);
+}
+.panel-note strong{color:var(--green)}
+@media(max-width:860px){
+  .hero{padding:44px 0 34px}
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hero-panel{max-width:560px}
+}
+@media(max-width:600px){
+  .wrap{width:min(100% - 28px,var(--max))}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%}
+}
+
+/* shared */
+.section{padding:52px 0}
+.section-head{max-width:740px;margin-bottom:26px}
+.section-head h2{font-size:clamp(24px,4vw,34px);margin:6px 0 12px;color:var(--navy)}
+.section-head p{color:var(--ink-soft);margin:0}
+.mini-note{font-size:13px;color:var(--muted)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:50px;padding:12px 22px;border-radius:999px;border:1px solid transparent;
+  font-family:inherit;font-size:15px;font-weight:700;line-height:1.4;text-decoration:none;
+  cursor:pointer;transition:background .15s,transform .15s,box-shadow .15s;
+}
+.btn.primary{background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(24,50,74,.18)}
+.btn.primary:hover{background:var(--navy-2);transform:translateY(-1px)}
+.btn.secondary{background:var(--paper-2);color:var(--navy);border-color:var(--line-strong)}
+.btn.secondary:hover{background:#eee5d7}
+.btn.ghost{background:transparent;color:var(--navy);border-color:var(--line-strong)}
+.btn.ghost:hover{background:rgba(255,255,255,.65)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.small{min-height:42px;padding:8px 16px;font-size:14px}
+
+/* features */
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{
+  background:rgba(255,255,255,.72);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px;
+}
+.feature-num{
+  display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;
+  background:var(--paper-2);color:var(--accent);font-size:12px;font-weight:700;
+  margin-bottom:12px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+}
+.feature h3{font-size:18px;margin:0 0 8px;color:var(--navy)}
+.feature p{font-size:14px;color:var(--ink-soft);margin:0}
+@media(max-width:760px){.feature-grid{grid-template-columns:1fr}}
+
+/* notice */
+.notice{
+  background:var(--white);border:1px solid var(--line);border-left:5px solid var(--green);
+  border-radius:0 var(--radius) var(--radius) 0;padding:22px 24px;
+}
+.notice h3{font-size:18px;margin:0 0 10px;color:var(--green)}
+.notice ul{margin:0;padding-left:1.2em;color:var(--ink-soft);font-size:14px}
+.notice li+li{margin-top:4px}
+
+/* price */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.price-card{
+  background:var(--navy);color:#fff;border-radius:24px;padding:30px;
+  box-shadow:0 22px 50px rgba(24,50,74,.18);position:relative;overflow:hidden;
+}
+.price-card::after{
+  content:"";position:absolute;width:210px;height:210px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.12);right:-80px;bottom:-90px;
+}
+.price-label{font-size:11px;letter-spacing:.14em;font-weight:700;color:#e9c8bd;margin:0 0 6px}
+.price{font-size:clamp(42px,7vw,58px);margin:0;line-height:1.1;color:#fff}
+.price span{font-size:20px;margin-left:2px;font-family:inherit}
+.price-meta{font-size:14px;color:#dbe6ee;margin:6px 0 18px}
+.price-card .status{
+  display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;padding:5px 11px;font-size:12px;margin:0 0 18px;
+}
+.price-card ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px;font-size:14px;color:#e8eef3}
+.price-card li{display:flex;gap:8px;align-items:flex-start}
+.price-card li::before{content:"✓";color:#f0b9a8;font-weight:700;flex:none}
+.price-card .btn{width:100%;background:#fff;color:var(--navy);box-shadow:none}
+.price-card .btn:hover{background:#f1ece2}
+.price-card .tiny{color:#c9d6df;margin:10px 0 0;text-align:center}
+.price-note{
+  background:var(--white);border:1px solid var(--line);border-radius:24px;padding:28px;
+}
+.price-note h3{font-size:19px;margin:0 0 12px;color:var(--navy)}
+.price-note p,.price-note li{font-size:14px;color:var(--ink-soft)}
+.price-note ul{padding-left:1.2em;margin:0 0 14px}
+.price-note li+li{margin-top:5px}
+.price-note .fine{font-size:12px;color:var(--muted);margin:0}
+@media(max-width:800px){.price-grid{grid-template-columns:1fr}}
+
+/* demo */
+.demo-shell{
+  background:var(--white);border:1px solid var(--line);border-radius:24px;
+  box-shadow:var(--shadow);padding:clamp(20px,3.5vw,38px);
+}
+.demo-intro{
+  display:flex;gap:12px;align-items:flex-start;background:var(--paper);
+  border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 26px;
+  font-size:13px;color:var(--ink-soft);
+}
+.demo-intro strong{color:var(--navy);white-space:nowrap}
+.q{border:0;padding:0;margin:0 0 24px;min-width:0}
+.q + .q{border-top:1px dashed var(--line);padding-top:24px}
+.q legend{
+  display:flex;gap:10px;align-items:baseline;padding:0;margin:0;
+  font-size:17px;font-weight:700;line-height:1.6;color:var(--ink);
+}
+.qnum{
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;color:var(--accent);
+  font-size:12px;letter-spacing:.08em;flex:none;
+}
+.hint{font-size:13px;color:var(--muted);margin:7px 0 12px;line-height:1.7}
+.choices{display:flex;flex-wrap:wrap;gap:9px}
+.choice{
+  display:flex;align-items:center;gap:9px;min-height:46px;padding:9px 14px;
+  border:1px solid var(--line);border-radius:12px;background:var(--paper);
+  cursor:pointer;font-size:15px;transition:border-color .15s,background .15s;
+}
+.choice:hover{border-color:var(--line-strong)}
+.choice:has(input:checked){border-color:var(--navy);background:#eef3f7;box-shadow:inset 0 0 0 1px var(--navy)}
+.choice input{accent-color:var(--navy);width:18px;height:18px;margin:0;flex:none}
+.choice.wide{width:100%}
+.form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:6px}
+.form-status{font-size:13px;color:var(--muted);margin:0}
+.form-status.error{color:var(--accent);font-weight:700}
+.form-status.ok{color:var(--green);font-weight:700}
+.noscript{
+  background:var(--accent-soft);border:1px solid #efc9c1;border-radius:12px;
+  padding:12px 14px;font-size:13px;color:#7d2b20;margin:0 0 20px;
+}
+@media(max-width:600px){
+  .demo-shell{padding:18px}
+  .form-actions .btn{width:100%}
+  .form-status{text-align:center;width:100%}
+}
+
+/* result */
+#result-wrap{margin-top:34px;scroll-margin-top:86px}
+.result-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:12px}
+.result-toolbar .eyebrow{margin-bottom:2px}
+.result-toolbar h2{font-size:23px;margin:0;color:var(--navy)}
+.paper{
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);padding:clamp(22px,4vw,40px);
+}
+.paper-head{border-bottom:2px solid var(--navy);padding-bottom:16px;margin-bottom:20px}
+.paper-kicker{font-size:11px;letter-spacing:.14em;color:var(--accent);font-weight:700;margin:0 0 5px}
+.paper h2{font-size:clamp(22px,4vw,30px);margin:0 0 4px;color:var(--navy)}
+.paper-meta{font-size:12px;color:var(--muted);margin:0}
+.alert{
+  background:var(--accent-soft);border-left:4px solid var(--accent);
+  border-radius:0 10px 10px 0;padding:13px 15px;font-size:13px;color:#5d3029;margin:0 0 24px;
+}
+.alert strong{color:var(--accent)}
+.paper-section{margin:0 0 24px}
+.paper-section:last-of-type{margin-bottom:0}
+.paper-section h3{
+  font-size:18px;margin:0 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line);
+  color:var(--navy);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;
+}
+.paper-section h3 .mini{font-family:inherit;font-size:11px;color:var(--muted);font-weight:500}
+.doc-list{list-style:none;padding:0;margin:0}
+.doc-check{
+  display:flex;align-items:flex-start;gap:11px;padding:9px 0;
+  border-bottom:1px dashed var(--line);cursor:pointer;
+}
+.doc-list li:last-child .doc-check{border-bottom:0}
+.doc-check:hover .doc-text{color:var(--navy)}
+.doc-check input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.doc-check .box{
+  width:20px;height:20px;flex:none;margin-top:4px;border:1.5px solid var(--line-strong);
+  border-radius:4px;background:#fff;display:grid;place-items:center;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;transition:background .12s,border-color .12s;
+}
+.doc-check .box::after{
+  content:"";width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;
+  transform:rotate(45deg) translate(-1px,-1px) scale(0);transition:transform .12s;
+}
+.doc-check input:checked + .box{background:var(--navy);border-color:var(--navy)}
+.doc-check input:checked + .box::after{transform:rotate(45deg) translate(-1px,-1px) scale(1)}
+.doc-check input:focus-visible + .box{outline:3px solid rgba(178,58,43,.55);outline-offset:2px}
+.doc-text{font-size:14px;line-height:1.7;flex:1}
+.doc-text .note{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.tag{
+  display:inline-block;font-size:10px;font-weight:700;color:var(--navy);
+  background:#eef3f7;border:1px solid #dbe5ec;border-radius:999px;
+  padding:1px 7px;margin-left:5px;vertical-align:1px;white-space:nowrap;
+}
+.tag.warn{color:var(--accent);background:var(--accent-soft);border-color:#efc9c1}
+.callout{
+  background:var(--green-soft);border:1px solid #cfe3d7;border-radius:12px;
+  padding:12px 14px;font-size:13px;color:#284f3d;margin:10px 0 0;
+}
+.callout strong{color:var(--green)}
+.calc-box{
+  background:var(--paper);border:1px solid var(--line);border-radius:14px;
+  padding:16px;margin-top:12px;
+}
+.calc-label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--ink)}
+.calc-input{
+  width:100%;max-width:240px;min-height:48px;padding:10px 12px;
+  font:inherit;font-size:16px;color:var(--ink);background:#fff;
+  border:1px solid var(--line-strong);border-radius:10px;
+}
+.calc-results{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:4px;font-size:13px}
+.calc-results li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:5px 0}
+.calc-results li:last-child{border-bottom:0}
+.calc-results strong{color:var(--navy);white-space:nowrap}
+.calc-note{font-size:11px;color:var(--muted);line-height:1.65;margin:10px 0 0}
+.paper-foot{
+  border-top:1px solid var(--line);margin-top:24px;padding-top:14px;
+  font-size:11px;color:var(--muted);line-height:1.7;
+}
+.paper-foot p{margin:0 0 4px}
+@media(max-width:600px){
+  .result-toolbar{align-items:flex-start;flex-direction:column}
+  .result-toolbar .btn{width:100%}
+  .doc-text{font-size:13.5px}
+  .calc-results li{flex-direction:column;gap:0}
+}
+
+/* waitlist */
+.waitlist{
+  background:linear-gradient(135deg,var(--navy),#203f5b);
+  color:#fff;border-radius:26px;padding:clamp(24px,4vw,40px);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;
+  box-shadow:0 24px 54px rgba(24,50,74,.18);
+}
+.waitlist .eyebrow{color:#e9c8bd}
+.waitlist h2{font-size:clamp(24px,4vw,32px);margin:0 0 12px;color:#fff}
+.waitlist p{color:#dbe6ee;font-size:14px}
+.waitlist .btn{background:#fff;color:var(--navy);margin:6px 0 8px}
+.waitlist .btn:hover{background:#f1ece2}
+.waitlist .tiny{font-size:11px;color:#b9c9d5;margin:0 0 5px}
+.waitlist .tiny strong{color:#fff;overflow-wrap:anywhere}
+.threshold{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  border-radius:16px;padding:18px;
+}
+.threshold .label{font-size:10px;letter-spacing:.12em;font-weight:700;color:#e9c8bd;margin:0 0 6px}
+.threshold p{font-size:13px;margin:0 0 8px;color:#e8eef3}
+.threshold p:last-child{margin-bottom:0}
+@media(max-width:800px){.waitlist{grid-template-columns:1fr;gap:20px}}
+
+/* faq/footer */
+.faq{display:grid;gap:10px}
+details{
+  background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:12px;
+  padding:0 16px;
+}
+summary{cursor:pointer;font-weight:700;font-size:14px;padding:14px 0;list-style:none;color:var(--navy)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;font-weight:400;color:var(--muted)}
+details[open] summary::after{content:"−"}
+details p{font-size:13px;color:var(--ink-soft);margin:0 0 14px}
+.site-footer{border-top:1px solid var(--line);padding:34px 0 40px;margin-top:52px}
+.footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;margin-bottom:18px}
+.footer-brand{font-weight:700;font-size:14px;color:var(--navy);margin:0 0 2px}
+.footer-brand small{display:block;font-size:11px;color:var(--muted);font-weight:400}
+.footer-links{font-size:12px;color:var(--ink-soft);line-height:1.8}
+.footer-links a{overflow-wrap:anywhere}
+.footer-links ul{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:2px}
+.footer-note{font-size:11px;color:var(--muted);line-height:1.75;border-top:1px dashed var(--line);padding-top:14px}
+.footer-note p{margin:0 0 3px}
+
+/* print */
+@media print{
+  @page{size:A4;margin:14mm}
+  html,body{background:#fff!important}
+  body{font-size:10.5pt;line-height:1.55;color:#000}
+  .site-header,.hero,.section-head,#features,.notice-section,.price-section,#checklist-form,
+  .demo-intro,.result-toolbar,.waitlist-section,.faq-section,.site-footer,.no-print,#initial-note,.noscript{display:none!important}
+  main{padding:0;margin:0}
+  .section,#demo{padding:0;margin:0}
+  .wrap{width:auto!important;max-width:none!important;margin:0!important}
+  .demo-shell{border:0!important;box-shadow:none!important;padding:0!important;background:#fff!important}
+  #result-wrap{margin:0}
+  .paper{
+    border:0!important;box-shadow:none!important;border-radius:0!important;
+    padding:0!important;max-width:none!important;width:auto!important;
+  }
+  .paper-head{border-bottom:1.5pt solid #000;padding-bottom:8pt;margin-bottom:10pt}
+  .paper h2{font-size:18pt}
+  .paper-kicker,.paper-meta,.paper-foot,.alert,.calc-note,.doc-text .note,.tag{color:#000}
+  .alert{border-left:2pt solid #000;background:#fff!important;padding:6pt 8pt;margin-bottom:10pt}
+  .paper-section{break-inside:avoid;margin-bottom:10pt}
+  .paper-section h3{font-size:12pt;border-bottom:.5pt solid #999;padding-bottom:3pt;margin-bottom:5pt}
+  .doc-list{display:block}
+  .doc-check{padding:3pt 0;border-bottom:.5pt dotted #bbb}
+  .doc-check .box{width:11pt;height:11pt;border:.75pt solid #000!important;background:#fff!important;margin-top:1pt}
+  .doc-check input:checked + .box{background:#000!important}
+  .doc-check input:checked + .box::after{border-color:#fff!important}
+  .doc-text{font-size:9.5pt}
+  .tag{background:#fff!important;border:.5pt solid #999!important;padding:0 3pt;font-size:7pt}
+  .callout{background:#fff!important;border:.5pt solid #999;padding:5pt 7pt;font-size:8.5pt}
+  .calc-box{background:#fff!important;border:.5pt solid #999;padding:7pt}
+  .calc-input{border:.5pt solid #000;min-height:0;padding:2pt 4pt;max-width:80pt;font-size:9pt}
+  .calc-results{font-size:8.5pt;margin-top:5pt}
+  .calc-results li{border-bottom:0;padding:1pt 0}
+  .paper-foot{font-size:8pt;border-top:.5pt solid #999;padding-top:5pt;margin-top:10pt}
+  a{color:#000!important;text-decoration:none!important}
+  body:not(.has-result) #print-area{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">韓</span>
+      <span>韓国書類ナビ<small>帰化申請・特別永住者向け</small></span>
+    </a>
+    <nav class="header-nav" aria-label="ページ内メニュー">
+      <a href="#features">できること</a>
+      <a href="#demo">書類リスト</a>
+      <a href="#price">予定価格</a>
+      <a class="nav-cta" href="#waitlist">ウェイトリスト</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">在日韓国人の特別永住者・本人1名の帰化申請</p>
+        <h1>帰化申請の韓国書類を、<span class="thin">ひとりで、順番に。</span></h1>
+        <p class="lead">日本の会社で働きながら、行政書士に頼らず、ご自身で帰化申請の準備をしているあなたへ。<br>
+        5つの質問に答えると、本人・父・母の書類、除籍謄本、日本の戸籍・届書、翻訳のチェック項目を1枚にまとめます。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#demo">無料でチェックリストを作る</a>
+          <a class="btn ghost" href="#price">予定価格を見る</a>
+        </div>
+        <ul class="hero-notes">
+          <li>本人1名の申請用</li>
+          <li>登録不要・ブラウザ内で処理</li>
+          <li>印刷して法務局の相談へ</li>
+        </ul>
+      </div>
+      <aside class="hero-panel" aria-label="このページで作れるもの">
+        <p class="panel-label">このページで作るもの</p>
+        <h2>あなた用の<br>書類チェックリスト</h2>
+        <ul class="panel-list">
+          <li>本人・父・母の書類</li>
+          <li>韓国の除籍謄本の条件</li>
+          <li>日本の戸籍・届書の条件</li>
+          <li>翻訳のチェックと参考価格</li>
+        </ul>
+        <p class="panel-note"><strong>回答は送信されません。</strong>ブラウザ内だけで処理します。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">できること</p>
+        <h2>必要な書類を、あなたの状況に合わせて1枚に。</h2>
+        <p>法務局の公開資料を読むとき、本人・父・母の分や条件が分かれて迷いやすいところを、質問に沿って整理します。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <span class="feature-num">01</span>
+          <h3>人ごとに整理</h3>
+          <p>本人・父・母の書類を、それぞれの見出しに分けて表示します。何を誰の分として集めるかが分かります。</p>
+        </article>
+        <article class="feature">
+          <span class="feature-num">02</span>
+          <h3>条件を確認</h3>
+          <p>韓国の除籍謄本の起算点、日本の戸籍（除籍）謄本、届書の記載事項証明書が必要になる条件を表示します。</p>
+        </article>
+        <article class="feature">
+          <span class="feature-num">03</span>
+          <h3>翻訳まで確認</h3>
+          <p>A4・翻訳者情報・全文翻訳・氏名と出生地の表記を確認できます。外部に頼む場合の参考価格も表示します。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section notice-section">
+    <div class="wrap">
+      <div class="notice">
+        <h3>使う前に知っておいてほしいこと</h3>
+        <ul>
+          <li>このページは、東京法務局・名古屋法務局・福岡法務局が公開している特別永住者の帰化申請の案内をもとにした整理ツールです。</li>
+          <li>運営者は行政書士ではありません。書類の代理作成、個別の法律相談、申請の代行は行いません。</li>
+          <li>表示されるリストはたたき台です。最終的な必要書類は、必ずお住まいの管轄の法務局の相談で確認してください。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section price-section" id="price">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">予定価格</p>
+        <h2>買い切りの予定価格です。</h2>
+        <p>まだ販売していません。今の段階では、支払いを受け付けていません。</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <p class="price-label">予定価格</p>
+          <p class="price">9,800<span>円</span></p>
+          <p class="price-meta">買い切り・予定</p>
+          <p class="status">販売前・支払い受付なし</p>
+          <ul>
+            <li>5つの質問から、あなた用の書類チェックリストを作成</li>
+            <li>印刷用リスト、翻訳チェック、参考価格の計算</li>
+            <li>法務局の公式情報へのリンク</li>
+          </ul>
+          <a class="btn" href="#waitlist">ウェイトリストに登録する</a>
+          <p class="tiny">この時点で費用はかかりません。</p>
+        </div>
+        <div class="price-note">
+          <h3>予定価格について</h3>
+          <p>9,800円は、発売前の予定価格です。販売開始時に変更する可能性があります。</p>
+          <ul>
+            <li>買い切りの予定です。月額料金はありません。</li>
+            <li>書類の取得費用や翻訳費用は含まれません。</li>
+            <li>支払い方法は未定です。今は支払いを受け付けていません。</li>
+            <li>このページに決済機能はありません。</li>
+          </ul>
+          <p>なお、法務局への申請手数料は無料です（<a href="https://common-s.jp/" target="_blank" rel="noopener noreferrer">common-s.jp</a>）。</p>
+          <p class="fine">このページのチェックリスト機能は、販売前のデモとして無料で使えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">書類チェックリスト</p>
+        <h2>5つ答えると、リストが出ます。</h2>
+        <p>回答に合わせて、本人・父・母の書類と、条件つきの書類を表示します。最後に印刷して、法務局の相談に持っていけます。</p>
+      </div>
+
+      <div class="demo-shell">
+        <p class="demo-intro"><strong>回答は保存されません。</strong>このページ内で処理し、送信もしません。再読み込みすると回答は消えます。</p>
+        <noscript>
+          <p class="noscript">このチェックリストの作成には JavaScript を使います。ブラウザの JavaScript を有効にしてください。ウェイトリストのメールリンクは、JavaScript がなくても使えます。</p>
+        </noscript>
+
+        <form id="checklist-form" novalidate>
+          <fieldset class="q" data-q="q1">
+            <legend><span class="qnum">01</span>基本証明書を取得できるか</legend>
+            <p class="hint">国籍証明書として、申請者の基本証明書（詳細）が必要です。提出できないときは、家族関係登録簿作成前の韓国・朝鮮の戸籍（除籍）謄本に代えられます。</p>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="q1" value="yes"><span>取得できる</span></label>
+              <label class="choice"><input type="radio" name="q1" value="no"><span>取得できない</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q" data-q="q2">
+            <legend><span class="qnum">02</span>父母が婚姻しているか</legend>
+            <p class="hint">婚姻届が韓国側にあるか不明でも、この質問は「不明」で進めて大丈夫です。</p>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="q2" value="married"><span>婚姻している</span></label>
+              <label class="choice"><input type="radio" name="q2" value="unmarried"><span>婚姻していない</span></label>
+              <label class="choice"><input type="radio" name="q2" value="unknown"><span>韓国側の婚姻届の有無が不明</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q" data-q="q3">
+            <legend><span class="qnum">03</span>配偶者・子・父母に日本国籍者がいるか</legend>
+            <p class="hint">前配偶者・内縁も含みます。該当する場合はチェックしてください。</p>
+            <div class="choices">
+              <label class="choice wide"><input type="checkbox" name="q3" id="q3"><span>いる</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q" data-q="q4">
+            <legend><span class="qnum">04</span>父母・兄弟姉妹・子に帰化/国籍取得者がいるか</legend>
+            <p class="hint">帰化した方、国籍を取得した方がいる場合はチェックしてください。</p>
+            <div class="choices">
+              <label class="choice wide"><input type="checkbox" name="q4" id="q4"><span>いる</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q" data-q="q5">
+            <legend><span class="qnum">05</span>日本の役所に出生・婚姻・離婚・養子縁組・認知などの届出をしたか</legend>
+            <p class="hint">死亡・親権者変更の届出も含みます。該当する場合はチェックしてください。</p>
+            <div class="choices">
+              <label class="choice wide"><input type="checkbox" name="q5" id="q5"><span>届出をした</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">書類リストを作る</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite">質問1と質問2は必須です。</p>
+          </div>
+        </form>
+
+        <div id="result-wrap" hidden>
+          <div class="result-toolbar no-print">
+            <div>
+              <p class="eyebrow">作成結果</p>
+              <h2>あなたの書類チェックリスト</h2>
+            </div>
+            <button class="btn secondary small" id="print-btn" type="button">印刷する</button>
+          </div>
+          <div id="print-area" class="paper"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section waitlist-section" id="waitlist">
+    <div class="wrap">
+      <div class="waitlist">
+        <div>
+          <p class="eyebrow">発売前に</p>
+          <h2>ウェイトリスト</h2>
+          <p>発売開始の案内を受け取るために、メールを送ってください。件名は入力済みです。</p>
+          <a class="btn" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20%E9%9F%93%E5%9B%BD%E6%9B%B8%E9%A1%9E%E3%83%8A%E3%83%93%EF%BC%88%E5%B8%B0%E5%8C%96%E7%94%B3%E8%AB%8B%E3%83%BB%E7%89%B9%E5%88%A5%E6%B0%B8%E4%BD%8F%E8%80%85%E5%90%91%E3%81%91%EF%BC%89">ウェイトリストに登録する</a>
+          <p class="tiny">メールアプリが開きます。本文は空のままで送信できます。送信をもって登録とします。登録しても、購入の義務はありません。</p>
+          <p class="tiny">うまく開かない場合は、宛先 <strong>waitlist-hq@mail.grokbot.com</strong>、件名「Waitlist: 韓国書類ナビ（帰化申請・特別永住者向け）」で送ってください。</p>
+        </div>
+        <div class="threshold">
+          <p class="label">開発の条件</p>
+          <p>2026年11月9日までに5件のウェイトリストメールが集まった場合、商品の開発に進みます。集まらない場合は開発しません。</p>
+          <p>予定価格: 9,800円（買い切り・予定）。この時点で支払いは発生しません。</p>
+          <p>送信いただいたメールは、発売案内の連絡にだけ使います。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">よくある確認</p>
+        <h2>使う前に、確認してください。</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>行政書士のサービスですか？</summary>
+          <p>いいえ。運営者は行政書士ではありません。書類の代理作成、個別の法律相談、申請の代行は行いません。</p>
+        </details>
+        <details>
+          <summary>このリストで書類は確定しますか？</summary>
+          <p>いいえ。法務局の公開資料をもとにしたたたき台です。最終的な必要書類は、必ずお住まいの管轄の法務局の相談で確認してください。</p>
+        </details>
+        <details>
+          <summary>回答は送信されますか？</summary>
+          <p>いいえ。質問の回答はブラウザ内だけで処理し、保存・送信しません。ページを再読み込みすると消えます。</p>
+        </details>
+        <details>
+          <summary>予定価格は、いつ支払うのですか？</summary>
+          <p>まだ販売していないため、今は支払いを受け付けていません。販売時期は未定です。2026年11月9日までに5件のウェイトリストメールが集まった場合に、商品の開発へ進みます。</p>
+        </details>
+        <details>
+          <summary>書類の取得や翻訳も頼めますか？</summary>
+          <p>いいえ。このページは書類の整理用です。書類の取得、翻訳、申請の代行は行いません。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">韓国書類ナビ<small>帰化申請・特別永住者向け</small></p>
+        <p class="footer-note">独立したプロジェクトです。いかなる政府機関とも関係ありません。<br>
+        当ページは法的助言を提供するものではありません。運営者は行政書士ではありません。</p>
+      </div>
+      <div class="footer-links">
+        <span>出典（法務局の公式ページ）</span>
+        <ul>
+          <li><a href="https://houmukyoku.moj.go.jp/tokyo/page000001_00892.html" target="_blank" rel="noopener noreferrer">東京法務局 特別永住者</a></li>
+          <li><a href="https://houmukyoku.moj.go.jp/nagoya/page000001_00969.html" target="_blank" rel="noopener noreferrer">名古屋法務局 特別永住者</a></li>
+          <li><a href="https://houmukyoku.moj.go.jp/fukuoka/page000001_00592.html" target="_blank" rel="noopener noreferrer">福岡法務局 特別永住者</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <p>最終的な必要書類は、法務局の相談で確認してください。</p>
+      <p>情報基準日: 2026年10月26日</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var form = document.getElementById('checklist-form');
+  var wrap = document.getElementById('result-wrap');
+  var area = document.getElementById('print-area');
+  var status = document.getElementById('form-status');
+  var printBtn = document.getElementById('print-btn');
+  var hasRendered = false;
+
+  function yen(value) {
+    return Number(value).toLocaleString('ja-JP');
+  }
+
+  function item(text, note, tag) {
+    return '<li><label class="doc-check">' +
+      '<input type="checkbox">' +
+      '<span class="box" aria-hidden="true"></span>' +
+      '<span class="doc-text">' + text +
+      (tag ? ' <span class="tag">' + tag + '</span>' : '') +
+      (note ? '<span class="note">' + note + '</span>' : '') +
+      '</span></label></li>';
+  }
+
+  function section(title, body, mini, callout) {
+    return '<section class="paper-section">' +
+      '<h3>' + title + (mini ? '<span class="mini">' + mini + '</span>' : '') + '</h3>' +
+      body +
+      (callout ? '<p class="callout">' + callout + '</p>' : '') +
+      '</section>';
+  }
+
+  function build(a) {
+    var html = '';
+
+    html += '<div class="paper-head">' +
+      '<p class="paper-kicker">韓国書類ナビ</p>' +
+      '<h2>帰化申請 書類チェックリスト</h2>' +
+      '<p class="paper-meta">本人1名の申請用／作成日：＿＿＿＿年＿＿月＿＿日</p>' +
+      '</div>';
+
+    html += '<div class="alert"><strong>このリストはたたき台です。</strong>最終的な必要書類は、必ず法務局の相談で確認してください。</div>';
+
+    var own = '';
+    if (a.q1 === 'yes') {
+      own += item('基本証明書（詳細）', '', '国籍証明書');
+    } else {
+      own += item('家族関係登録簿作成前の韓国・朝鮮の戸籍（除籍）謄本', '基本証明書を提出できないとき', '国籍証明書');
+    }
+    own += item('家族関係証明書（詳細）');
+    own += item('婚姻関係証明書（詳細）', '※未婚でも必要');
+    own += item('入養関係証明書（詳細）', '※養子縁組なしでも必要');
+    own += item('親養子入養関係証明書（詳細）', '※同');
+    html += section('本人（申請者）', '<ul class="doc-list">' + own + '</ul>', '国籍証明書・家族関係など');
+
+    html += section('父', '<ul class="doc-list">' + item('家族関係証明書（詳細）') + '</ul>');
+    html += section('母', '<ul class="doc-list">' +
+      item('家族関係証明書（詳細）') +
+      item('母の婚姻関係証明書（詳細）') +
+      '</ul>');
+
+    var deuki = '';
+    var deukiNote = '';
+    if (a.q2 === 'married') {
+      deuki += item('父母が婚姻して以降の除籍謄本');
+    } else if (a.q2 === 'unmarried') {
+      deuki += item('母が懐胎可能年齢（概ね10歳頃）に達して以降の全ての除籍謄本');
+    } else {
+      deuki += item('父母が婚姻して以降の除籍謄本', '婚姻している場合の候補', '候補');
+      deuki += item('母が懐胎可能年齢（概ね10歳頃）に達して以降の全ての除籍謄本', '婚姻していない場合の候補', '候補');
+      deukiNote = '婚姻届が韓国側にあるか不明でも、このまま進められます。どちらが必要かは、法務局の相談で確認してください。';
+    }
+    html += section('韓国の除籍謄本', '<ul class="doc-list">' + deuki + '</ul>', '父母の婚姻状況に応じて', deukiNote);
+
+    if (a.q3 || a.q4) {
+      var condition = '配偶者（前配偶者・内縁含む）・子・父母が日本国民のとき、父母・兄弟姉妹・子に帰化/国籍取得者がいるとき 等。';
+      html += section(
+        '日本の戸籍（除籍）謄本',
+        '<ul class="doc-list">' + item('日本の戸籍（除籍）謄本', condition) + '</ul>',
+        '回答に該当',
+        '回答に該当するため表示しています。対象となる方の分を確認してください。'
+      );
+    }
+
+    if (a.q5) {
+      html += section(
+        '届書の記載事項証明書',
+        '<ul class="doc-list">' + item('届書の記載事項証明書', '日本の役所に出生・死亡・婚姻・離婚・親権者変更・養子縁組・認知届を出しているとき（東京: 兄弟姉妹の出生届、父母の婚姻・離婚届も）。') + '</ul>',
+        '回答に該当'
+      );
+    }
+
+    var translation = item('A4の翻訳文') +
+      item('翻訳者の住所・氏名・翻訳年月日を記載') +
+      item('一部のみの翻訳は不可（全文翻訳）') +
+      item('翻訳者は申請者本人を含め誰でもよい') +
+      item('氏名・出生地はカタカナ/ひらがな/漢字で記載');
+    html += section('翻訳のチェック', '<ul class="doc-list">' + translation + '</ul>', 'すべての翻訳に共通');
+
+    html += section('部数', '<ul class="doc-list">' + item('書類は正本＋副本（コピー、拡大縮小不可）の2部') + '</ul>');
+
+    html += '<section class="paper-section">' +
+      '<h3>翻訳を外部に頼む場合の参考価格<span class="mini">Office.KIM の公開価格</span></h3>' +
+      '<div class="calc-box">' +
+      '<label class="calc-label" for="translation-pages">翻訳する除籍謄本の頁数の目安（自己翻訳）</label>' +
+      '<input class="calc-input" id="translation-pages" type="number" min="0" step="1" inputmode="numeric" placeholder="例: 3">' +
+      '<p class="calc-note">自分で翻訳する予定の除籍謄本の頁数を入れてください。同じ頁数を Office.KIM に翻訳依頼した場合の公開価格を、参考として表示します。</p>' +
+      '<ul class="calc-results">' +
+      '<li><span>除籍謄本（コンピューター化）</span><strong id="calc-comp">—</strong></li>' +
+      '<li><span>除籍謄本（手書き）</span><strong id="calc-hand">—</strong></li>' +
+      '</ul>' +
+      '<p class="calc-note">2026年10月26日に確認した Office.KIM の公開価格: 除籍謄本（コンピューター化）2,750～3,300円/頁、除籍謄本（手書き）3,850～5,500円/頁。家族関係登録各証明書は1,650～2,200円/通です。これは Office.KIM の価格であり、当方の見積もりではありません。実際の費用は依頼先に確認してください。</p>' +
+      '</div></section>';
+
+    html += '<div class="paper-foot">' +
+      '<p>このリストは、東京法務局・名古屋法務局・福岡法務局の「特別永住者」の公開資料をもとにしたたたき台です。最終的な必要書類は、法務局の相談で確認してください。</p>' +
+      '<p>情報基準日: 2026年10月26日／このリストは法的助言ではありません。</p>' +
+      '</div>';
+
+    return html;
+  }
+
+  function getAnswers(showError) {
+    var q1 = form.querySelector('input[name="q1"]:checked');
+    var q2 = form.querySelector('input[name="q2"]:checked');
+
+    if (!q1 || !q2) {
+      if (showError) {
+        status.textContent = '質問1と質問2を選んでください。';
+        status.className = 'form-status error';
+        var missing = !q1 ? form.querySelector('input[name="q1"]') : form.querySelector('input[name="q2"]');
+        if (missing) { missing.focus(); }
+      }
+      return null;
+    }
+
+    return {
+      q1: q1.value,
+      q2: q2.value,
+      q3: document.getElementById('q3').checked,
+      q4: document.getElementById('q4').checked,
+      q5: document.getElementById('q5').checked
+    };
+  }
+
+  function renderOutput(answers, shouldScroll) {
+    area.innerHTML = build(answers);
+    wrap.hidden = false;
+    document.body.classList.add('has-result');
+    hasRendered = true;
+
+    if (shouldScroll) {
+      status.textContent = 'リストを作成しました。回答に合わせて更新できます。';
+      status.className = 'form-status ok';
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      wrap.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    } else {
+      status.textContent = '回答に合わせてリストを更新しました。';
+      status.className = 'form-status ok';
+    }
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var answers = getAnswers(true);
+    if (!answers) { return; }
+    renderOutput(answers, true);
+  });
+
+  form.addEventListener('change', function () {
+    if (!hasRendered) { return; }
+    var answers = getAnswers(false);
+    if (answers) { renderOutput(answers, false); }
+  });
+
+  area.addEventListener('input', function (event) {
+    if (!event.target || event.target.id !== 'translation-pages') { return; }
+    var raw = event.target.value;
+    var comp = document.getElementById('calc-comp');
+    var hand = document.getElementById('calc-hand');
+    if (!comp || !hand) { return; }
+
+    if (raw === '') {
+      comp.textContent = '—';
+      hand.textContent = '—';
+      return;
+    }
+
+    var pages = Math.max(0, Math.floor(Number(raw)));
+    if (!Number.isFinite(pages)) {
+      comp.textContent = '—';
+      hand.textContent = '—';
+      return;
+    }
+
+    if (pages === 0) {
+      comp.textContent = '0円';
+      hand.textContent = '0円';
+      return;
+    }
+
+    comp.textContent = yen(pages * 2750) + '～' + yen(pages * 3300) + '円';
+    hand.textContent = yen(pages * 3850) + '～' + yen(pages * 5500) + '円';
+  });
+
+  printBtn.addEventListener('click', function () {
+    window.print();
+  });
+})();
+</script>
+</body>
+</html>

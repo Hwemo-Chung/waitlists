@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f3eb">
+<title>일본 워홀 셀프 서류 키트 — 내 이유서는 내가 씁니다</title>
+<meta name="description" content="일본 워킹홀리데이 필수 서류 12종과 해당자 서류를 혼자서도 빠짐없이. 이유서·계획서는 대신 써주지 않는 셀프 작성 워크북과 체크리스트. 15,000원 판매 예정, 현재 결제 없음.">
+<style>
+  :root{
+    --paper:#f7f3eb;
+    --paper-2:#efe8dc;
+    --white:#fffdf9;
+    --ink:#19212c;
+    --ink-2:#2c3542;
+    --muted:#5b6472;
+    --line:#ddd5c8;
+    --line-strong:#c9bfae;
+    --accent:#c84222;
+    --accent-dark:#a9361b;
+    --accent-soft:#fbe9e2;
+    --green:#2e6b4f;
+    --green-soft:#e8f2eb;
+    --shadow:0 20px 50px rgba(35,27,18,.08);
+    --max:1120px;
+    --radius:22px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    color:var(--ink);
+    background:
+      radial-gradient(circle at 8% 0%, rgba(214,75,42,.07), transparent 30rem),
+      radial-gradient(circle at 94% 10%, rgba(46,107,79,.06), transparent 28rem),
+      var(--paper);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit}
+  button,input,textarea{font:inherit}
+  .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+  .skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:#fff;padding:10px 16px;border-radius:0 0 10px 10px;text-decoration:none}
+  .skip:focus{top:0}
+  :focus-visible{outline:3px solid rgba(214,75,42,.45);outline-offset:3px}
+
+  /* Header */
+  .site-header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,243,235,.9);
+    border-bottom:1px solid rgba(221,213,200,.75);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:14px;letter-spacing:-.035em;white-space:nowrap}
+  .brand-mark{
+    width:34px;height:34px;flex:none;border-radius:10px;
+    display:grid;place-items:center;
+    background:var(--accent);color:#fff;
+    font-size:11px;font-weight:900;letter-spacing:.03em;
+    box-shadow:0 7px 16px rgba(214,75,42,.24);
+  }
+  .nav{display:flex;align-items:center;gap:24px;font-size:13.5px;color:var(--muted);font-weight:650}
+  .nav a{text-decoration:none}
+  .nav a:hover{color:var(--ink)}
+  .header-cta{white-space:nowrap}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:48px;padding:0 22px;border-radius:999px;
+    background:var(--ink);color:var(--paper);
+    border:1px solid var(--ink);
+    font-size:14.5px;font-weight:800;letter-spacing:-.015em;
+    text-decoration:none;cursor:pointer;
+    transition:transform .18s ease,background .18s ease,box-shadow .18s ease,border-color .18s ease;
+  }
+  .btn:hover{transform:translateY(-1px);background:var(--ink-2);box-shadow:0 10px 22px rgba(25,33,44,.14)}
+  .btn-accent{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(214,75,42,.24)}
+  .btn-accent:hover{background:var(--accent-dark);border-color:var(--accent-dark);box-shadow:0 12px 26px rgba(214,75,42,.3)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong);box-shadow:none}
+  .btn-ghost:hover{background:rgba(255,253,249,.75);box-shadow:none}
+  .btn-small{min-height:40px;padding:0 16px;font-size:13px}
+  .btn-full{width:100%}
+
+  /* Hero */
+  .hero{padding:72px 0 56px}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(318px,.84fr);gap:56px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:flex-start;gap:9px;
+    margin:0;padding:7px 13px;
+    border:1px solid #f0cec2;border-radius:999px;
+    background:var(--accent-soft);color:var(--accent-dark);
+    font-size:12px;font-weight:800;line-height:1.5;letter-spacing:.01em;
+  }
+  .eyebrow .dot{width:6px;height:6px;flex:none;border-radius:50%;background:var(--accent);margin-top:.45em}
+  h1{
+    margin:24px 0 22px;
+    font-size:clamp(2.15rem,5.6vw,4.6rem);
+    line-height:1.12;
+    letter-spacing:-.06em;
+    font-weight:900;
+    text-wrap:balance;
+  }
+  h1 em{
+    font-style:normal;color:var(--accent);
+    background:linear-gradient(transparent 62%, rgba(214,75,42,.14) 62%);
+    padding:0 .04em;
+  }
+  .lede{max-width:640px;margin:0 0 28px;color:#4b5563;font-size:clamp(15.5px,1.7vw,18px);line-height:1.75}
+  .lede strong{color:var(--ink)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:13px}
+  .micro{margin:0;color:var(--muted);font-size:12px;font-weight:650}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:38px;padding-top:24px;border-top:1px solid var(--line)}
+  .stat{min-width:76px}
+  .stat strong{display:block;font-size:25px;line-height:1.12;letter-spacing:-.045em;font-weight:900}
+  .stat span{display:block;margin-top:3px;font-size:11.5px;color:var(--muted);line-height:1.4}
+
+  /* Price card */
+  .price-card{
+    position:relative;overflow:hidden;
+    padding:30px;
+    border:1px solid var(--line);border-radius:26px;
+    background:var(--white);
+    box-shadow:var(--shadow);
+  }
+  .price-card::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--accent),#ef9a58)}
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 10px;border:1px dashed var(--line-strong);border-radius:999px;
+    background:#f7f2e8;color:#6c5e4b;
+    font-size:11px;font-weight:900;letter-spacing:.025em;
+  }
+  .badge::before{content:"";width:6px;height:6px;border-radius:50%;background:#b8a892}
+  .price-label{margin:22px 0 2px;color:var(--muted);font-size:11.5px;font-weight:900;letter-spacing:.11em}
+  .price{margin:0;font-size:clamp(2.7rem,4.2vw,3.5rem);line-height:1;letter-spacing:-.06em;font-weight:900}
+  .price span{margin-left:4px;font-size:.38em;font-weight:800;letter-spacing:0}
+  .price-note{margin:8px 0 20px;color:var(--muted);font-size:12.5px}
+  .price-card ul{display:grid;gap:9px;margin:0 0 22px;padding:0;list-style:none;font-size:13.5px;line-height:1.55}
+  .price-card li{display:flex;gap:9px;align-items:flex-start}
+  .price-card li::before{content:"";width:5px;height:5px;flex:none;margin-top:.62em;border-radius:50%;background:var(--accent)}
+  .tiny{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.65;text-align:center}
+  .tiny strong{color:#4b5563}
+
+  /* Honesty strip */
+  .truth{padding:30px 0;background:var(--ink);color:#f8f3ea}
+  .truth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .truth-item{display:flex;gap:13px;align-items:flex-start}
+  .truth-mark{
+    width:27px;height:27px;flex:none;border-radius:50%;
+    display:grid;place-items:center;
+    background:rgba(255,255,255,.1);color:#ffb39c;
+    font-size:10px;font-weight:900;letter-spacing:.02em;
+  }
+  .truth h3{margin:0 0 3px;font-size:13.5px;letter-spacing:-.02em}
+  .truth p{margin:0;color:#c9c3b8;font-size:12px;line-height:1.6}
+  .truth strong{color:#fff;font-weight:800}
+
+  /* Sections */
+  .section{padding:78px 0}
+  .section-tight{padding-top:64px}
+  .section-soft{background:rgba(255,253,249,.55);border-block:1px solid rgba(221,213,200,.7)}
+  .section-head{max-width:780px;margin-bottom:34px}
+  .kicker{margin:0 0 11px;color:var(--accent-dark);font-size:11.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+  .kicker-light{color:#f29a7f}
+  h2{margin:0 0 13px;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.25;letter-spacing:-.05em;font-weight:900;text-wrap:balance}
+  .section-head p{margin:0;color:var(--muted);font-size:15.5px}
+  .section-head p strong{color:var(--ink)}
+
+  /* Demo */
+  .demo-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:22px;align-items:start}
+  .card{
+    padding:26px;
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--white);
+    box-shadow:0 12px 34px rgba(35,27,18,.045);
+  }
+  .card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:17px}
+  .card h3{margin:0 0 3px;font-size:18.5px;line-height:1.35;letter-spacing:-.035em}
+  .card-sub{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+  .step{
+    flex:none;padding:5px 9px;border-radius:999px;
+    background:var(--accent-soft);color:var(--accent-dark);
+    font-size:10.5px;font-weight:900;letter-spacing:.055em;white-space:nowrap;
+  }
+  .progress-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted)}
+  .progress-head strong{color:var(--ink);font-size:13px}
+  .progress-track{height:9px;margin:9px 0 7px;border-radius:999px;background:#ece5d9;overflow:hidden}
+  .progress-fill{width:0;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),#e98b55);transition:width .25s ease}
+  .progress-label{margin:0;color:var(--muted);font-size:11.5px}
+  .progress-label strong{color:var(--ink)}
+  .check-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px 0 0;padding:0;list-style:none}
+  .check-item{
+    display:flex;gap:10px;align-items:flex-start;
+    min-height:55px;padding:11px 12px;
+    border:1px solid var(--line);border-radius:12px;
+    background:#fffefa;cursor:pointer;
+    transition:background .15s ease,border-color .15s ease,transform .15s ease;
+  }
+  .check-item:hover{border-color:var(--line-strong);transform:translateY(-1px)}
+  .check-item.is-checked{background:var(--green-soft);border-color:#c3dccb}
+  .check-item input{width:18px;height:18px;flex:none;margin:3px 0 0;accent-color:var(--green);cursor:pointer}
+  .num{flex:none;min-width:18px;padding-top:3px;color:var(--muted);font-size:9.5px;font-weight:900;letter-spacing:.03em;font-variant-numeric:tabular-nums}
+  .check-body{display:block;min-width:0}
+  .check-title{display:block;font-size:12.5px;font-weight:800;line-height:1.4;letter-spacing:-.01em}
+  .check-note{display:block;margin-top:2px;color:var(--muted);font-size:10.5px;line-height:1.45}
+  .check-note:empty{display:none}
+  .tag{
+    display:inline-block;margin-left:3px;padding:1px 5px;border-radius:4px;
+    background:var(--accent-soft);color:var(--accent-dark);
+    font-size:8.5px;font-weight:900;letter-spacing:0;vertical-align:1px;white-space:nowrap;
+  }
+  .optional-block{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+  .optional-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+  .optional-head h4{margin:0;font-size:11.5px;font-weight:900;letter-spacing:.02em}
+  .optional-head span{color:var(--muted);font-size:10.5px}
+  .check-list.optional{grid-template-columns:1fr;margin-top:0}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
+  .local-note{margin:0;color:var(--muted);font-size:10.5px;line-height:1.55}
+  .reset-btn{padding:3px 0;border:0;background:none;color:var(--muted);font-size:10.5px;text-decoration:underline;text-underline-offset:3px;cursor:pointer;white-space:nowrap}
+  .reset-btn:hover{color:var(--ink)}
+
+  /* Balance */
+  .field-label{display:block;margin-bottom:6px;color:#3d4653;font-size:11.5px;font-weight:900;letter-spacing:.03em}
+  .input-wrap{position:relative}
+  .input-wrap input{
+    width:100%;height:58px;padding:0 50px 0 16px;
+    border:1.5px solid var(--line);border-radius:14px;
+    background:#fffefa;color:var(--ink);
+    font-size:20px;font-weight:900;letter-spacing:-.025em;
+    outline:none;transition:border-color .15s ease,box-shadow .15s ease;
+  }
+  .input-wrap input::placeholder{color:#7a7164;font-weight:650}
+  .input-wrap input:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(214,75,42,.1)}
+  .input-suffix{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:12px;font-weight:800;pointer-events:none}
+  .hint{margin:10px 0 0;color:var(--muted);font-size:10.8px;line-height:1.6}
+  .hint strong{color:#4b5563}
+  .balance-result{
+    display:flex;align-items:center;min-height:96px;
+    margin-top:16px;padding:16px;
+    border:1px solid var(--line);border-radius:14px;
+    background:#f7f2e9;color:#4b5563;
+    font-size:13px;line-height:1.6;
+  }
+  .balance-result strong{font-size:15.5px;font-weight:900;letter-spacing:-.02em}
+  .balance-result.warn{border-color:#f0c6b7;background:#fdf0eb;color:#8b2c12}
+  .balance-result.ok{border-color:#c3dccb;background:var(--green-soft);color:#24533c}
+  .balance-result .result-inner{display:block}
+
+  /* Self check */
+  .selfcheck-card{margin-top:22px}
+  .draft-grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(280px,.78fr);gap:24px;align-items:start}
+  .draft-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:7px}
+  .draft-label label{color:#3d4653;font-size:11.5px;font-weight:900;letter-spacing:.03em}
+  .privacy-chip{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border:1px solid #c3dccb;border-radius:999px;background:var(--green-soft);color:#24533c;font-size:9.5px;font-weight:900;letter-spacing:.03em;white-space:nowrap}
+  .privacy-chip::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--green)}
+  textarea{
+    display:block;width:100%;min-height:286px;resize:vertical;
+    padding:15px;border:1.5px solid var(--line);border-radius:14px;
+    background:#fffefa;color:var(--ink);
+    font-size:14px;line-height:1.75;letter-spacing:-.005em;
+    outline:none;transition:border-color .15s ease,box-shadow .15s ease;
+  }
+  textarea::placeholder{color:#7a7164}
+  textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(214,75,42,.1)}
+  .draft-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px;color:var(--muted);font-size:10.5px}
+  .meta-pill{padding:4px 8px;border:1px solid var(--line);border-radius:999px;background:#faf6ee}
+  .meta-pill strong{color:var(--ink);font-weight:900;font-variant-numeric:tabular-nums}
+  .warnings{display:grid;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+  .warning-item{
+    position:relative;display:flex;gap:10px;align-items:flex-start;
+    padding:11px 13px;border:1px solid var(--line);border-radius:12px;
+    background:#f7f2e9;color:#4b5563;
+    font-size:11.8px;line-height:1.6;
+  }
+  .warning-item::before{content:"i";flex:none;width:18px;height:18px;margin-top:1px;border-radius:50%;background:#dcd3c5;color:#5b4f3d;font-size:10px;font-weight:900;display:grid;place-items:center;font-style:normal}
+  .warning-item.warn{border-color:#f0c6b7;background:#fdf0eb;color:#8b2c12}
+  .warning-item.warn::before{content:"!";background:#e9b7a5;color:#7c220b}
+  .warning-item.ok{border-color:#c3dccb;background:var(--green-soft);color:#24533c}
+  .warning-item.ok::before{content:"✓";background:#b7d3c1;color:#1e4a34;font-size:9px}
+  .warning-item strong{font-weight:900}
+  .selfcheck-questions{padding:18px;border:1px solid var(--line);border-radius:16px;background:#f9f5ed}
+  .q-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
+  .q-head h4{margin:0;font-size:13px;letter-spacing:-.02em}
+  .q-count{padding:3px 7px;border-radius:999px;background:#ece4d7;color:var(--muted);font-size:9.5px;font-weight:900;font-variant-numeric:tabular-nums}
+  .q-item{display:flex;gap:9px;align-items:flex-start;padding:10px 0;border-top:1px solid rgba(221,213,200,.75);cursor:pointer}
+  .q-item:first-of-type{border-top:0}
+  .q-item input{width:17px;height:17px;flex:none;margin:3px 0 0;accent-color:var(--accent);cursor:pointer}
+  .q-item strong{display:block;font-size:12px;line-height:1.4;letter-spacing:-.01em}
+  .q-item span span{display:block;margin-top:1px;color:var(--muted);font-size:10.2px;line-height:1.5}
+  .selfcheck-note{margin:14px 0 0;padding:10px 11px;border:1px dashed var(--line-strong);border-radius:10px;background:#fffefa;color:var(--muted);font-size:10.5px;line-height:1.6}
+  .selfcheck-note strong{color:#4b5563}
+
+  /* Facts */
+  .facts-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:48px;align-items:start}
+  .fact-list{margin:0;padding:0;list-style:none}
+  .fact-list li{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:19px 0;border-top:1px solid var(--line)}
+  .fact-list li:last-child{border-bottom:1px solid var(--line)}
+  .fact-num{padding-top:3px;color:var(--accent-dark);font-size:10.5px;font-weight:900;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+  .fact-list h3{margin:0 0 4px;font-size:14.5px;line-height:1.45;letter-spacing:-.025em}
+  .fact-list p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.65}
+  .source-card{
+    position:sticky;top:96px;
+    padding:26px;border:1px solid var(--line);border-radius:20px;
+    background:var(--white);box-shadow:0 12px 34px rgba(35,27,18,.045);
+  }
+  .source-label{margin:0 0 10px;color:var(--accent-dark);font-size:10.5px;font-weight:900;letter-spacing:.11em}
+  .source-card h3{margin:0 0 9px;font-size:18px;line-height:1.4;letter-spacing:-.04em}
+  .source-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+  .source-links{display:grid;gap:8px;margin:17px 0 0}
+  .source-links a{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:10px 12px;border:1px solid var(--line);border-radius:10px;
+    background:#faf6ee;font-size:11.5px;font-weight:800;text-decoration:none;
+    transition:background .15s ease,border-color .15s ease;
+  }
+  .source-links a:hover{background:var(--accent-soft);border-color:#f0cec2}
+  .source-links a span:last-child{color:var(--accent);font-size:14px}
+  .source-note{margin-top:14px!important;font-size:10px!important}
+  .official-callout{margin:18px 0 0;padding:14px 15px;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;background:var(--accent-soft);color:#6c2b18;font-size:11.5px;line-height:1.65}
+  .official-callout strong{font-weight:900}
+
+  /* FAQ */
+  .faq-grid{display:grid;grid-template-columns:minmax(0,.66fr) minmax(0,1.34fr);gap:48px;align-items:start}
+  .faq-intro p{color:var(--muted);font-size:14px;margin:0 0 18px}
+  details{border-bottom:1px solid var(--line)}
+  details:first-of-type{border-top:1px solid var(--line)}
+  summary{
+    position:relative;padding:18px 38px 18px 0;
+    font-size:14.5px;font-weight:800;letter-spacing:-.02em;
+    cursor:pointer;list-style:none;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:3px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:21px;font-weight:400;line-height:1}
+  details[open] summary::after{content:"−"}
+  details p{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.75;max-width:680px}
+  details p strong{color:var(--ink)}
+
+  /* Waitlist */
+  .waitlist{
+    padding:78px 0;
+    background:
+      radial-gradient(circle at 84% 18%, rgba(214,75,42,.26), transparent 28rem),
+      radial-gradient(circle at 8% 95%, rgba(46,107,79,.18), transparent 26rem),
+      var(--ink);
+    color:#f8f3ea;
+  }
+  .waitlist-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:52px;align-items:center}
+  .waitlist h2{color:#fff;margin-bottom:15px}
+  .waitlist p{color:#c9c3b8}
+  .waitlist .lede{color:#d5cec1;font-size:14.5px;margin-bottom:22px}
+  .waitlist-facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .waitlist-facts li{padding:6px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.05);color:#ded7ca;font-size:10.5px;font-weight:700}
+  .waitlist-card{padding:28px;border:1px solid rgba(255,255,255,.15);border-radius:22px;background:rgba(255,255,255,.055)}
+  .badge-light{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.07);color:#f2c8b9}
+  .badge-light::before{background:#f29a7f}
+  .waitlist-price{margin:19px 0 0;color:#fff;font-size:clamp(2.7rem,4.2vw,3.4rem);line-height:1;letter-spacing:-.06em;font-weight:900}
+  .waitlist-price span{margin-left:4px;font-size:.38em;font-weight:800;letter-spacing:0}
+  .waitlist-card .price-note{color:#bdb5a7;margin-bottom:18px}
+  .waitlist-card .tiny{color:#bdb5a7;font-size:10px}
+  .waitlist-card .tiny strong{color:#eee8dd}
+  .waitlist-card hr{height:1px;margin:19px 0;border:0;background:rgba(255,255,255,.12)}
+
+  /* Footer */
+  .footer{padding:50px 0 26px;background:var(--paper-2);border-top:1px solid var(--line)}
+  .footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:42px}
+  .footer-brand{margin:0 0 10px;font-weight:900;font-size:14px;letter-spacing:-.025em}
+  .footer p{margin:0 0 10px;color:var(--muted);font-size:11.8px;line-height:1.7}
+  .footer-label{margin:2px 0 5px!important;color:var(--ink)!important;font-size:10.5px!important;font-weight:900;letter-spacing:.08em}
+  .footer-links{display:grid;gap:7px;margin:10px 0 0;padding:0;list-style:none}
+  .footer-links a{color:var(--ink);font-size:11.5px;text-underline-offset:3px;text-decoration-thickness:1px}
+  .footer-links a:hover{color:var(--accent-dark)}
+  .footer-note{font-size:10.5px!important}
+  .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:28px;padding-top:16px;border-top:1px solid rgba(201,191,174,.6);color:var(--muted);font-size:10px}
+
+  @media (max-width:960px){
+    .nav{display:none}
+    .hero-grid{grid-template-columns:1fr;gap:32px}
+    .price-card{max-width:560px}
+    .demo-grid{grid-template-columns:1fr}
+    .facts-grid{grid-template-columns:1fr;gap:30px}
+    .source-card{position:static}
+    .faq-grid{grid-template-columns:1fr;gap:24px}
+    .waitlist-grid{grid-template-columns:1fr;gap:32px}
+    .waitlist-card{max-width:560px}
+    .draft-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    .wrap{width:calc(100% - 32px)}
+    .header-inner{min-height:64px}
+    .brand{font-size:12.5px}
+    .brand-mark{width:31px;height:31px;border-radius:9px}
+    .header-cta{padding:0 13px;min-height:37px;font-size:11.5px}
+    .hero{padding:48px 0 40px}
+    .section{padding:58px 0}
+    .truth{padding:24px 0}
+    .truth-grid{grid-template-columns:1fr;gap:17px}
+    .hero-stats{gap:18px 24px;margin-top:30px}
+    .stat{min-width:66px}
+    .stat strong{font-size:22px}
+    .card{padding:20px}
+    .check-list{grid-template-columns:1fr}
+    .check-list.optional{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr;gap:22px}
+    .footer{padding-top:38px}
+    .price-card{padding:25px}
+    .waitlist{padding:58px 0}
+    .waitlist-card{padding:22px}
+    textarea{font-size:16px;min-height:250px}
+    .draft-meta{font-size:10px}
+    .section-head p{font-size:14.5px}
+    .check-title{font-size:13.5px}
+    .check-note{font-size:11.5px}
+    .progress-label,.hint{font-size:11.5px}
+    .meta-pill{font-size:11px}
+    .warning-item{font-size:12.5px}
+    .q-item strong{font-size:12.5px}
+    .q-item span span{font-size:11px}
+    .selfcheck-note{font-size:11px}
+    .card-sub{font-size:12.5px}
+    .tiny{font-size:11.5px}
+    .waitlist-card .tiny{font-size:11.5px}
+    .waitlist-facts li{font-size:11px}
+    .footer p{font-size:12.5px}
+    .footer-links a{font-size:12px}
+    .footer-note{font-size:11.5px!important}
+    .footer-bottom{font-size:11px}
+  }
+  @media (max-width:420px){
+    .brand-text-long{display:none}
+    .brand-text-short{display:inline!important}
+    .hero-cta .btn{width:100%}
+    .hero-cta{display:grid}
+    .price-card{padding:22px}
+    .waitlist-facts{display:grid}
+    .waitlist-facts li{text-align:center}
+  }
+  .brand-text-short{display:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 바로 가기</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="일본 워홀 셀프 서류 키트 홈">
+      <span class="brand-mark" aria-hidden="true">WH</span>
+      <span class="brand-text-long">일본 워홀 셀프 서류 키트</span>
+      <span class="brand-text-short">워홀 셀프 서류 키트</span>
+    </a>
+    <nav class="nav" aria-label="페이지 섹션">
+      <a href="#demo">미리보기</a>
+      <a href="#facts">공식 안내</a>
+      <a href="#faq">FAQ</a>
+      <a href="#waitlist">가격</a>
+    </nav>
+    <a class="btn btn-small header-cta" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20%EC%9D%BC%EB%B3%B8%20%EC%9B%8C%ED%99%80%20%EC%85%80%ED%94%84%20%EC%84%9C%EB%A5%98%20%ED%82%A4%ED%8A%B8">대기자 메일</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> 다음 분기, 처음 또는 두 번째 일본 워홀 신청을 준비하는 한국 국적 20대를 위한</p>
+        <h1>유학원 대신,<br><em>내 이유서</em>는<br>내가 씁니다.</h1>
+        <p class="lede">일본 워홀 셀프 서류 키트는 필수 서류 12종과 해당자 서류를 빠짐없이 챙기고, 이유서·계획서를 <strong>스스로 완성하도록 돕는 워크북과 체크리스트</strong>입니다. 대신 써주는 서비스가 아닙니다.</p>
+        <div class="hero-cta">
+          <a class="btn btn-accent" href="#demo">무료 체크리스트 써보기</a>
+          <a class="btn btn-ghost" href="#waitlist">출시 대기하기</a>
+        </div>
+        <p class="micro">대필 없음 · 결제 없음 · 붙여넣은 글 전송 없음</p>
+        <div class="hero-stats" aria-label="핵심 숫자">
+          <div class="stat"><strong>12</strong><span>필수 서류</span></div>
+          <div class="stat"><strong>5</strong><span>반드시 본인 작성</span></div>
+          <div class="stat"><strong>2</strong><span>해당자 서류</span></div>
+          <div class="stat"><strong>4</strong><span>2026년 접수 횟수</span></div>
+          <div class="stat"><strong>약 280만원</strong><span>잔고증명서 기준</span></div>
+        </div>
+      </div>
+
+      <aside class="price-card" aria-labelledby="priceCardTitle">
+        <span class="badge">판매 예정 · 현재 결제 불가</span>
+        <p class="price-label" id="priceCardTitle">예정 가격</p>
+        <p class="price">15,000<span>원</span></p>
+        <p class="price-note">1회 구매 · 아직 판매하지 않습니다 · 결제를 받지 않습니다<br><strong>대사관 지정 대리신청기관 수수료는 별도입니다.</strong></p>
+        <ul>
+          <li>필수 12종 + 해당자 2종 체크리스트</li>
+          <li>잔고·이유서·계획서 셀프 점검</li>
+          <li>공식 안내 링크와 핵심 조건 정리</li>
+        </ul>
+        <a class="btn btn-accent btn-full" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20%EC%9D%BC%EB%B3%B8%20%EC%9B%8C%ED%99%80%20%EC%85%80%ED%94%84%20%EC%84%9C%EB%A5%98%20%ED%82%A4%ED%8A%B8">대기자로 메일 보내기</a>
+        <p class="tiny">메일 제목이 자동으로 채워집니다.<br><strong>2026년 11월 9일까지 대기자 이메일 5건</strong>이 모이면 실제 개발을 시작합니다.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="truth" aria-label="먼저 확인할 세 가지">
+    <div class="wrap truth-grid">
+      <div class="truth-item">
+        <span class="truth-mark" aria-hidden="true">01</span>
+        <div>
+          <h3>대필하지 않습니다</h3>
+          <p>이유서·계획서는 <strong>본인이 작성해야 합니다.</strong> 키트는 질문, 워크북, 점검만 제공합니다.</p>
+        </div>
+      </div>
+      <div class="truth-item">
+        <span class="truth-mark" aria-hidden="true">02</span>
+        <div>
+          <h3>대리기관 수수료는 별도</h3>
+          <p>대사관 지정 대리신청기관 수수료는 <strong>키트에 포함되지 않으며, 대체할 수 없습니다.</strong></p>
+        </div>
+      </div>
+      <div class="truth-item">
+        <span class="truth-mark" aria-hidden="true">03</span>
+        <div>
+          <h3>아직 판매 전입니다</h3>
+          <p>15,000원은 <strong>예정 가격</strong>입니다. 지금은 결제를 받지 않고 대기자 메일만 받습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="demo">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">무료 미리보기</p>
+        <h2>키트의 핵심 세 가지를<br>지금 이 페이지에서 써보세요.</h2>
+        <p>체크 상태는 이 브라우저에만 저장됩니다. 이유서·계획서 초안은 <strong>저장하거나 전송하지 않습니다.</strong></p>
+      </div>
+
+      <div class="demo-grid">
+        <div class="card" aria-labelledby="checklistTitle">
+          <div class="card-head">
+            <div>
+              <h3 id="checklistTitle">1. 서류 체크리스트</h3>
+              <p class="card-sub">필수 12종 + 해당자 2종 · 이 브라우저에 자동 저장</p>
+            </div>
+            <span class="step">로컬 저장</span>
+          </div>
+
+          <div class="progress-head">
+            <strong id="reqCount">0 / 12</strong>
+            <span>필수 서류 완료</span>
+          </div>
+          <div class="progress-track" id="reqProgress" role="progressbar" aria-labelledby="reqCount" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0">
+            <div class="progress-fill" id="reqBar"></div>
+          </div>
+          <p class="progress-label">1~5번은 반드시 본인 작성 · 12번 체크리스트도 본인 작성</p>
+
+          <ul class="check-list">
+            <li>
+              <label class="check-item" for="doc01">
+                <input type="checkbox" id="doc01" data-doc="required" data-key="doc01">
+                <span class="num" aria-hidden="true">01</span>
+                <span class="check-body">
+                  <span class="check-title">사증신청서 <span class="tag">본인 작성</span></span>
+                  <span class="check-note">사진 약 4.5×3.5cm, 무배경, 6개월 이내</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc02">
+                <input type="checkbox" id="doc02" data-doc="required" data-key="doc02">
+                <span class="num" aria-hidden="true">02</span>
+                <span class="check-body">
+                  <span class="check-title">이력서 <span class="tag">본인 작성</span></span>
+                  <span class="check-note">일본어 또는 영어</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc03">
+                <input type="checkbox" id="doc03" data-doc="required" data-key="doc03">
+                <span class="num" aria-hidden="true">03</span>
+                <span class="check-body">
+                  <span class="check-title">이유서 <span class="tag">본인 작성</span></span>
+                  <span class="check-note">A4 1장 이상 · 관광지 나열 금지</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc04">
+                <input type="checkbox" id="doc04" data-doc="required" data-key="doc04">
+                <span class="num" aria-hidden="true">04</span>
+                <span class="check-body">
+                  <span class="check-title">계획서 <span class="tag">본인 작성</span></span>
+                  <span class="check-note">A4 1장 이상 · 관광지 나열 금지</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc05">
+                <input type="checkbox" id="doc05" data-doc="required" data-key="doc05">
+                <span class="num" aria-hidden="true">05</span>
+                <span class="check-body">
+                  <span class="check-title">조사표 <span class="tag">본인 작성</span></span>
+                  <span class="check-note">일본어 · 본인 서명</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc06">
+                <input type="checkbox" id="doc06" data-doc="required" data-key="doc06">
+                <span class="num" aria-hidden="true">06</span>
+                <span class="check-body">
+                  <span class="check-title">기본증명서</span>
+                  <span class="check-note"></span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc07">
+                <input type="checkbox" id="doc07" data-doc="required" data-key="doc07">
+                <span class="num" aria-hidden="true">07</span>
+                <span class="check-body">
+                  <span class="check-title">주민등록초본</span>
+                  <span class="check-note"></span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc08">
+                <input type="checkbox" id="doc08" data-doc="required" data-key="doc08">
+                <span class="num" aria-hidden="true">08</span>
+                <span class="check-body">
+                  <span class="check-title">재학/최종학력 증명</span>
+                  <span class="check-note"></span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc09">
+                <input type="checkbox" id="doc09" data-doc="required" data-key="doc09">
+                <span class="num" aria-hidden="true">09</span>
+                <span class="check-body">
+                  <span class="check-title">잔고증명서</span>
+                  <span class="check-note">약 280만원</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc10">
+                <input type="checkbox" id="doc10" data-doc="required" data-key="doc10">
+                <span class="num" aria-hidden="true">10</span>
+                <span class="check-body">
+                  <span class="check-title">여권 사본</span>
+                  <span class="check-note">신상면 + 일본 출입국 도장 전 페이지</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc11">
+                <input type="checkbox" id="doc11" data-doc="required" data-key="doc11">
+                <span class="num" aria-hidden="true">11</span>
+                <span class="check-body">
+                  <span class="check-title">출입국사실증명서</span>
+                  <span class="check-note">출생 후 현재까지</span>
+                </span>
+              </label>
+            </li>
+            <li>
+              <label class="check-item" for="doc12">
+                <input type="checkbox" id="doc12" data-doc="required" data-key="doc12">
+                <span class="num" aria-hidden="true">12</span>
+                <span class="check-body">
+                  <span class="check-title">제출자료 체크리스트 <span class="tag">본인 작성</span></span>
+                  <span class="check-note">제출 전 마지막 확인</span>
+                </span>
+              </label>
+            </li>
+          </ul>
+
+          <div class="optional-block">
+            <div class="optional-head">
+              <h4>해당자 서류</h4>
+              <span id="optCount">0 / 2 체크</span>
+            </div>
+            <ul class="check-list optional">
+              <li>
+                <label class="check-item" for="doc13">
+                  <input type="checkbox" id="doc13" data-doc="optional" data-key="doc13">
+                  <span class="num" aria-hidden="true">A</span>
+                  <span class="check-body">
+                    <span class="check-title">병역 증명</span>
+                    <span class="check-note">주민등록초본 겸용 가능</span>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item" for="doc14">
+                  <input type="checkbox" id="doc14" data-doc="optional" data-key="doc14">
+                  <span class="num" aria-hidden="true">B</span>
+                  <span class="check-body">
+                    <span class="check-title">일본어 능력 입증 자료</span>
+                    <span class="check-note">JLPT 등 · 없으면 이력서/이유서에 학습 이력 설명</span>
+                  </span>
+                </label>
+              </li>
+            </ul>
+            <p class="hint">해당자 서류는 본인에게 해당할 때만 체크하세요. 진행률에는 필수 12종만 반영됩니다.</p>
+          </div>
+
+          <div class="card-foot">
+            <p class="local-note">체크 상태는 이 브라우저의 localStorage에만 저장됩니다.</p>
+            <button type="button" class="reset-btn" id="resetChecklist">체크 초기화</button>
+          </div>
+        </div>
+
+        <div class="card" aria-labelledby="balanceTitle">
+          <div class="card-head">
+            <div>
+              <h3 id="balanceTitle">2. 잔고 셀프 체크</h3>
+              <p class="card-sub">2,800,000원(약 280만원) 기준과 비교</p>
+            </div>
+            <span class="step">계산</span>
+          </div>
+
+          <label class="field-label" for="balanceInput">현재 잔고 (원)</label>
+          <div class="input-wrap">
+            <input type="text" id="balanceInput" inputmode="numeric" autocomplete="off" placeholder="2,800,000" aria-describedby="balanceHint">
+            <span class="input-suffix" aria-hidden="true">원</span>
+          </div>
+          <p class="hint" id="balanceHint">공식 안내의 잔고증명서 기준은 <strong>약 280만원</strong>입니다. 이 점검은 2,800,000원과 비교합니다.</p>
+          <div class="balance-result" id="balanceResult" role="status" aria-live="polite">
+            <span class="result-inner">금액을 입력하면 2,800,000원 기준과 비교해 드립니다.</span>
+          </div>
+          <p class="hint">이 점검은 준비용 참고입니다. 실제 잔고증명서 발급 기준과 잔고 인정 방식은 대사관·은행 안내를 확인하세요.</p>
+        </div>
+      </div>
+
+      <div class="card selfcheck-card" id="selfcheck" aria-labelledby="selfcheckTitle">
+        <div class="card-head">
+          <div>
+            <h3 id="selfcheckTitle">3. 이유서·계획서 셀프 점검</h3>
+            <p class="card-sub">본인이 쓴 초안을 붙여넣으면 분량과 나열 신호를 확인합니다 · 저장·전송 없음</p>
+          </div>
+          <span class="step">전송 없음</span>
+        </div>
+
+        <div class="draft-grid">
+          <div>
+            <div class="draft-label">
+              <label for="draftInput">이유서 또는 계획서 초안</label>
+              <span class="privacy-chip">브라우저 안에서만 계산</span>
+            </div>
+            <textarea id="draftInput" placeholder="본인이 쓴 초안을 여기에 붙여넣어 보세요. 이 페이지 밖으로 전송되지 않습니다." aria-describedby="draftPrivacy" autocomplete="off" spellcheck="false"></textarea>
+            <div class="draft-meta" aria-live="polite">
+              <span class="meta-pill"><strong id="charCount">0</strong>자 (공백 포함)</span>
+              <span class="meta-pill">공백 제외 <strong id="charCountNoSpace">0</strong>자</span>
+              <span class="meta-pill">구분자 <strong id="sepCount">0</strong>개</span>
+            </div>
+            <p class="hint" id="draftPrivacy">붙여넣은 글은 이 브라우저 안에서만 계산되며, 저장·전송되지 않습니다. 새로고침하면 사라집니다.</p>
+            <p class="hint"><strong>700자</strong>는 공식 기준이 아니라, 공식 안내의 “A4 1장 이상”을 바탕으로 잡은 아주 거친 참고치입니다. 실제 분량은 서식과 글자 크기에 따라 달라집니다.</p>
+            <ul class="warnings" id="draftWarnings" aria-live="polite">
+              <li class="warning-item">초안을 붙여넣으면 분량과 나열 신호를 점검합니다.</li>
+            </ul>
+          </div>
+
+          <div class="selfcheck-questions">
+            <div class="q-head">
+              <h4>4가지 자가 질문</h4>
+              <span class="q-count" id="qCount" aria-live="polite">0 / 4</span>
+            </div>
+            <label class="q-item" for="q1">
+              <input type="checkbox" id="q1" data-question="q1">
+              <span><strong>경험하고 싶은 것</strong><span>일본에서 무엇을 경험하고 싶은지 구체적으로 썼나요?</span></span>
+            </label>
+            <label class="q-item" for="q2">
+              <input type="checkbox" id="q2" data-question="q2">
+              <span><strong>워홀 목적에의 기여</strong><span>그 경험이 워킹홀리데이의 목적에 어떻게 기여하는지 썼나요?</span></span>
+            </label>
+            <label class="q-item" for="q3">
+              <input type="checkbox" id="q3" data-question="q3">
+              <span><strong>미래에 어떻게 도움</strong><span>앞으로의 진로·생활에 어떻게 도움이 되는지 썼나요?</span></span>
+            </label>
+            <label class="q-item" for="q4">
+              <input type="checkbox" id="q4" data-question="q4">
+              <span><strong>일본어 학습 이력</strong><span>학습 이력을 썼나요? JLPT 등 자료가 없다면 이력서·이유서에 설명할 수 있습니다.</span></span>
+            </label>
+            <p class="selfcheck-note"><strong>이 점검은 공식 심사가 아닙니다.</strong> 문장을 고쳐주거나 대신 써주지 않으며, 합격을 예측하지도 않습니다. 초안은 서버로 전송되지 않고 이 페이지 안에서만 계산됩니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="facts">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">공식 안내</p>
+        <h2>공식 안내에서 확인한 것</h2>
+        <p>아래 내용은 주한일본대사관 안내에서 확인한 사실입니다. 신청 전에는 반드시 원문을 다시 확인하세요.</p>
+      </div>
+
+      <div class="facts-grid">
+        <ol class="fact-list">
+          <li>
+            <span class="fact-num" aria-hidden="true">01</span>
+            <div>
+              <h3>2026년은 4회 접수</h3>
+              <p>분기별로 접수가 진행됩니다. 다음 분기 일정은 대사관 공지를 확인하세요.</p>
+            </div>
+          </li>
+          <li>
+            <span class="fact-num" aria-hidden="true">02</span>
+            <div>
+              <h3>개인 신청은 대사관 지정 대리신청기관을 통해서만</h3>
+              <p>창구 접수와 우편 접수는 불가합니다. 대리신청기관 수수료는 이 키트와 별도입니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="fact-num" aria-hidden="true">03</span>
+            <div>
+              <h3>신청 대상은 과거 발급 0회 또는 1회</h3>
+              <p>과거 워킹홀리데이 사증 발급 횟수가 0회 또는 1회인 사람이 대상입니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="fact-num" aria-hidden="true">04</span>
+            <div>
+              <h3>1~5번 서류는 반드시 본인 작성</h3>
+              <p>사증신청서, 이력서, 이유서, 계획서, 조사표는 본인이 작성해야 합니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="fact-num" aria-hidden="true">05</span>
+            <div>
+              <h3>이유서·계획서는 각각 A4 1장 이상</h3>
+              <p>관광지·하고 싶은 일 나열은 금지입니다. 경험하고 싶은 것, 워홀 목적에의 기여, 미래에 어떻게 도움 되는지를 구체적으로 씁니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="fact-num" aria-hidden="true">06</span>
+            <div>
+              <h3>잔고증명서는 약 280만원</h3>
+              <p>공식 안내의 잔고증명서 기준은 약 280만원입니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="fact-num" aria-hidden="true">07</span>
+            <div>
+              <h3>과거 불합격 이력은 새 심사에 영향 없음</h3>
+              <p>이력서에 정직하게 기재하면 됩니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="fact-num" aria-hidden="true">08</span>
+            <div>
+              <h3>해당자 서류 두 가지</h3>
+              <p>병역 증명(주민등록초본 겸용 가능), 일본어 능력 입증 자료(JLPT 등). 일본어 자료가 없으면 이력서·이유서에 학습 이력을 설명합니다.</p>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="source-card">
+          <p class="source-label">공식 출처</p>
+          <h3>판단 기준은 언제나 대사관 원문입니다.</h3>
+          <p>이 페이지는 준비를 돕는 요약입니다. 서류 요건과 일정은 바뀔 수 있으니 신청 전 원문을 확인하세요.</p>
+          <div class="source-links">
+            <a href="https://www.kr.emb-japan.go.jp/itpr_ja/visa_working_h_documents.html" target="_blank" rel="noopener noreferrer"><span>워킹홀리데이 제출 서류 안내</span><span aria-hidden="true">↗</span></a>
+            <a href="https://www.kr.emb-japan.go.jp/itpr_ko/working_holiday_2026.html" target="_blank" rel="noopener noreferrer"><span>2026 워킹홀리데이 안내</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="source-note">확인일 2026-10-26</p>
+          <p class="official-callout"><strong>대리기관에 작성을 의뢰해 비슷한 형식·내용이 중복 제출되는 경우가 있으므로 이유서·계획서는 반드시 본인이 작성하라고 공식 안내에 적혀 있습니다.</strong> 이 키트가 대필을 제공하지 않는 이유입니다.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="faq">
+    <div class="wrap">
+      <div class="faq-grid">
+        <div class="faq-intro">
+          <p class="kicker">FAQ</p>
+          <h2>사기 전에<br>확인할 것</h2>
+          <p>이 키트가 무엇을 하고, 무엇을 하지 않는지 먼저 확인하세요. 판매 전이라 결제는 받지 않습니다.</p>
+          <a class="btn btn-ghost btn-small" href="#waitlist">대기자 안내 보기</a>
+        </div>
+        <div>
+          <details>
+            <summary>이유서·계획서를 대신 써주나요?</summary>
+            <p><strong>아니요.</strong> 대사관은 사증신청서·이력서·이유서·계획서·조사표를 반드시 본인이 작성하도록 안내합니다. 이 키트는 질문에 답하며 직접 쓰는 워크북과 점검 도구이며, 대필 서비스가 아닙니다.</p>
+          </details>
+          <details>
+            <summary>대사관 지정 대리신청기관 수수료가 포함되나요?</summary>
+            <p><strong>포함되지 않습니다.</strong> 개인 신청은 대사관 지정 대리신청기관을 통해서만 가능하며, 그 수수료는 별도입니다. 이 키트로 대리신청기관 수수료를 대체할 수 없습니다.</p>
+          </details>
+          <details>
+            <summary>지금 구매할 수 있나요?</summary>
+            <p><strong>아니요.</strong> 15,000원은 1회 구매 예정 가격이며, 아직 판매하지 않습니다. 지금은 결제를 받지 않습니다. 2026년 11월 9일까지 대기자 이메일 5건이 모이면 실제 개발을 시작합니다.</p>
+          </details>
+          <details>
+            <summary>합격이나 비자 발급을 보장하나요?</summary>
+            <p><strong>보장하지 않습니다.</strong> 서류 준비를 돕는 도구이며, 심사 결과나 비자 발급을 예측하거나 보장하지 않습니다. 최종 판단은 대사관과 대리신청기관의 안내를 따르세요.</p>
+          </details>
+          <details>
+            <summary>제가 쓴 글이 어디로 전송되나요?</summary>
+            <p><strong>어디에도 전송되지 않습니다.</strong> 이 페이지의 이유서·계획서 점검은 브라우저 안에서만 계산됩니다. 붙여넣은 글은 저장하지 않으며 새로고침하면 사라집니다. 체크리스트 상태만 이 브라우저의 localStorage에 저장됩니다.</p>
+          </details>
+          <details>
+            <summary>JLPT가 없어도 준비할 수 있나요?</summary>
+            <p>공식 안내상 일본어 능력 입증 자료(JLPT 등)가 없으면 이력서·이유서에 학습 이력을 설명할 수 있습니다. 이 키트의 4가지 자가 질문에도 일본어 학습 이력 항목이 포함되어 있습니다.</p>
+          </details>
+          <details>
+            <summary>과거에 불합격한 적이 있는데 괜찮나요?</summary>
+            <p>공식 안내상 과거 불합격 이력은 새 심사에 영향을 주지 않습니다. 이력서에 정직하게 기재하세요.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="waitlist" id="waitlist">
+    <div class="wrap waitlist-grid">
+      <div>
+        <p class="kicker kicker-light">대기자 모집</p>
+        <h2>15,000원은 예정 가격입니다.<br>지금은 판매하지 않습니다.</h2>
+        <p class="lede">대기자 이메일 5건이 2026년 11월 9일까지 모이면 실제 개발을 시작합니다. 모이지 않으면 이 가격으로 판매하지 않습니다. 지금은 결제를 받지 않습니다.</p>
+        <ul class="waitlist-facts" aria-label="가격과 제공 범위">
+          <li>1회 구매 예정</li>
+          <li>현재 결제 없음</li>
+          <li>대리기관 수수료 별도</li>
+          <li>이유서·계획서 대필 없음</li>
+        </ul>
+      </div>
+      <div class="waitlist-card">
+        <span class="badge badge-light">판매 예정 · 판매 전</span>
+        <p class="waitlist-price">15,000<span>원</span></p>
+        <p class="price-note">1회 구매 · 아직 판매하지 않음 · 결제받지 않음</p>
+        <a class="btn btn-accent btn-full" href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20%EC%9D%BC%EB%B3%B8%20%EC%9B%8C%ED%99%80%20%EC%85%80%ED%94%84%20%EC%84%9C%EB%A5%98%20%ED%82%A4%ED%8A%B8">대기자 메일 보내기</a>
+        <p class="tiny">메일 제목: <strong>Waitlist: 일본 워홀 셀프 서류 키트</strong><br>메일 앱이 열리지 않으면 <strong>waitlist-hq@mail.grokbot.com</strong>으로 직접 보내주세요.</p>
+        <hr>
+        <p class="tiny">대기자 이메일은 출시 여부 판단과 안내에만 사용합니다. 대사관 지정 대리신청기관 수수료는 별도이며, 이 키트로 대체할 수 없습니다.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">일본 워홀 셀프 서류 키트</p>
+        <p>이 프로젝트는 독립적인 개인 프로젝트입니다. 어떤 정부 기관과도 제휴하거나 소속되지 않았으며, 주한일본대사관 및 대사관 지정 대리신청기관과도 무관합니다. 이 페이지는 공식 신청 페이지가 아니며, 내용은 법률 자문이 아닙니다. 대사관 지정 대리신청기관 수수료는 별도이며, 이 키트로 대체할 수 없습니다.</p>
+        <p>공식 안내 원문:</p>
+        <ul class="footer-links">
+          <li><a href="https://www.kr.emb-japan.go.jp/itpr_ja/visa_working_h_documents.html" target="_blank" rel="noopener noreferrer">주한일본대사관 — 워킹홀리데이 제출 서류 안내</a></li>
+          <li><a href="https://www.kr.emb-japan.go.jp/itpr_ko/working_holiday_2026.html" target="_blank" rel="noopener noreferrer">주한일본대사관 — 2026 워킹홀리데이 안내</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-label">대기자 · 문의</p>
+        <p><a href="mailto:waitlist-hq@mail.grokbot.com?subject=Waitlist%3A%20%EC%9D%BC%EB%B3%B8%20%EC%9B%8C%ED%99%80%20%EC%85%80%ED%94%84%20%EC%84%9C%EB%A5%98%20%ED%82%A4%ED%8A%B8">waitlist-hq@mail.grokbot.com</a></p>
+        <p class="footer-note">가격과 제공 범위는 출시 전 바뀔 수 있습니다. 이 페이지의 사실은 2026-10-26 확인 기준입니다.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>일본 워홀 셀프 서류 키트</span>
+      <span>독립 프로젝트 · 법률 자문 아님</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- 1. Checklist + localStorage ---------- */
+  var STORAGE_KEY = "jpwh-self-service-kit-checklist-v1";
+  var requiredBoxes = Array.prototype.slice.call(document.querySelectorAll('input[data-doc="required"]'));
+  var optionalBoxes = Array.prototype.slice.call(document.querySelectorAll('input[data-doc="optional"]'));
+  var allBoxes = requiredBoxes.concat(optionalBoxes);
+  var reqBar = document.getElementById("reqBar");
+  var reqProgress = document.getElementById("reqProgress");
+  var reqCount = document.getElementById("reqCount");
+  var optCount = document.getElementById("optCount");
+  var resetBtn = document.getElementById("resetChecklist");
+  var savedState = {};
+
+  try {
+    var raw = window.localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) savedState = parsed;
+    }
+  } catch (e) {
+    savedState = {};
+  }
+
+  function paintItem(box) {
+    var item = box.closest(".check-item");
+    if (item) item.classList.toggle("is-checked", box.checked);
+  }
+
+  function updateChecklist() {
+    var requiredDone = 0;
+    requiredBoxes.forEach(function (box) {
+      paintItem(box);
+      if (box.checked) requiredDone += 1;
+    });
+
+    var optionalDone = 0;
+    optionalBoxes.forEach(function (box) {
+      paintItem(box);
+      if (box.checked) optionalDone += 1;
+    });
+
+    reqCount.textContent = requiredDone + " / " + requiredBoxes.length;
+    optCount.textContent = optionalDone + " / " + optionalBoxes.length + " 체크";
+    if (reqBar) reqBar.style.width = ((requiredDone / requiredBoxes.length) * 100) + "%";
+    if (reqProgress) {
+      reqProgress.setAttribute("aria-valuemax", String(requiredBoxes.length));
+      reqProgress.setAttribute("aria-valuenow", String(requiredDone));
+    }
+  }
+
+  function saveChecklist() {
+    allBoxes.forEach(function (box) {
+      savedState[box.getAttribute("data-key")] = box.checked;
+    });
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(savedState));
+    } catch (e) {
+      /* Private mode can block storage. The checklist still works for this visit. */
+    }
+  }
+
+  allBoxes.forEach(function (box) {
+    var key = box.getAttribute("data-key");
+    if (Object.prototype.hasOwnProperty.call(savedState, key)) {
+      box.checked = savedState[key] === true;
+    }
+    box.addEventListener("change", function () {
+      savedState[key] = box.checked;
+      saveChecklist();
+      updateChecklist();
+    });
+  });
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      allBoxes.forEach(function (box) {
+        box.checked = false;
+        savedState[box.getAttribute("data-key")] = false;
+      });
+      saveChecklist();
+      updateChecklist();
+    });
+  }
+
+  updateChecklist();
+
+  /* ---------- 2. Balance check ---------- */
+  var balanceInput = document.getElementById("balanceInput");
+  var balanceResult = document.getElementById("balanceResult");
+  var BALANCE_GUIDE = 2800000;
+
+  function formatWon(value) {
+    return value.toLocaleString("ko-KR");
+  }
+
+  function setBalanceMessage(html, state) {
+    if (!balanceResult) return;
+    balanceResult.className = "balance-result" + (state ? " " + state : "");
+    balanceResult.innerHTML = '<span class="result-inner">' + html + "</span>";
+  }
+
+  function checkBalance() {
+    if (!balanceInput || !balanceResult) return;
+    var digits = balanceInput.value.replace(/[^0-9]/g, "");
+    if (!digits) {
+      balanceInput.value = "";
+      setBalanceMessage("금액을 입력하면 2,800,000원 기준과 비교해 드립니다.", "");
+      return;
+    }
+
+    digits = digits.slice(0, 12);
+    var value = Number(digits);
+    balanceInput.value = formatWon(value);
+
+    if (value < BALANCE_GUIDE) {
+      var shortfall = BALANCE_GUIDE - value;
+      setBalanceMessage(
+        "<strong>" + formatWon(value) + "원</strong>은 약 280만원 기준보다 <strong>" +
+        formatWon(shortfall) + "원</strong> 적습니다.<br>잔고증명서를 준비하기 전에 잔고를 다시 확인하세요.",
+        "warn"
+      );
+    } else {
+      setBalanceMessage(
+        "<strong>" + formatWon(value) + "원</strong>은 2,800,000원 기준 이상입니다.<br>다만 실제 잔고증명서 발급 기준과 잔고 인정 방식은 대사관·은행 안내를 확인하세요.",
+        "ok"
+      );
+    }
+  }
+
+  if (balanceInput) {
+    balanceInput.addEventListener("input", checkBalance);
+    balanceInput.addEventListener("blur", checkBalance);
+  }
+
+  /* ---------- 3. Reason/plan self-check ---------- */
+  var draftInput = document.getElementById("draftInput");
+  var charCount = document.getElementById("charCount");
+  var charCountNoSpace = document.getElementById("charCountNoSpace");
+  var sepCount = document.getElementById("sepCount");
+  var draftWarnings = document.getElementById("draftWarnings");
+  var questionBoxes = Array.prototype.slice.call(document.querySelectorAll("input[data-question]"));
+  var qCount = document.getElementById("qCount");
+  var ROUGH_A4_HINT = 700;
+  var SEPARATOR_HINT = 6;
+
+  function countChars(text) {
+    return Array.from(text).length;
+  }
+
+  function warningItem(state, html) {
+    var li = document.createElement("li");
+    li.className = "warning-item" + (state ? " " + state : "");
+    li.innerHTML = html;
+    return li;
+  }
+
+  function renderDraftCheck() {
+    if (!draftInput || !draftWarnings) return;
+    var text = draftInput.value;
+    var chars = countChars(text);
+    var noSpace = countChars(text.replace(/\s/g, ""));
+    var separators = (text.match(/[、,]/g) || []).length;
+
+    if (charCount) charCount.textContent = chars.toLocaleString("ko-KR");
+    if (charCountNoSpace) charCountNoSpace.textContent = noSpace.toLocaleString("ko-KR");
+    if (sepCount) sepCount.textContent = separators.toLocaleString("ko-KR");
+
+    draftWarnings.textContent = "";
+
+    if (!text.trim()) {
+      draftWarnings.appendChild(warningItem("", "초안을 붙여넣으면 분량과 나열 신호를 점검합니다."));
+      return;
+    }
+
+    if (chars < ROUGH_A4_HINT) {
+      draftWarnings.appendChild(warningItem(
+        "warn",
+        "<span><strong>아직 " + ROUGH_A4_HINT.toLocaleString("ko-KR") + "자 미만입니다.</strong> 공식 안내의 “A4 1장 이상”을 바탕으로 잡은 아주 거친 참고치예요. 경험·기여·미래를 더 구체적으로 적어 보세요.</span>"
+      ));
+    } else {
+      draftWarnings.appendChild(warningItem(
+        "ok",
+        "<span><strong>" + ROUGH_A4_HINT.toLocaleString("ko-KR") + "자 이상입니다.</strong> 다만 분량은 아주 거친 참고치일 뿐, 내용의 구체성은 아래 4가지 질문으로 직접 확인하세요.</span>"
+      ));
+    }
+
+    if (separators >= SEPARATOR_HINT) {
+      draftWarnings.appendChild(warningItem(
+        "warn",
+        "<span><strong>구분자(、 또는 ,)가 " + separators.toLocaleString("ko-KR") + "개로 많습니다.</strong> 관광지나 하고 싶은 일을 나열한 글처럼 보일 수 있습니다. 공식 안내는 관광지·하고 싶은 일 나열을 금지합니다. 경험하고 싶은 것 / 워홀 목적에의 기여 / 미래에 어떻게 도움 되는지로 다시 읽어 보세요. 이 경고는 참고 신호이며 공식 심사 기준이 아닙니다.</span>"
+      ));
+    }
+  }
+
+  function updateQuestions() {
+    var done = 0;
+    questionBoxes.forEach(function (box) {
+      if (box.checked) done += 1;
+    });
+    if (qCount) qCount.textContent = done + " / " + questionBoxes.length;
+  }
+
+  if (draftInput) draftInput.addEventListener("input", renderDraftCheck);
+  questionBoxes.forEach(function (box) {
+    box.addEventListener("change", updateQuestions);
+  });
+
+  renderDraftCheck();
+  updateQuestions();
+})();
+</script>
+</body>
+</html>
